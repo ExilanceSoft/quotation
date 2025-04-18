@@ -1,0 +1,12 @@
+{
+    "restartable": "rs",
+    "ignore": [".git", "node_modules/", "logs/"],
+    "watch": ["*.js", "config/", "models/", "routes/"],
+    "execMap": {
+      "js": "node --trace-warnings"
+    },
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,json"
+  }

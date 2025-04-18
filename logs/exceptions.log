@@ -1,0 +1,34 @@
+2025-04-17 15:27:19 [error]: uncaughtException: Cannot find module './middleware/errorHandler'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module './middleware/errorHandler'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-04-17 15:28:27 [error]: uncaughtException: Cannot find module './middleware/errorHandler'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+Error: Cannot find module './middleware/errorHandler'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:8:22)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
