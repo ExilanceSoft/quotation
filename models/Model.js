@@ -18,7 +18,11 @@ const modelSchema = new mongoose.Schema({
     trim: true,
     maxlength: [1000, 'Description cannot be more than 1000 characters']
   },
-  // Technical Specifications
+  branch_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Branch',
+    required: true
+  },
   engine_cc: {
     type: Number,
     min: [0, 'Engine CC must be at least 0']
@@ -33,26 +37,20 @@ const modelSchema = new mongoose.Schema({
     enum: ['Manual', 'Automatic', 'CVT', 'DCT'],
     default: 'Manual'
   },
-  // Visual Data
-  image_url: {
-    type: String,
-    trim: true,
-    match: [
-      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,
-      'Please use a valid URL with HTTP or HTTPS'
-    ]
-  },
-  color_options: {
-    type: [String],
-    default: [],
-    validate: {
-      validator: function(colors) {
-        return colors.every(color => color.length <= 30);
-      },
-      message: 'Each color must be 30 characters or less'
+  images: [{
+    url: {
+      type: String,
+      required: true
+    },
+    caption: {
+      type: String,
+      default: ''
+    },
+    is_primary: {
+      type: Boolean,
+      default: false
     }
-  },
-  // Pricing Components
+  }],
   ex_showroom_price: {
     type: Number,
     required: [true, 'Please add an ex-showroom price'],
@@ -94,7 +92,6 @@ const modelSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
-// Virtual for on-road price calculation
 modelSchema.virtual('on_road_price').get(function() {
   const rtoTax = (this.ex_showroom_price * this.rto_tax_percentage) / 100;
   return (
@@ -107,12 +104,11 @@ modelSchema.virtual('on_road_price').get(function() {
   );
 });
 
-// Indexes for better performance
 modelSchema.index({ model_group: 1 });
 modelSchema.index({ fuel_type: 1, gearbox: 1 });
 modelSchema.index({ is_active: 1, ex_showroom_price: 1 });
+modelSchema.index({ branch_id: 1 });
 
-// Log before saving
 modelSchema.pre('save', function(next) {
   logger.info(`Saving model: ${this.name}`);
   next();

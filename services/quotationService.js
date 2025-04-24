@@ -1,5 +1,5 @@
 const Model = require('../models/Model');
-// const Accessory = require('');
+const Accessory = require('../models/accessory');
 const Branch = require('../models/Branch');
 const User = require('../models/User');
 const { generateQuotationNumber } = require('./numberGenerator');

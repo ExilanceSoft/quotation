@@ -39,10 +39,10 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Branch'
   },
-  role: {
-    type: String,
-    enum: ['admin', 'sales', 'manager'],
-    default: 'sales'
+  role_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Role',
+    required: true
   },
   is_active: {
     type: Boolean,
@@ -50,12 +50,25 @@ const userSchema = new mongoose.Schema({
   },
   last_login: {
     type: Date
+  },
+  created_by: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 }, {
   timestamps: true,
   toJSON: { virtuals: true },
   toObject: { virtuals: true }
 });
+
+// Static method to check if super admin exists
+userSchema.statics.superAdminExists = async function() {
+  const Role = mongoose.model('Role');
+  const superAdminRole = await Role.findOne({ name: 'super_admin' });
+  if (!superAdminRole) return false;
+  
+  return this.exists({ role_id: superAdminRole._id });
+};
 
 // Encrypt password before saving
 userSchema.pre('save', async function(next) {
@@ -77,10 +90,13 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
-// Indexes for better performance
-userSchema.index({ username: 1 }, { unique: true });
-userSchema.index({ email: 1 }, { unique: true });
-userSchema.index({ role: 1, is_active: 1 });
+// Virtual for role name
+userSchema.virtual('role', {
+  ref: 'Role',
+  localField: 'role_id',
+  foreignField: '_id',
+  justOne: true
+});
 
 // Log before saving
 userSchema.pre('save', function(next) {

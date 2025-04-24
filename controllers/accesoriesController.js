@@ -3,9 +3,6 @@ const logger = require('../config/logger');
 const { validateAccessoryInput } = require('../utils/validators');
 const { ErrorResponse } = require('../utils/errorHandler');
 
-// @desc    Get all accessories
-// @route   GET /api/accessories
-// @access  Public
 exports.getAccessories = async (req, res, next) => {
   try {
     const { activeOnly = 'true', category, sort = 'name' } = req.query;
@@ -16,7 +13,7 @@ exports.getAccessories = async (req, res, next) => {
 
     const accessories = await Accessory.find(filter)
       .sort(sort)
-      .collation({ locale: 'en', strength: 2 }); // Case-insensitive sorting
+      .collation({ locale: 'en', strength: 2 });
 
     logger.info(`Fetched ${accessories.length} accessories`);
     res.status(200).json({
@@ -30,9 +27,6 @@ exports.getAccessories = async (req, res, next) => {
   }
 };
 
-// @desc    Get single accessory
-// @route   GET /api/accessories/:id
-// @access  Public
 exports.getAccessory = async (req, res, next) => {
   try {
     const accessory = await Accessory.findById(req.params.id);
@@ -53,9 +47,6 @@ exports.getAccessory = async (req, res, next) => {
   }
 };
 
-// @desc    Create new accessory
-// @route   POST /api/accessories
-// @access  Private/Admin
 exports.createAccessory = async (req, res, next) => {
   try {
     const { errors, isValid } = validateAccessoryInput(req.body);
@@ -78,9 +69,6 @@ exports.createAccessory = async (req, res, next) => {
   }
 };
 
-// @desc    Update accessory
-// @route   PUT /api/accessories/:id
-// @access  Private/Admin
 exports.updateAccessory = async (req, res, next) => {
   try {
     const { errors, isValid } = validateAccessoryInput(req.body);
@@ -111,9 +99,6 @@ exports.updateAccessory = async (req, res, next) => {
   }
 };
 
-// @desc    Delete accessory
-// @route   DELETE /api/accessories/:id
-// @access  Private/Admin
 exports.deleteAccessory = async (req, res, next) => {
   try {
     const accessory = await Accessory.findByIdAndDelete(req.params.id);
@@ -134,9 +119,6 @@ exports.deleteAccessory = async (req, res, next) => {
   }
 };
 
-// @desc    Toggle accessory active status
-// @route   PATCH /api/accessories/:id/toggle-active
-// @access  Private/Admin
 exports.toggleActive = async (req, res, next) => {
   try {
     const accessory = await Accessory.findById(req.params.id);

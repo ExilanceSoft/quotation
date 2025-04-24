@@ -3,6 +3,7 @@ const quotationService = require('../services/quotationService');
 const logger = require('../config/logger');
 const { validateQuotationInput } = require('../utils/validators');
 const { ErrorResponse } = require('../utils/errorHandler');
+const PDFDocument = require('pdfkit');
 
 // @desc    Create new quotation
 // @route   POST /api/quotations
@@ -211,24 +212,56 @@ exports.generateQuotationPDF = async (req, res, next) => {
       return next(new ErrorResponse('Not authorized to access this quotation', 401));
     }
 
-    // In a real implementation, you would use a PDF generation library like pdfkit or puppeteer
-    // This is a simplified example
-    const pdfData = {
-      quotationNumber: quotation.quotation_number,
-      date: quotation.date,
-      customer: quotation.customer_details,
-      selectedModel: quotation.selected_model,
-      totalAmount: quotation.selected_model.pricing.total,
-      branchDetails: quotation.branch_id,
-      salesPerson: quotation.created_by.full_name
-    };
+    // Create PDF document
+    const doc = new PDFDocument({ margin: 50 });
+    
+    // Set response headers
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename=quotation-${quotation.quotation_number}.pdf`
+    );
+
+    // Pipe PDF to response
+    doc.pipe(res);
+
+    // Add content to PDF
+    doc.fontSize(20).text('Quotation', { align: 'center' });
+    doc.moveDown();
+    doc.fontSize(14).text(`Quotation Number: ${quotation.quotation_number}`);
+    doc.text(`Date: ${quotation.date}`);
+    doc.moveDown();
+
+    // Add customer details
+    doc.fontSize(16).text('Customer Details:', { underline: true });
+    doc.fontSize(12);
+    doc.text(`Name: ${quotation.customer_details.name}`);
+    doc.text(`Address: ${quotation.customer_details.address}`);
+    doc.text(`Mobile: ${quotation.customer_details.primary_mobile}`);
+    doc.moveDown();
+
+    // Add vehicle details
+    doc.fontSize(16).text('Vehicle Details:', { underline: true });
+    doc.fontSize(12);
+    doc.text(`Model: ${quotation.selected_model.name}`);
+    doc.text(`Price: ₹${quotation.selected_model.pricing.total.toLocaleString()}`);
+    doc.moveDown();
+
+    // Add pricing breakdown
+    doc.fontSize(16).text('Pricing Breakdown:', { underline: true });
+    doc.fontSize(12);
+    const pricing = quotation.selected_model.pricing.breakdown;
+    doc.text(`Ex-showroom: ₹${pricing.ex_showroom.toLocaleString()}`);
+    doc.text(`RTO Tax: ₹${pricing.rto_tax.toLocaleString()}`);
+    doc.text(`Insurance: ₹${pricing.insurance.toLocaleString()}`);
+    doc.text(`Accessories: ₹${pricing.accessories.toLocaleString()}`);
+    doc.moveDown();
+    doc.fontSize(14).text(`Total: ₹${quotation.selected_model.pricing.total.toLocaleString()}`, { align: 'right' });
+
+    // Finalize PDF
+    doc.end();
 
     logger.info(`Generated PDF for quotation: ${quotation.quotation_number}`);
-    res.status(200).json({
-      success: true,
-      data: pdfData,
-      message: 'PDF generation would happen here in a real implementation'
-    });
   } catch (err) {
     logger.error(`Error generating quotation PDF: ${err.message}`);
     next(err);

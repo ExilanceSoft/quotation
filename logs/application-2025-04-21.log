@@ -1,0 +1,32 @@
+{"timestamp":"2025-04-21 11:23:31","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 11:23:31","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 15:28:27","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 15:28:27","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 15:28:30","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 15:28:30","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 16:00:47","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 16:00:47","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 16:00:55","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 16:00:55","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 16:01:04","level":"\u001b[32MINFO\u001b[39M","message":"App running on port 5000...","stack":null}
+{"timestamp":"2025-04-21 16:01:04","level":"\u001b[32MINFO\u001b[39M","message":"MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"🚀 Server running on port 5000 in development mode","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Test endpoint available at http://localhost:5000/test","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Health check at http://localhost:5000/health","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 MongoDB connected - readyState:","stack":null}
+{"timestamp":"2025-04-21 18:00:22","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"🚀 Server running on port 5000 in development mode","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Test endpoint available at http://localhost:5000/test","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Health check at http://localhost:5000/health","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"🔗 MongoDB connected - readyState:","stack":null}
+{"timestamp":"2025-04-21 18:00:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"🚀 Server running on port 5000 in development mode","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Test endpoint available at http://localhost:5000/test","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 Health check at http://localhost:5000/health","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"🔗 MongoDB connected - readyState:","stack":null}
+{"timestamp":"2025-04-21 18:01:22","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-21 18:02:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /test","stack":null}
+{"timestamp":"2025-04-21 18:02:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /favicon.ico","stack":null}
