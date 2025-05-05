@@ -22,7 +22,9 @@ exports.protect = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Add user to request object
-    req.user = await User.findById(decoded.id).select('-password').populate('role_id');
+    req.user = await User.findById(decoded.id)
+      .select('-otp -otpExpire -loginAttempts -lockUntil')
+      .populate('role_id');
     
     if (!req.user) {
       return next(new ErrorResponse('User not found', 404));

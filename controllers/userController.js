@@ -4,8 +4,29 @@ const logger = require('../config/logger');
 const { validateUserInput } = require('../utils/validators');
 const { ErrorResponse } = require('../utils/errorHandler');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 const Branch = require('../models/Branch');
+const { generateOTP, sendOTPEmail } = require('../utils/emailService');
+
+// Helper function to format user response
+const formatUserResponse = (user) => {
+  const userObj = user.toObject ? user.toObject() : user;
+  
+  // Remove sensitive fields
+  delete userObj.otp;
+  delete userObj.otpExpire;
+  delete userObj.loginAttempts;
+  delete userObj.lockUntil;
+
+  // Add virtuals if they exist
+  if (user.role) {
+    userObj.role = user.role;
+  }
+  if (user.branch) {
+    userObj.branch = user.branch;
+  }
+
+  return userObj;
+};
 
 // @desc    Register super admin (one-time)
 // @route   POST /api/users/register-super-admin
@@ -19,6 +40,13 @@ exports.registerSuperAdmin = async (req, res, next) => {
       return next(new ErrorResponse('Super admin already exists', 400));
     }
 
+    // Validate input
+    const { errors, isValid } = validateUserInput(req.body, 'register');
+    if (!isValid) {
+      logger.warn('Super admin registration validation failed', errors);
+      return next(new ErrorResponse('Invalid input data', 400, errors));
+    }
+
     // Create super_admin role if not exists
     let superAdminRole = await Role.findOne({ name: 'super_admin' });
     
@@ -27,61 +55,75 @@ exports.registerSuperAdmin = async (req, res, next) => {
         name: 'super_admin',
         description: 'System super administrator with full access',
         permissions: [
-          { resource: 'user', actions: ['manage'] },
-          { resource: 'role', actions: ['manage'] },
-          { resource: 'branch', actions: ['manage'] },
-          { resource: 'model', actions: ['manage'] },
-          { resource: 'accessory', actions: ['manage'] },
-          { resource: 'quotation', actions: ['manage'] }
+          { resource: 'user', actions: ['create', 'read', 'update', 'delete'] },
+          { resource: 'role', actions: ['create', 'read', 'update', 'delete'] },
+          { resource: 'branch', actions: ['create', 'read', 'update', 'delete'] },
+          { resource: 'model', actions: ['create', 'read', 'update', 'delete'] },
+          { resource: 'accessory', actions: ['create', 'read', 'update', 'delete'] },
+          { resource: 'quotation', actions: ['create', 'read', 'update', 'delete'] }
         ],
         is_default: false
       });
+      logger.info('Super admin role created');
     }
 
-    const { errors, isValid } = validateUserInput(req.body, 'register');
+    const { username, email, full_name, mobile } = req.body;
     
-    if (!isValid) {
-      logger.warn('Super admin registration validation failed', errors);
-      return next(new ErrorResponse('Invalid input data', 400, errors));
-    }
-
-    const { username, email, password, full_name } = req.body;
+    // Check if username, email or mobile already exists
+    const existingUser = await User.findOne({ 
+      $or: [
+        { username: username.toLowerCase() }, 
+        { email: email.toLowerCase() }, 
+        { mobile } 
+      ] 
+    });
     
-    // Check if username or email already exists
-    const existingUser = await User.findOne({ $or: [{ username }, { email }] });
     if (existingUser) {
-      logger.warn(`Duplicate user registration attempt: ${username}`);
-      return next(new ErrorResponse('Username or email already exists', 400));
+      let conflictField = '';
+      if (existingUser.username === username.toLowerCase()) conflictField = 'username';
+      else if (existingUser.email === email.toLowerCase()) conflictField = 'email';
+      else conflictField = 'mobile';
+      
+      logger.warn(`Duplicate ${conflictField} during super admin registration: ${username}`);
+      return next(new ErrorResponse(`${conflictField.charAt(0).toUpperCase() + conflictField.slice(1)} already exists`, 400));
     }
 
+    // Create super admin user
     const user = await User.create({
-      username,
-      email,
-      password,
+      username: username.toLowerCase(),
+      email: email.toLowerCase(),
+      mobile,
       full_name,
-      role_id: superAdminRole._id
+      role_id: superAdminRole._id,
+      is_active: true,
+      isVerified: true,
+      created_by: null // No creator for super admin
     });
 
     // Create token
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
+      { expiresIn: process.env.JWT_EXPIRE || '30d' }
     );
 
-    logger.info(`Super admin registered: ${user.username}`);
+    const userResponse = formatUserResponse(user);
+
+    logger.info(`Super admin registered successfully: ${user.username}`);
     res.status(201).json({
       success: true,
       token,
       data: {
-        id: user._id,
-        username: user.username,
-        role: 'super_admin'
+        ...userResponse,
+        role: {
+          name: 'super_admin',
+          permissions: superAdminRole.permissions
+        }
       }
     });
   } catch (err) {
-    logger.error(`Error registering super admin: ${err.message}`);
-    next(err);
+    logger.error(`Error registering super admin: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error during super admin registration', 500));
   }
 };
 
@@ -97,22 +139,34 @@ exports.register = async (req, res, next) => {
       return next(new ErrorResponse('Invalid input data', 400, errors));
     }
 
-    const { username, email, password, full_name, branch_id, role_id } = req.body;
+    const { username, email, full_name, branch_id, role_id, mobile } = req.body;
     
-    // Check if username or email already exists
-    const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+    // Check if username, email or mobile already exists
+    const existingUser = await User.findOne({ 
+      $or: [
+        { username: username.toLowerCase() }, 
+        { email: email.toLowerCase() }, 
+        { mobile } 
+      ] 
+    });
+    
     if (existingUser) {
-      logger.warn(`Duplicate user registration attempt: ${username}`);
-      return next(new ErrorResponse('Username or email already exists', 400));
+      let conflictField = '';
+      if (existingUser.username === username.toLowerCase()) conflictField = 'username';
+      else if (existingUser.email === email.toLowerCase()) conflictField = 'email';
+      else conflictField = 'mobile';
+      
+      logger.warn(`Duplicate ${conflictField} during user registration: ${username}`);
+      return next(new ErrorResponse(`${conflictField.charAt(0).toUpperCase() + conflictField.slice(1)} already exists`, 400));
     }
 
-    // Validate role assignment and get role name
+    // Validate role assignment
     const role = await Role.findById(role_id);
     if (!role) {
       return next(new ErrorResponse('Invalid role specified', 400));
     }
 
-    // Validate branch if provided and get branch name
+    // Validate branch if provided
     let branch = null;
     if (branch_id) {
       branch = await Branch.findById(branch_id);
@@ -121,112 +175,191 @@ exports.register = async (req, res, next) => {
       }
     }
 
-    // Get the current user with populated role
+    // Check permissions of the requesting user
     const currentUser = await User.findById(req.user.id).populate('role_id');
     if (!currentUser) {
       return next(new ErrorResponse('User not found', 404));
     }
 
+    // Only super admin can assign super_admin role
+    if (role.name === 'super_admin' && currentUser.role_id.name !== 'super_admin') {
+      return next(new ErrorResponse('Not authorized to assign super_admin role', 403));
+    }
+
     // Check if requesting user has permission to assign this role
     if (currentUser.role_id.name !== 'super_admin') {
-      const requestingUserRole = await Role.findById(currentUser.role_id);
-      if (!requestingUserRole.permissions.some(p => p.resource === 'role' && p.actions.includes('manage'))) {
+      const hasRolePermission = currentUser.role_id.permissions.some(
+        p => p.resource === 'role' && p.actions.includes('assign')
+      );
+      if (!hasRolePermission) {
         return next(new ErrorResponse('Not authorized to assign roles', 403));
       }
     }
 
+    // Create the new user
     const user = await User.create({
-      username,
-      email,
-      password,
+      username: username.toLowerCase(),
+      email: email.toLowerCase(),
+      mobile,
       full_name,
       branch_id,
       role_id,
       created_by: req.user.id
     });
 
-    // Populate the response with branch and role details
-    const responseData = {
-      id: user._id,
-      username: user.username,
-      full_name: user.full_name,
-      role: {
-        id: role._id,
-        name: role.name
-      }
-    };
+    // Generate OTP for initial verification
+    const otp = generateOTP();
+    user.otp = otp;
+    user.otpExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
+    await user.save();
+    
+    // Send OTP email
+    await sendOTPEmail(user.email, otp);
 
-    if (branch) {
-      responseData.branch = {
-        id: branch._id,
-        name: branch.name
-      };
-    }
+    const userResponse = formatUserResponse(user);
 
     logger.info(`User registered by ${req.user.id}: ${user.username}`);
     res.status(201).json({
       success: true,
-      data: responseData
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error registering user: ${err.message}`);
-    next(err);
+    logger.error(`Error registering user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error during user registration', 500));
   }
 };
 
-// @desc    Login user
+// @desc    Login user (initiates OTP flow)
 // @route   POST /api/users/login
 // @access  Public
 exports.login = async (req, res, next) => {
   try {
-    const { errors, isValid } = validateUserInput(req.body, 'login');
-    
-    if (!isValid) {
-      logger.warn('User login validation failed', errors);
-      return next(new ErrorResponse('Invalid input data', 400, errors));
+    // Only validate email for login
+    if (!req.body.email || !req.body.email.trim()) {
+      return next(new ErrorResponse('Email is required', 400));
     }
 
-    const { username, password } = req.body;
+    const email = req.body.email.toLowerCase().trim();
     
-    const user = await User.findOne({ username }).select('+password').populate('role_id');
+    const user = await User.findOne({ email })
+      .select('+otp +otpExpire +loginAttempts +lockUntil')
+      .populate('role_id');
     
-    if (!user || !(await user.comparePassword(password))) {
-      logger.warn(`Failed login attempt for username: ${username}`);
+    if (!user) {
+      logger.warn(`Failed login attempt for email: ${email}`);
       return next(new ErrorResponse('Invalid credentials', 401));
+    }
+
+    // Check if account is locked
+    if (user.lockUntil && user.lockUntil > Date.now()) {
+      const retryAfter = Math.ceil((user.lockUntil - Date.now()) / 1000);
+      return next(new ErrorResponse(
+        `Account temporarily locked. Try again in ${retryAfter} seconds`, 
+        429,
+        { retryAfter }
+      ));
     }
 
     // Check if user is active
     if (!user.is_active) {
-      logger.warn(`Login attempt for inactive user: ${username}`);
+      logger.warn(`Login attempt for inactive user: ${email}`);
       return next(new ErrorResponse('Account is inactive', 401));
     }
+
+    // Generate OTP
+    const otp = generateOTP();
+    user.otp = otp;
+    user.otpExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
+    user.loginAttempts = 0;
+    user.lockUntil = undefined;
+    
+    await user.save();
+    
+    // Send OTP email
+    await sendOTPEmail(user.email, otp);
+
+    logger.info(`OTP sent to user: ${user.email}`);
+    res.status(200).json({
+      success: true,
+      message: 'OTP sent to your email',
+      data: {
+        email: user.email,
+        otpExpiresIn: 600 // 10 minutes in seconds
+      }
+    });
+  } catch (err) {
+    logger.error(`Error in login process: ${err.message}`);
+    next(new ErrorResponse('Server error during login', 500));
+  }
+};
+
+// @desc    Verify OTP
+// @route   POST /api/users/verify-otp
+// @access  Public
+exports.verifyOTP = async (req, res, next) => {
+  try {
+    const { email, otp } = req.body;
+    
+    if (!email || !otp) {
+      return next(new ErrorResponse('Please provide email and OTP', 400));
+    }
+
+    const user = await User.findOne({ email: email.toLowerCase() })
+      .select('+otp +otpExpire')
+      .populate('role_id');
+    
+    if (!user) {
+      return next(new ErrorResponse('Invalid credentials', 401));
+    }
+
+    if (user.otp !== otp || user.otpExpire < Date.now()) {
+      // Increment failed attempts
+      user.loginAttempts += 1;
+      
+      // Lock account after 5 failed attempts
+      if (user.loginAttempts >= 5) {
+        user.lockUntil = Date.now() + 15 * 60 * 1000; // 15 minutes lock
+        await user.save();
+        return next(new ErrorResponse(
+          'Too many failed attempts. Account locked for 15 minutes',
+          429
+        ));
+      }
+      
+      await user.save();
+      return next(new ErrorResponse('Invalid or expired OTP', 401));
+    }
+
+    // Clear OTP fields
+    user.otp = undefined;
+    user.otpExpire = undefined;
+    user.isVerified = true;
+    user.loginAttempts = 0;
+    user.lockUntil = undefined;
+    await user.save();
 
     // Create token
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
+      { expiresIn: process.env.JWT_EXPIRE || '30d' }
     );
 
     // Update last login
     user.last_login = new Date();
     await user.save();
 
-    logger.info(`User logged in: ${user.username}`);
+    const userResponse = formatUserResponse(user);
+
+    logger.info(`User logged in: ${user.email}`);
     res.status(200).json({
       success: true,
       token,
-      data: {
-        id: user._id,
-        username: user.username,
-        full_name: user.full_name,
-        role_id: user.role_id,
-        branch_id: user.branch_id
-      }
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error logging in user: ${err.message}`);
-    next(err);
+    logger.error(`Error verifying OTP: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error during OTP verification', 500));
   }
 };
 
@@ -236,7 +369,6 @@ exports.login = async (req, res, next) => {
 exports.getCurrentUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id)
-      .select('-password')
       .populate('role_id')
       .populate('branch_id', 'name city');
 
@@ -245,14 +377,16 @@ exports.getCurrentUser = async (req, res, next) => {
       return next(new ErrorResponse('User not found', 404));
     }
 
+    const userResponse = formatUserResponse(user);
+
     logger.info(`Fetched current user: ${user.username}`);
     res.status(200).json({
       success: true,
-      data: user
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error fetching current user: ${err.message}`);
-    next(err);
+    logger.error(`Error fetching current user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error fetching user', 500));
   }
 };
 
@@ -261,29 +395,41 @@ exports.getCurrentUser = async (req, res, next) => {
 // @access  Private
 exports.updateCurrentUser = async (req, res, next) => {
   try {
-    const { password, full_name, email } = req.body;
+    const { full_name, email } = req.body;
     const updateFields = {};
 
     if (full_name) updateFields.full_name = full_name;
-    if (email) updateFields.email = email;
-    if (password) {
-      const salt = await bcrypt.genSalt(10);
-      updateFields.password = await bcrypt.hash(password, salt);
+    if (email) {
+      // Check if email already exists for another user
+      const existingUser = await User.findOne({ 
+        email: email.toLowerCase(),
+        _id: { $ne: req.user.id }
+      });
+      if (existingUser) {
+        return next(new ErrorResponse('Email already in use', 400));
+      }
+      updateFields.email = email.toLowerCase();
     }
 
     const user = await User.findByIdAndUpdate(req.user.id, updateFields, {
       new: true,
       runValidators: true
-    }).select('-password').populate('role_id');
+    }).populate('role_id');
+
+    if (!user) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
+    const userResponse = formatUserResponse(user);
 
     logger.info(`Updated current user: ${user.username}`);
     res.status(200).json({
       success: true,
-      data: user
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error updating current user: ${err.message}`);
-    next(err);
+    logger.error(`Error updating current user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error updating user', 500));
   }
 };
 
@@ -296,6 +442,10 @@ exports.getUsers = async (req, res, next) => {
     
     // If not super admin, filter by permissions
     const currentUser = await User.findById(req.user.id).populate('role_id');
+    if (!currentUser) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
     if (currentUser.role_id.name !== 'super_admin') {
       if (!currentUser.role_id.permissions.some(p => p.resource === 'user' && p.actions.includes('read'))) {
         return next(new ErrorResponse('Not authorized to access this resource', 403));
@@ -308,21 +458,22 @@ exports.getUsers = async (req, res, next) => {
     }
 
     const users = await User.find(filter)
-      .select('-password')
       .populate('branch_id', 'name city')
       .populate('role_id', 'name description')
       .populate('created_by', 'username')
       .sort('username');
 
+    const usersResponse = users.map(user => formatUserResponse(user));
+
     logger.info(`Fetched ${users.length} users by ${req.user.id}`);
     res.status(200).json({
       success: true,
       count: users.length,
-      data: users
+      data: usersResponse
     });
   } catch (err) {
-    logger.error(`Error fetching users: ${err.message}`);
-    next(err);
+    logger.error(`Error fetching users: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error fetching users', 500));
   }
 };
 
@@ -332,7 +483,6 @@ exports.getUsers = async (req, res, next) => {
 exports.getUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id)
-      .select('-password')
       .populate('branch_id', 'name city')
       .populate('role_id', 'name description');
 
@@ -343,6 +493,10 @@ exports.getUser = async (req, res, next) => {
 
     // Authorization check
     const currentUser = await User.findById(req.user.id).populate('role_id');
+    if (!currentUser) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
     if (currentUser.role_id.name !== 'super_admin') {
       if (currentUser.branch_id && user.branch_id && 
           currentUser.branch_id.toString() !== user.branch_id.toString()) {
@@ -350,14 +504,16 @@ exports.getUser = async (req, res, next) => {
       }
     }
 
+    const userResponse = formatUserResponse(user);
+
     logger.info(`Fetched user: ${user.username}`);
     res.status(200).json({
       success: true,
-      data: user
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error fetching user: ${err.message}`);
-    next(err);
+    logger.error(`Error fetching user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error fetching user', 500));
   }
 };
 
@@ -381,6 +537,10 @@ exports.updateUser = async (req, res, next) => {
 
     // Authorization check
     const currentUser = await User.findById(req.user.id).populate('role_id');
+    if (!currentUser) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
     if (currentUser.role_id.name !== 'super_admin') {
       // Check if current user has permission to update users
       if (!currentUser.role_id.permissions.some(p => p.resource === 'user' && p.actions.includes('update'))) {
@@ -399,27 +559,40 @@ exports.updateUser = async (req, res, next) => {
       }
     }
 
-    const { password, role_id, is_active } = req.body;
-    const updateFields = { ...req.body };
+    // Check for duplicate email
+    if (req.body.email) {
+      const existingUser = await User.findOne({
+        email: req.body.email.toLowerCase(),
+        _id: { $ne: req.params.id }
+      });
+      if (existingUser) {
+        return next(new ErrorResponse('Email already in use', 400));
+      }
+    }
 
-    if (password) {
-      const salt = await bcrypt.genSalt(10);
-      updateFields.password = await bcrypt.hash(password, salt);
+    const updateFields = { ...req.body };
+    if (updateFields.email) {
+      updateFields.email = updateFields.email.toLowerCase();
+    }
+    if (updateFields.username) {
+      updateFields.username = updateFields.username.toLowerCase();
     }
 
     const updatedUser = await User.findByIdAndUpdate(req.params.id, updateFields, {
       new: true,
       runValidators: true
-    }).select('-password').populate('role_id');
+    }).populate('role_id');
+
+    const userResponse = formatUserResponse(updatedUser);
 
     logger.info(`Updated user: ${updatedUser.username} by ${req.user.id}`);
     res.status(200).json({
       success: true,
-      data: updatedUser
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error updating user: ${err.message}`);
-    next(err);
+    logger.error(`Error updating user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error updating user', 500));
   }
 };
 
@@ -442,6 +615,10 @@ exports.deleteUser = async (req, res, next) => {
 
     // Authorization check
     const currentUser = await User.findById(req.user.id).populate('role_id');
+    if (!currentUser) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
     if (currentUser.role_id.name !== 'super_admin') {
       // Check if current user has permission to delete users
       if (!currentUser.role_id.permissions.some(p => p.resource === 'user' && p.actions.includes('delete'))) {
@@ -468,8 +645,8 @@ exports.deleteUser = async (req, res, next) => {
       data: {}
     });
   } catch (err) {
-    logger.error(`Error deleting user: ${err.message}`);
-    next(err);
+    logger.error(`Error deleting user: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error deleting user', 500));
   }
 };
 
@@ -487,6 +664,10 @@ exports.toggleActive = async (req, res, next) => {
 
     // Authorization check
     const currentUser = await User.findById(req.user.id).populate('role_id');
+    if (!currentUser) {
+      return next(new ErrorResponse('User not found', 404));
+    }
+
     if (currentUser.role_id.name !== 'super_admin') {
       // Check if current user has permission to update users
       if (!currentUser.role_id.permissions.some(p => p.resource === 'user' && p.actions.includes('update'))) {
@@ -514,13 +695,15 @@ exports.toggleActive = async (req, res, next) => {
     user.is_active = !user.is_active;
     await user.save();
 
+    const userResponse = formatUserResponse(user);
+
     logger.info(`Toggled active status for user: ${user.username} to ${user.is_active} by ${req.user.id}`);
     res.status(200).json({
       success: true,
-      data: user
+      data: userResponse
     });
   } catch (err) {
-    logger.error(`Error toggling user active status: ${err.message}`);
-    next(err);
+    logger.error(`Error toggling user active status: ${err.message}`, { stack: err.stack });
+    next(new ErrorResponse('Server error toggling user status', 500));
   }
 };

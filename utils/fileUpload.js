@@ -1,48 +1,45 @@
-const fs = require('fs');
-const path = require('path');
+// utils/fileUpload.js
 const multer = require('multer');
-const { ErrorResponse } = require('./errorHandler');
+const path = require('path');
 const logger = require('../config/logger');
+const fs = require('fs');
 
-// Define and ensure the upload directory exists
-const uploadDir = path.join(__dirname, '../public/uploads/models');
+// Ensure upload directory exists
+const uploadDir = path.join(__dirname, '../public/uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// Multer storage configuration
+// Set up storage for uploaded files
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    const ext = path.extname(file.originalname).toLowerCase();
-    cb(null, 'model-' + uniqueSuffix + ext);
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
   }
 });
 
-// File filter to allow only image types
+// File filter to only allow CSV files
 const fileFilter = (req, file, cb) => {
-  const filetypes = /jpe?g|png|gif/;
+  const filetypes = /csv/;
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = filetypes.test(file.mimetype);
 
   if (extname && mimetype) {
-    cb(null, true);
+    return cb(null, true);
   } else {
-    cb(new ErrorResponse('Only image files (jpeg, jpg, png, gif) are allowed!', 400));
+    cb(new Error('Only CSV files are allowed!'));
   }
 };
 
-// Configure multer middleware
 const upload = multer({
   storage: storage,
+  fileFilter: fileFilter,
   limits: {
-    fileSize: 5 * 1024 * 1024, // Limit: 5MB
-    files: 1
-  },
-  fileFilter: fileFilter
+    fileSize: 5 * 1024 * 1024 // 5MB limit
+  }
 });
 
 module.exports = upload;

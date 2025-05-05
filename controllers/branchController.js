@@ -143,7 +143,7 @@ exports.deleteBranch = async (req, res, next) => {
       return next(new ErrorResponse('Not authorized to delete branches', 403));
     }
 
-    const branch = await Branch.findById(req.params.id);
+    const branch = await Branch.findByIdAndDelete(req.params.id);
 
     if (!branch) {
       return next(
@@ -151,14 +151,10 @@ exports.deleteBranch = async (req, res, next) => {
       );
     }
 
-    // Soft delete by setting is_active to false
-    branch.is_active = false;
-    await branch.save();
-
-    logger.info(`Branch soft-deleted: ${branch.name} by user ${req.user.id}`);
+    logger.info(`Branch permanently deleted: ${branch.name} by user ${req.user.id}`);
     res.status(200).json({
       success: true,
-      data: {}
+      data: branch // Return the deleted branch data
     });
   } catch (err) {
     next(err);

@@ -1,348 +1,295 @@
-const Quotation = require('../models/Quotation');
-const quotationService = require('../services/quotationService');
+const Quotation = require('../models/QuotationModel');
+const Customer = require('../models/CustomerModel');
+const Model = require('../models/ModelModel');
+const Header = require('../models/HeaderModel');
+const AppError = require('../utils/appError');
 const logger = require('../config/logger');
-const { validateQuotationInput } = require('../utils/validators');
-const { ErrorResponse } = require('../utils/errorHandler');
-const PDFDocument = require('pdfkit');
 
-// @desc    Create new quotation
-// @route   POST /api/quotations
-// @access  Private
+const getQuotationDetails = async (quotationId) => {
+  return await Quotation.findById(quotationId)
+    .populate('customer')
+    .populate('creator')
+    .populate('terms_conditions')
+    .populate({
+      path: 'models.model_id',
+      select: 'model_name prices',
+      populate: {
+        path: 'prices.header_id',
+        select: 'header_key category_key priority metadata'
+      }
+    })
+    .populate({
+      path: 'base_model_id',
+      select: 'model_name prices',
+      populate: {
+        path: 'prices.header_id',
+        select: 'header_key category_key priority metadata'
+      }
+    });
+};
+
+
 exports.createQuotation = async (req, res, next) => {
   try {
-    const { errors, isValid } = validateQuotationInput(req.body);
-    
-    if (!isValid) {
-      logger.warn('Quotation validation failed', errors);
-      return next(new ErrorResponse('Invalid input data', 400, errors));
+    const { 
+      customerDetails, 
+      selectedModels, 
+      expected_delivery_date,
+      finance_needed = false // Add finance_needed field with default false
+    } = req.body;
+
+    // Validate input
+    if (!customerDetails || !selectedModels || !Array.isArray(selectedModels)) {
+      return next(new AppError('Missing required fields or invalid data format', 400));
     }
 
-    const quotationData = await quotationService.generateQuotation({
-      ...req.body,
-      userId: req.user.id
-    });
-
-    const quotation = await Quotation.create(quotationData);
-    
-    logger.info(`Quotation created: ${quotation.quotation_number}`);
-    res.status(201).json({
-      success: true,
-      data: quotation
-    });
-  } catch (err) {
-    logger.error(`Error creating quotation: ${err.message}`);
-    next(err);
-  }
-};
-
-// @desc    Get all quotations
-// @route   GET /api/quotations
-// @access  Private
-exports.getQuotations = async (req, res, next) => {
-  try {
-    // Only allow admins to see all quotations
-    const filter = req.user.role === 'admin' ? {} : { created_by: req.user.id };
-    
-    const { fromDate, toDate, branchId } = req.query;
-    
-    if (fromDate && toDate) {
-      filter.createdAt = {
-        $gte: new Date(fromDate),
-        $lte: new Date(toDate)
-      };
-    }
-    
-    if (branchId) {
-      filter.branch_id = branchId;
-    }
-
-    const quotations = await Quotation.find(filter)
-      .populate('branch_id', 'name city')
-      .populate('created_by', 'full_name')
-      .sort({ createdAt: -1 });
-
-    logger.info(`User ${req.user.id} fetched ${quotations.length} quotations`);
-    res.status(200).json({
-      success: true,
-      count: quotations.length,
-      data: quotations
-    });
-  } catch (err) {
-    logger.error(`Error fetching quotations: ${err.message}`);
-    next(err);
-  }
-};
-
-// @desc    Get single quotation
-// @route   GET /api/quotations/:id
-// @access  Private
-exports.getQuotation = async (req, res, next) => {
-  try {
-    const quotation = await Quotation.findById(req.params.id)
-      .populate('branch_id', 'name city phone gst_number address')
-      .populate('created_by', 'full_name');
-
-    if (!quotation) {
-      logger.warn(`Quotation not found with id: ${req.params.id}`);
-      return next(new ErrorResponse(`Quotation not found with id ${req.params.id}`, 404));
-    }
-
-    // Check if user is authorized to view this quotation
-    if (req.user.role !== 'admin' && quotation.created_by.toString() !== req.user.id) {
-      logger.warn(`User ${req.user.id} unauthorized to access quotation ${req.params.id}`);
-      return next(new ErrorResponse('Not authorized to access this quotation', 401));
-    }
-
-    logger.info(`Fetched quotation: ${quotation.quotation_number}`);
-    res.status(200).json({
-      success: true,
-      data: quotation
-    });
-  } catch (err) {
-    logger.error(`Error fetching quotation: ${err.message}`);
-    next(err);
-  }
-};
-
-// @desc    Update quotation
-// @route   PUT /api/quotations/:id
-// @access  Private
-exports.updateQuotation = async (req, res, next) => {
-  try {
-    const { errors, isValid } = validateQuotationInput(req.body);
-    
-    if (!isValid) {
-      logger.warn('Quotation validation failed', errors);
-      return next(new ErrorResponse('Invalid input data', 400, errors));
-    }
-
-    let quotation = await Quotation.findById(req.params.id);
-
-    if (!quotation) {
-      logger.warn(`Quotation not found with id: ${req.params.id}`);
-      return next(new ErrorResponse(`Quotation not found with id ${req.params.id}`, 404));
-    }
-
-    // Check if user is authorized to update this quotation
-    if (req.user.role !== 'admin' && quotation.created_by.toString() !== req.user.id) {
-      logger.warn(`User ${req.user.id} unauthorized to update quotation ${req.params.id}`);
-      return next(new ErrorResponse('Not authorized to update this quotation', 401));
-    }
-
-    // Regenerate quotation data if model or accessories changed
-    if (req.body.modelId || req.body.selectedAccessoryIds) {
-      const newQuotationData = await quotationService.generateQuotation({
-        ...req.body,
-        userId: req.user.id,
-        branchId: req.body.branchId || quotation.branch_id
-      });
-
-      quotation = await Quotation.findByIdAndUpdate(req.params.id, newQuotationData, {
-        new: true,
-        runValidators: true
-      });
+    // 1. Create or find customer
+    let customer;
+    if (customerDetails._id) {
+      customer = await Customer.findById(customerDetails._id);
+      if (!customer) {
+        return next(new AppError('Customer not found', 404));
+      }
     } else {
-      // Only update customer details or other non-model related fields
-      quotation = await Quotation.findByIdAndUpdate(
-        req.params.id, 
-        { 
-          customer_details: req.body.customerDetails || quotation.customer_details,
-          finance_required: req.body.financeRequired ?? quotation.finance_required,
-          test_ride_requested: req.body.testRideRequested ?? quotation.test_ride_requested,
-          expected_delivery_date: req.body.expectedDeliveryDate || quotation.expected_delivery_date
-        }, 
-        {
-          new: true,
-          runValidators: true
-        }
-      );
+      // Validate required customer fields
+      if (!customerDetails.name || !customerDetails.address || !customerDetails.mobile1) {
+        return next(new AppError('Missing required customer fields', 400));
+      }
+
+      customer = await Customer.create({
+        name: customerDetails.name,
+        address: customerDetails.address,
+        taluka: customerDetails.taluka || '',
+        district: customerDetails.district || '',
+        mobile1: customerDetails.mobile1,
+        mobile2: customerDetails.mobile2 || '',
+        createdBy: req.user.id
+      });
     }
 
-    logger.info(`Updated quotation: ${quotation.quotation_number}`);
-    res.status(200).json({
-      success: true,
-      data: quotation
+    // 2. Get full model details
+    const models = await Model.find({
+      _id: { $in: selectedModels.map(m => m.model_id) }
+    }).populate({
+      path: 'prices.header_id',
+      select: 'header_key category_key priority metadata'
     });
-  } catch (err) {
-    logger.error(`Error updating quotation: ${err.message}`);
-    next(err);
-  }
-};
 
-// @desc    Delete quotation
-// @route   DELETE /api/quotations/:id
-// @access  Private/Admin
-exports.deleteQuotation = async (req, res, next) => {
-  try {
-    const quotation = await Quotation.findByIdAndDelete(req.params.id);
-
-    if (!quotation) {
-      logger.warn(`Quotation not found with id: ${req.params.id}`);
-      return next(new ErrorResponse(`Quotation not found with id ${req.params.id}`, 404));
+    if (models.length !== selectedModels.length) {
+      return next(new AppError('One or more model IDs are invalid', 400));
     }
 
-    logger.info(`Deleted quotation: ${quotation.quotation_number}`);
-    res.status(200).json({
-      success: true,
-      data: {}
-    });
-  } catch (err) {
-    logger.error(`Error deleting quotation: ${err.message}`);
-    next(err);
-  }
-};
-
-// @desc    Generate quotation PDF
-// @route   GET /api/quotations/:id/pdf
-// @access  Private
-exports.generateQuotationPDF = async (req, res, next) => {
-  try {
-    const quotation = await Quotation.findById(req.params.id)
-      .populate('branch_id', 'name address city state pincode phone gst_number')
-      .populate('created_by', 'full_name');
-
-    if (!quotation) {
-      logger.warn(`Quotation not found with id: ${req.params.id}`);
-      return next(new ErrorResponse(`Quotation not found with id ${req.params.id}`, 404));
-    }
-
-    // Check if user is authorized to view this quotation
-    if (req.user.role !== 'admin' && quotation.created_by.toString() !== req.user.id) {
-      logger.warn(`User ${req.user.id} unauthorized to access quotation ${req.params.id}`);
-      return next(new ErrorResponse('Not authorized to access this quotation', 401));
-    }
-
-    // Create PDF document
-    const doc = new PDFDocument({ margin: 50 });
-    
-    // Set response headers
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader(
-      'Content-Disposition',
-      `attachment; filename=quotation-${quotation.quotation_number}.pdf`
+    // 3. Find Ex-Showroom header
+    const headers = await Header.find();
+    const exShowroomHeader = headers.find(h => 
+      h.header_key.toLowerCase().includes('ex-showroom') || 
+      h.category_key.toLowerCase().includes('ex-showroom')
     );
 
-    // Pipe PDF to response
-    doc.pipe(res);
+    if (!exShowroomHeader) {
+      logger.warn('Ex-Showroom price header not found in database');
+    }
 
-    // Add content to PDF
-    doc.fontSize(20).text('Quotation', { align: 'center' });
-    doc.moveDown();
-    doc.fontSize(14).text(`Quotation Number: ${quotation.quotation_number}`);
-    doc.text(`Date: ${quotation.date}`);
-    doc.moveDown();
+    // 4. Prepare response with model details and collect base models
+    const allBaseModels = [];
+    const responseModels = await Promise.all(models.map(async model => {
+      // Find Ex-Showroom price
+      const exShowroomPrice = exShowroomHeader 
+        ? model.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
+        : null;
 
-    // Add customer details
-    doc.fontSize(16).text('Customer Details:', { underline: true });
-    doc.fontSize(12);
-    doc.text(`Name: ${quotation.customer_details.name}`);
-    doc.text(`Address: ${quotation.customer_details.address}`);
-    doc.text(`Mobile: ${quotation.customer_details.primary_mobile}`);
-    doc.moveDown();
+      // Get series name (first word of model name)
+      const seriesMatch = model.model_name.match(/^([A-Za-z0-9]+)/);
+      const series = seriesMatch ? seriesMatch[1] : 'Unknown';
 
-    // Add vehicle details
-    doc.fontSize(16).text('Vehicle Details:', { underline: true });
-    doc.fontSize(12);
-    doc.text(`Model: ${quotation.selected_model.name}`);
-    doc.text(`Price: ₹${quotation.selected_model.pricing.total.toLocaleString()}`);
-    doc.moveDown();
+      // Find base model for this series
+      let baseModel = null;
+      let isBaseModel = false;
+      
+      if (series) {
+        const seriesModels = await Model.find({
+          model_name: new RegExp(`^${series}`)
+        }).populate({
+          path: 'prices.header_id',
+          select: 'header_key category_key'
+        });
 
-    // Add pricing breakdown
-    doc.fontSize(16).text('Pricing Breakdown:', { underline: true });
-    doc.fontSize(12);
-    const pricing = quotation.selected_model.pricing.breakdown;
-    doc.text(`Ex-showroom: ₹${pricing.ex_showroom.toLocaleString()}`);
-    doc.text(`RTO Tax: ₹${pricing.rto_tax.toLocaleString()}`);
-    doc.text(`Insurance: ₹${pricing.insurance.toLocaleString()}`);
-    doc.text(`Accessories: ₹${pricing.accessories.toLocaleString()}`);
-    doc.moveDown();
-    doc.fontSize(14).text(`Total: ₹${quotation.selected_model.pricing.total.toLocaleString()}`, { align: 'right' });
+        if (seriesModels.length > 0) {
+          const modelsWithPrices = seriesModels.map(m => {
+            const price = exShowroomHeader 
+              ? m.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
+              : null;
+            return {
+              model_id: m._id,
+              model_name: m.model_name,
+              price: price,
+              model: m // Store the full model document
+            };
+          }).filter(m => m.price !== null && m.price !== undefined);
 
-    // Finalize PDF
-    doc.end();
+          if (modelsWithPrices.length > 0) {
+            modelsWithPrices.sort((a, b) => a.price - b.price);
+            baseModel = modelsWithPrices[0];
+            
+            // Check if selected model is the base model
+            isBaseModel = baseModel.model_id.toString() === model._id.toString();
+            
+            if (!isBaseModel) {
+              allBaseModels.push(baseModel);
+            }
+          }
+        }
+      }
+      return {
+        selected_model: {
+          _id: model._id,
+          model_name: model.model_name,
+          prices: model.prices.map(p => ({
+            value: p.value,
+            header_key: p.header_id?.header_key || 'deleted',
+            category_key: p.header_id?.category_key || 'deleted',
+            priority: p.header_id?.priority || 0,
+            metadata: p.header_id?.metadata || {}
+          })),
+          ex_showroom_price: exShowroomPrice,
+          series: series,
+          createdAt: model.createdAt,
+          is_base_model: isBaseModel
+        }
+      };
+    }));
 
-    logger.info(`Generated PDF for quotation: ${quotation.quotation_number}`);
+    // 5. Find the lowest priced base model across all series (only if not all selected models are base models)
+    let finalBaseModel = null;
+    const allSelectedAreBaseModels = responseModels.every(m => m.selected_model.is_base_model);
+    
+    if (!allSelectedAreBaseModels && allBaseModels.length > 0) {
+      allBaseModels.sort((a, b) => a.price - b.price);
+      const lowestBaseModel = allBaseModels[0];
+
+      // Get full details of the lowest base model
+      const fullBaseModel = await Model.findById(lowestBaseModel.model_id)
+        .populate({
+          path: 'prices.header_id',
+          select: 'header_key category_key priority metadata'
+        });
+
+      if (fullBaseModel) {
+        finalBaseModel = {
+          _id: fullBaseModel._id,
+          model_name: fullBaseModel.model_name,
+          prices: fullBaseModel.prices.map(p => ({
+            value: p.value,
+            header_key: p.header_id?.header_key || 'deleted',
+            category_key: p.header_id?.category_key || 'deleted',
+            priority: p.header_id?.priority || 0,
+            metadata: p.header_id?.metadata || {}
+          })),
+          ex_showroom_price: exShowroomHeader 
+            ? fullBaseModel.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
+            : null,
+          series: fullBaseModel.model_name.match(/^([A-Za-z0-9]+)/)?.[1] || 'Unknown',
+          createdAt: fullBaseModel.createdAt
+        };
+      }
+    }
+
+    // 6. Create and save the quotation to database
+    const quotation = await Quotation.create({
+      customer_id: customer._id,
+      models: responseModels.map(m => ({
+        model_id: m.selected_model._id,
+        model_name: m.selected_model.model_name,
+        base_price: m.selected_model.ex_showroom_price || 0,
+        final_price: m.selected_model.ex_showroom_price || 0
+      })),
+      expected_delivery_date,
+      finance_needed, // Save finance_needed status
+      createdBy: req.user.id,
+      total_amount: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0),
+      tax_amount: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0) * 0.18,
+      grand_total: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0) * 1.18
+    });
+
+    // 7. Prepare the final response
+    const response = {
+      customerDetails: {
+        _id: customer._id,
+        name: customer.name,
+        address: customer.address,
+        taluka: customer.taluka,
+        district: customer.district,
+        mobile1: customer.mobile1,
+        mobile2: customer.mobile2,
+        finance_needed: quotation.finance_needed,
+        createdAt: customer.createdAt
+      },
+      expected_delivery_date: expected_delivery_date || null,
+      selectedModels: responseModels,
+      quotation_id: quotation._id,
+      quotation_number: quotation.quotation_number,
+      userDetails: {
+        _id: req.user._id,
+        username: req.user.username,
+        email: req.user.email,
+        mobile: req.user.mobile,
+        full_name: req.user.full_name,
+        // Virtual fields
+        branch: req.user.branch ? {
+          _id: req.user.branch._id,
+          name: req.user.branch.name,
+          address: req.user.branch.address,
+          city: req.user.branch.city,
+          state: req.user.branch.state,
+          pincode: req.user.branch.pincode,
+          phone: req.user.branch.phone,
+          email: req.user.branch.email,
+          gst_number: req.user.branch.gst_number,
+          is_active: req.user.branch.is_active
+        } : null,
+        role: req.user.role ? {
+          _id: req.user.role._id,
+          name: req.user.role.name,
+          description: req.user.role.description,
+          is_default: req.user.role.is_default,
+        } : null
+      }
+    };
+
+    // Only include base_model if there is one and not all selected are base models
+    if (finalBaseModel && !allSelectedAreBaseModels) {
+      response.base_model = finalBaseModel;
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: response
+    });
   } catch (err) {
-    logger.error(`Error generating quotation PDF: ${err.message}`);
+    logger.error(`Error in quotation preparation: ${err.message}`);
     next(err);
   }
 };
 
-// @desc    Get quotations statistics
-// @route   GET /api/quotations/stats
-// @access  Private/Admin
-exports.getQuotationStats = async (req, res, next) => {
+// Get all quotations
+exports.getAllQuotations = async (req, res, next) => {
   try {
-    const stats = await Quotation.aggregate([
-      {
-        $group: {
-          _id: {
-            year: { $year: '$createdAt' },
-            month: { $month: '$createdAt' }
-          },
-          count: { $sum: 1 },
-          totalAmount: { 
-            $sum: '$selected_model.pricing.total' 
-          }
-        }
-      },
-      {
-        $sort: { '_id.year': 1, '_id.month': 1 }
-      },
-      {
-        $project: {
-          _id: 0,
-          year: '$_id.year',
-          month: '$_id.month',
-          count: 1,
-          totalAmount: 1
-        }
-      }
-    ]);
+    const quotations = await Quotation.find()
+      .populate('customer', 'name mobile1')
+      .populate('creator', 'name')
+      .sort({ createdAt: -1 });
 
-    const branchStats = await Quotation.aggregate([
-      {
-        $group: {
-          _id: '$branch_id',
-          count: { $sum: 1 },
-          totalAmount: { 
-            $sum: '$selected_model.pricing.total' 
-          }
-        }
-      },
-      {
-        $lookup: {
-          from: 'branches',
-          localField: '_id',
-          foreignField: '_id',
-          as: 'branch'
-        }
-      },
-      {
-        $unwind: '$branch'
-      },
-      {
-        $project: {
-          _id: 0,
-          branchId: '$_id',
-          branchName: '$branch.name',
-          branchCity: '$branch.city',
-          count: 1,
-          totalAmount: 1
-        }
-      }
-    ]);
-
-    logger.info('Fetched quotation statistics');
     res.status(200).json({
-      success: true,
+      status: 'success',
+      results: quotations.length,
       data: {
-        monthlyStats: stats,
-        branchStats: branchStats
+        quotations
       }
     });
   } catch (err) {
-    logger.error(`Error fetching quotation statistics: ${err.message}`);
     next(err);
   }
 };
+
+
+

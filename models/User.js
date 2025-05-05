@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
 const logger = require('../config/logger');
 
 const userSchema = new mongoose.Schema({
@@ -23,11 +22,15 @@ const userSchema = new mongoose.Schema({
       'Please add a valid email'
     ]
   },
-  password: {
+  mobile: {
     type: String,
-    required: [true, 'Please add a password'],
-    minlength: [6, 'Password must be at least 6 characters'],
-    select: false
+    required: [true, 'Please add a mobile number'],
+    unique: true,
+    trim: true,
+    match: [
+      /^[0-9]{10}$/,
+      'Please add a valid 10-digit mobile number'
+    ]
   },
   full_name: {
     type: String,
@@ -54,11 +57,50 @@ const userSchema = new mongoose.Schema({
   created_by: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+  otp: {
+    type: String,
+    select: false
+  },
+  otpExpire: {
+    type: Date,
+    select: false
+  },
+  isVerified: {
+    type: Boolean,
+    default: false
+  },
+  loginAttempts: {
+    type: Number,
+    default: 0,
+    select: false
+  },
+  lockUntil: {
+    type: Date,
+    select: false
   }
 }, {
   timestamps: true,
-  toJSON: { virtuals: true },
-  toObject: { virtuals: true }
+  toJSON: { 
+    virtuals: true,
+    transform: function(doc, ret) {
+      delete ret.otp;
+      delete ret.otpExpire;
+      delete ret.loginAttempts;
+      delete ret.lockUntil;
+      return ret;
+    }
+  },
+  toObject: { 
+    virtuals: true,
+    transform: function(doc, ret) {
+      delete ret.otp;
+      delete ret.otpExpire;
+      delete ret.loginAttempts;
+      delete ret.lockUntil;
+      return ret;
+    }
+  }
 });
 
 // Static method to check if super admin exists
@@ -70,30 +112,18 @@ userSchema.statics.superAdminExists = async function() {
   return this.exists({ role_id: superAdminRole._id });
 };
 
-// Encrypt password before saving
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-
-  try {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-    logger.info(`Hashed password for user: ${this.username}`);
-    next();
-  } catch (err) {
-    logger.error('Error hashing password:', err);
-    next(err);
-  }
-});
-
-// Method to compare passwords
-userSchema.methods.comparePassword = async function(candidatePassword) {
-  return await bcrypt.compare(candidatePassword, this.password);
-};
-
 // Virtual for role name
 userSchema.virtual('role', {
   ref: 'Role',
   localField: 'role_id',
+  foreignField: '_id',
+  justOne: true
+});
+
+// Virtual for branch details
+userSchema.virtual('branch', {
+  ref: 'Branch',
+  localField: 'branch_id',
   foreignField: '_id',
   justOne: true
 });

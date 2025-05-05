@@ -4,8 +4,7 @@ const logger = require('../config/logger');
 const permissionSchema = new mongoose.Schema({
   resource: {
     type: String,
-    required: true,
-    enum: ['user', 'role', 'branch', 'model', 'accessory', 'quotation']
+    required: true
   },
   actions: {
     type: [String],

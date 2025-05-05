@@ -1,3 +1,4 @@
+// app.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -15,7 +16,7 @@ const app = express();
 app.use(helmet());
 
 // CORS Configuration
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003',  'http://192.168.1.7:3000'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -25,41 +26,33 @@ app.use(cors({
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true, // ✅ Important: enables sending cookies/auth headers
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Rate Limiting Middleware
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // Limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000,
+  max: 10000 
 });
 app.use(limiter);
 
-// Connect to MongoDB
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000,
-      maxPoolSize: 10,
-    });
-    logger.info('✅ MongoDB Connected Successfully');
-    return true;
-  } catch (err) {
-    logger.error('❌ MongoDB Connection Error:', err.message);
-    return false;
-  }
-};
-
-// Body Parsers
+// Body Parsers - Moved before routes
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-// Serve static files (for uploads)
-app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use('/api/uploads', (req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST,http://192.168.1.7:3000 OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  }
+  next();
+});
+
+app.use('/api/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
 // Logger for all requests
 app.use((req, res, next) => {
@@ -71,17 +64,30 @@ app.use((req, res, next) => {
 const userRoutes = require('./routes/userRoutes');
 const roleRoutes = require('./routes/roleRoutes');
 const accessoryRoutes = require('./routes/accessoryRoutes');
-const modelRoutes = require('./routes/modelRoutes');
 const quotationRoutes = require('./routes/quotationRoutes');
 const branchRoutes = require('./routes/branchRoutes');
+const financeDocumentRoutes = require('./routes/financeDocumentRoutes');
+const termsConditionRoutes = require('./routes/termsConditionRoutes');
+const headerRoutes = require('./routes/headerRoutes');
+const modelRoutes = require('./routes/modelRoutes');
+const csvRoutes = require('./routes/csvRoutes');
+const offerRoutes = require('./routes/offerRoutes');
+const customerRoutes = require('./routes/customerRoutes');
+
 
 // Mount Routes
+app.use('/api/customers', customerRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/accessories', accessoryRoutes);
-app.use('/api/models', modelRoutes);
 app.use('/api/quotations', quotationRoutes);
 app.use('/api/branches', branchRoutes);
+app.use('/api/finance-documents', financeDocumentRoutes);
+app.use('/api/terms-conditions', termsConditionRoutes);
+app.use('/api/headers', headerRoutes);
+app.use('/api/models', modelRoutes);
+app.use('/api/csv', csvRoutes);
+app.use('/api/offers', offerRoutes);
 
 // Health Check Endpoint
 app.get('/health', (req, res) => {
@@ -117,5 +123,22 @@ app.use((err, req, res, next) => {
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
 });
+
+// Database connection function
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000,
+      maxPoolSize: 10,
+    });
+    logger.info('✅ MongoDB Connected Successfully');
+    return true;
+  } catch (err) {
+    logger.error('❌ MongoDB Connection Error:', err.message);
+    return false;
+  }
+}
 
 module.exports = { app, connectDB, initializeRoles };
