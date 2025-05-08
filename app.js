@@ -16,7 +16,7 @@ const app = express();
 app.use(helmet());
 
 // CORS Configuration
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003',  'http://192.168.1.7:3000'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003',  'http://192.168.1.7:3000','http://192.168.1.7:5001'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -46,8 +46,9 @@ app.use('/api/uploads', (req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST,http://192.168.1.7:3000 OPTIONS');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST,http://localhost:3000,http://192.168.1.7:5001 OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
   }
   next();
 });

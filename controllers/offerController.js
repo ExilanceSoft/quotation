@@ -44,17 +44,34 @@ const validateObjectIds = (ids) => {
 
 exports.createOffer = async (req, res, next) => {
   try {
-    const { 
-      title, 
-      description, 
-      url,
-      isActive = true,
-      applyToAllModels = false,
-      applicableModels = [] 
-    } = req.body;
+    // For form-data, req.body fields can be strings or arrays
+    const isActive = req.body.isActive === 'true';
+    const applyToAllModels = req.body.applyToAllModels === 'true';
+
+    // Handle applicableModels - can be string, array of strings, or array from multiple form fields
+    let applicableModels = [];
+    if (req.body.applicableModels) {
+      // Case 1: Multiple form fields with same name (comes as array)
+      if (Array.isArray(req.body.applicableModels)) {
+        applicableModels = req.body.applicableModels;
+      }
+      // Case 2: JSON string array
+      else if (typeof req.body.applicableModels === 'string' && 
+               req.body.applicableModels.startsWith('[')) {
+        try {
+          applicableModels = JSON.parse(req.body.applicableModels);
+        } catch (err) {
+          return next(new AppError('Invalid format for applicableModels', 400));
+        }
+      }
+      // Case 3: Single ID string
+      else {
+        applicableModels = [req.body.applicableModels];
+      }
+    }
 
     // Basic validation
-    if (!title || !description) {
+    if (!req.body.title || !req.body.description) {
       return next(new AppError('Title and description are required', 400));
     }
 
@@ -85,9 +102,9 @@ exports.createOffer = async (req, res, next) => {
     }
 
     const newOffer = await Offer.create({
-      title,
-      description,
-      url,
+      title: req.body.title,
+      description: req.body.description,
+      url: req.body.url,
       image: imagePath,
       isActive,
       applyToAllModels,
@@ -164,7 +181,6 @@ exports.getAllOffers = async (req, res, next) => {
     next(err);
   }
 };
-
 exports.getOfferById = async (req, res, next) => {
   try {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
@@ -194,13 +210,11 @@ exports.getOfferById = async (req, res, next) => {
     next(err);
   }
 };
-
 exports.updateOffer = async (req, res, next) => {
   try {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return next(new AppError('Invalid offer ID format', 400));
     }
-
     const { 
       title, 
       description, 
@@ -209,7 +223,6 @@ exports.updateOffer = async (req, res, next) => {
       applyToAllModels,
       applicableModels 
     } = req.body;
-
     // Check if offer exists
     const existingOffer = await Offer.findById(req.params.id);
     if (!existingOffer) {

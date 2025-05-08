@@ -1891,3 +1891,114 @@
 {"timestamp":"2025-05-05 18:23:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
 {"timestamp":"2025-05-05 18:23:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
 {"timestamp":"2025-05-05 18:23:49","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-05 18:30:31","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:30:31","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:30:32","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-05 18:30:32","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-05 18:30:33","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-05 18:30:33","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5001","stack":null}
+{"timestamp":"2025-05-05 18:30:33","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-05 18:30:35","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-05 18:30:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:30:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:30:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:30:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:31:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:31:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:31:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:31:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:31:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:31:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:31:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:33:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:34:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:34:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:34:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:34:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:34:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:34:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add6","stack":null}
+{"timestamp":"2025-05-05 18:34:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:34:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:34:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:34:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/id/681886b192888fd2a496add0","stack":null}
+{"timestamp":"2025-05-05 18:35:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:35:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:35:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:35:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:36:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-05 18:36:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 5 roles by 6811d96cc8634ab1c6a3a372","stack":null}
+{"timestamp":"2025-05-05 18:36:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-05 18:36:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 5 roles by 6811d96cc8634ab1c6a3a372","stack":null}
+{"timestamp":"2025-05-05 18:42:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-05 18:42:08","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 5 roles by 6811d96cc8634ab1c6a3a372","stack":null}
+{"timestamp":"2025-05-05 18:42:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-05 18:42:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 5 roles by 6811d96cc8634ab1c6a3a372","stack":null}
+{"timestamp":"2025-05-05 18:42:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:42:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-05 18:42:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:42:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-05 18:42:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:42:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:42:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:42:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-05 18:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-05 18:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:44:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:44:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-05 18:44:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:44:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-05 18:44:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:44:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-05 18:45:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-05 18:45:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-05 18:50:26","level":"INFO","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:50:26","level":"INFO","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:50:26","level":"ERROR","message":"❌ MongoDB Connection Error:","stack":null}
+{"timestamp":"2025-05-05 18:50:39","level":"INFO","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:50:39","level":"INFO","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:50:39","level":"ERROR","message":"❌ MongoDB Connection Error:","stack":null}
+{"timestamp":"2025-05-05 18:51:03","level":"INFO","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:51:03","level":"INFO","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:51:03","level":"ERROR","message":"❌ MongoDB Connection Error:","stack":null}
+{"timestamp":"2025-05-05 18:51:32","level":"INFO","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:51:32","level":"INFO","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:51:32","level":"ERROR","message":"❌ MongoDB Connection Error:","stack":null}
+{"timestamp":"2025-05-05 18:51:49","level":"INFO","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-05 18:51:49","level":"INFO","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-05 18:51:49","level":"ERROR","message":"❌ MongoDB Connection Error:","stack":null}

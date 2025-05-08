@@ -10423,3 +10423,833 @@ SyntaxError: missing ) after argument list
     at require (node:internal/modules/helpers:176:18)
     at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\modelRoutes.js:4:25)
     at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 10:43:05 [[31MERROR[39M]: uncaughtException: Parameter "obj" to Document() must be an object, got "async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 5000, // 5 seconds timeout
+      socketTimeoutMS: 45000 // 45 seconds socket timeout
+    });
+    logger.info('MongoDB Connected Successfully');
+  } catch (err) {
+    logger.error('MongoDB Connection Error:', err);
+    // Exit process with failure
+    process.exit(1);
+  }
+}" (type function)
+ObjectParameterError: Parameter "obj" to Document() must be an object, got "async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 5000, // 5 seconds timeout
+      socketTimeoutMS: 45000 // 45 seconds socket timeout
+    });
+    logger.info('MongoDB Connected Successfully');
+  } catch (err) {
+    logger.error('MongoDB Connection Error:', err);
+    // Exit process with failure
+    process.exit(1);
+  }
+}" (type function)
+    at model.Document (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\document.js:123:11)
+    at model.Model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:128:12)
+    at new model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:4800:15)
+    at model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:4795:16)
+    at E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\models\index.js:22:54
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\models\index.js:21:4)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+ObjectParameterError: Parameter "obj" to Document() must be an object, got "async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 5000, // 5 seconds timeout
+      socketTimeoutMS: 45000 // 45 seconds socket timeout
+    });
+    logger.info('MongoDB Connected Successfully');
+  } catch (err) {
+    logger.error('MongoDB Connection Error:', err);
+    // Exit process with failure
+    process.exit(1);
+  }
+}" (type function)
+    at model.Document (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\document.js:123:11)
+    at model.Model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:128:12)
+    at new model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:4800:15)
+    at model (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\mongoose\lib\model.js:4795:16)
+    at E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\models\index.js:22:54
+    at Array.forEach (<anonymous>)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\models\index.js:21:4)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-05-06 11:28:07 [[31MERROR[39M]: uncaughtException: Unexpected token 'export'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:277
+export.
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:277
+export.
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 11:28:11 [[31MERROR[39M]: uncaughtException: Unexpected token 'export'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:277
+export.
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:277
+export.
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 11:30:59 [[31MERROR[39M]: uncaughtException: Unexpected token 'export'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById =
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById =
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 11:31:06 [[31MERROR[39M]: uncaughtException: Unexpected token 'export'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById = as
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById = as
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 11:31:14 [[31MERROR[39M]: uncaughtException: Unexpected token 'export'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById = async(req, res,next)
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:306
+export.getQuotationById = async(req, res,next)
+^^^^^^
+
+SyntaxError: Unexpected token 'export'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 11:32:24 [[31MERROR[39M]: uncaughtException: Unexpected token '.'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:312
+        let query = .findById(req.params.id);
+                    ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:312
+        let query = .findById(req.params.id);
+                    ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 13:29:31 [[31MERROR[39M]: uncaughtException: The "id" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:7:15)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:7:15)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+2025-05-06 14:17:39 [[31MERROR[39M]: uncaughtException: missing ) after argument list
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:179
+      }));
+        ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:179
+      }));
+        ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 14:28:58 [[31MERROR[39M]: uncaughtException: missing ) after argument list
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:440
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:440
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 15:39:12 [[31MERROR[39M]: uncaughtException: Identifier 'Quotation' has already been declared
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:36
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:36
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 15:40:24 [[31MERROR[39M]: uncaughtException: Identifier 'getQuotationDetails' has already been declared
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:36
+const getQuotationDetails = async (quotationId) => {
+      ^
+
+SyntaxError: Identifier 'getQuotationDetails' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:36
+const getQuotationDetails = async (quotationId) => {
+      ^
+
+SyntaxError: Identifier 'getQuotationDetails' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 16:02:54 [[31MERROR[39M]: uncaughtException: Unexpected identifier 'response'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:283
+      const response = {
+            ^^^^^^^^
+
+SyntaxError: Unexpected identifier 'response'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:283
+      const response = {
+            ^^^^^^^^
+
+SyntaxError: Unexpected identifier 'response'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 16:02:59 [[31MERROR[39M]: uncaughtException: Unexpected identifier 'response'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:283
+       const response = {
+             ^^^^^^^^
+
+SyntaxError: Unexpected identifier 'response'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:283
+       const response = {
+             ^^^^^^^^
+
+SyntaxError: Unexpected identifier 'response'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 16:51:01 [[31MERROR[39M]: uncaughtException: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-05-06 16:51:45 [[31MERROR[39M]: uncaughtException: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-05-06 16:52:29 [[31MERROR[39M]: uncaughtException: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-05-06 16:52:48 [[31MERROR[39M]: uncaughtException: Invalid or unexpected token
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9
+const User = require('../model
+                     ^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9
+const User = require('../model
+                     ^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 16:53:42 [[31MERROR[39M]: uncaughtException: Missing initializer in const declaration
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:10
+const c
+      ^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:10
+const c
+      ^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-06 16:54:33 [[31MERROR[39M]: uncaughtException: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Error: Cannot find module '../models/UserModel'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-05-06 18:07:25 [[31MERROR[39M]: uncaughtException: The "id" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+2025-05-06 18:07:30 [[31MERROR[39M]: uncaughtException: The "id" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+TypeError [ERR_INVALID_ARG_TYPE]: The "id" argument must be of type string. Received undefined
+    at validateString (node:internal/validators:162:11)
+    at Module.require (node:internal/modules/cjs/loader:1228:3)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:9:14)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+2025-05-07 16:16:27 [[31MERROR[39M]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:8:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:8:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+2025-05-07 16:16:37 [[31MERROR[39M]: uncaughtException: missing ) after argument list
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:516
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:516
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-07 17:27:32 [[31MERROR[39M]: uncaughtException: Unexpected identifier 'allUniqueOffers'
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:677
+allUniqueOffers: uniqueOffers.map(offer => {
+^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'allUniqueOffers'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:677
+allUniqueOffers: uniqueOffers.map(offer => {
+^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier 'allUniqueOffers'
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-07 17:30:04 [[31MERROR[39M]: uncaughtException: missing ) after argument list
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:518
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:518
+        }));
+          ^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)

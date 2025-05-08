@@ -5,6 +5,6 @@ const { protect } = require('../middlewares/auth');
 
 router.post('/', protect, quotationController.createQuotation);
 router.get('/', protect, quotationController.getAllQuotations);
-
+router.get('/:id', protect, quotationController.getQuotationById);
 
 module.exports = router;

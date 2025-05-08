@@ -44,7 +44,6 @@ router.get('/base-models', modelController.identifyBaseModels);
 router.post('/base-model-for-selected', modelController.getBaseModelForSelectedModels);
 
 // UTILITY ENDPOINTS
-// =================
 
 // 11. Get model by ID (alternative endpoint)
 router.get('/id/:modelId', modelController.getModelById);

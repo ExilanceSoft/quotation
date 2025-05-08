@@ -2715,3 +2715,11 @@
 {"timestamp":"2025-04-30 21:54:00","level":"\u001b[31MERROR\u001b[39M","message":"Error: No model found with that ID","stack":null}
 {"timestamp":"2025-04-30 21:54:00","level":"\u001b[31MERROR\u001b[39M","message":"Error: No model found with that ID\n    at exports.getOffersForModel (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\controllers\\offerController.js:251:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
 {"timestamp":"2025-04-30 21:56:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers/for-model/68121c71335985bcb55d191f","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5001","stack":null}
+{"timestamp":"2025-04-30 22:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-04-30 22:00:13","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}

@@ -140,24 +140,32 @@ exports.updateHeader = async (req, res, next) => {
       next(err);
     }
   };
-exports.deleteHeader = async (req, res, next) => {
-  try {
-    const header = await Header.findByIdAndDelete(req.params.headerId);
-
-    if (!header) {
-      return next(new AppError('No header found with that ID', 404));
+  exports.deleteHeader = async (req, res, next) => {
+    try {
+      // First check if any models reference this header
+      const Model = require('../models/ModelModel'); // Import your model model
+      const referencedModels = await Model.find({ header_id: req.params.id });
+      
+      if (referencedModels.length > 0) {
+        return next(new AppError('Cannot delete header - it is referenced by existing models', 400));
+      }
+  
+      // If no references exist, proceed with deletion
+      const header = await Header.findByIdAndDelete(req.params.id);
+  
+      if (!header) {
+        return next(new AppError('No header found with that ID', 404));
+      }
+  
+      res.status(204).json({
+        status: 'success',
+        data: null
+      });
+    } catch (err) {
+      logger.error(`Error deleting header: ${err.message}`);
+      next(err);
     }
-
-    res.status(204).json({
-      status: 'success',
-      data: null
-    });
-  } catch (err) {
-    logger.error(`Error deleting header: ${err.message}`);
-    next(err);
-  }
-};
-
+  };
 exports.getAllHeaders = async (req, res, next) => {
   try {
     let query = Header.find().select('-__v');

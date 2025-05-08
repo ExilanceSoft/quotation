@@ -8,7 +8,7 @@ const { protect, authorize } = require('../middlewares/auth');
 
 // Protected routes
 router.use(protect);
-router.use(authorize(['admin', 'super_admin']));
+// router.use(authorize(['admin', 'super_admin']));
 
 router.route('/')
   .get(financeDocumentController.getFinanceDocuments)

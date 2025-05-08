@@ -1,0 +1,136 @@
+{"timestamp":"2025-05-08 09:42:42","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-08 09:42:42","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-08 09:42:42","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-08 09:42:42","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-08 09:42:43","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-08 09:42:43","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5001","stack":null}
+{"timestamp":"2025-05-08 09:42:43","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-08 09:42:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:42:44","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-08 09:42:44","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:42:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 09:43:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b57f43a47b937ad06c926","stack":null}
+{"timestamp":"2025-05-08 09:47:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:47:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:47:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 09:48:21","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 09:48:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c308e35d70204034164a8","stack":null}
+{"timestamp":"2025-05-08 09:49:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:49:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:49:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:49:48","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:49:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 09:50:30","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 09:50:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c310e35d70204034164ef","stack":null}
+{"timestamp":"2025-05-08 09:51:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:51:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:55:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 09:55:20","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 09:55:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 09:56:27","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 09:56:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c327335d7020403416536","stack":null}
+{"timestamp":"2025-05-08 10:11:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:11:51","level":"\u001b[33MWARN\u001b[39M","message":"User 681af0dc6735e18d7968a5ef with role sales attempted unauthorized access","stack":null}
+{"timestamp":"2025-05-08 10:11:51","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-08 10:11:51","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:60:21\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:342:13)\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:297:9\n    at processParams (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:33:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:13:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:13:37","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-08 10:13:37","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:14:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:14:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:14:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:14:54","level":"\u001b[33MWARN\u001b[39M","message":"User 681af0dc6735e18d7968a5ef with role sales attempted unauthorized access","stack":null}
+{"timestamp":"2025-05-08 10:14:54","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-08 10:14:54","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:60:21\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:342:13)\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:297:9\n    at processParams (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:33:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:15:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:15:05","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:15:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:15:18","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-08 10:15:18","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:15:36","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-08 10:15:36","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:15:41","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-08 10:15:41","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to user: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-08 10:16:04","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-05-08 10:16:04","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:16:04","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:16:04","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-08 10:16:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:16:18","level":"\u001b[33MWARN\u001b[39M","message":"User 681af0dc6735e18d7968a5ef with role sales attempted unauthorized access","stack":null}
+{"timestamp":"2025-05-08 10:16:18","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-08 10:16:18","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:60:21\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:342:13)\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:297:9\n    at processParams (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:33:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:17:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:17:09","level":"\u001b[33MWARN\u001b[39M","message":"User 681af0dc6735e18d7968a5ef with role sales attempted unauthorized access","stack":null}
+{"timestamp":"2025-05-08 10:17:09","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-08 10:17:09","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:60:21\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:342:13)\n    at E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:297:9\n    at processParams (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:33:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 10:18:07","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-08 10:18:07","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-08 10:18:07","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-08 10:18:07","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-08 10:18:08","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-08 10:18:08","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5001","stack":null}
+{"timestamp":"2025-05-08 10:18:08","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-08 10:18:08","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-08 10:18:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:18:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:19:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:19:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:26:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:26:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:27:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:28:10","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:28:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c39e36397e2c19f4868dd","stack":null}
+{"timestamp":"2025-05-08 10:28:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:30:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:30:44","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:30:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:30:54","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:30:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:31:28","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:31:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3aa86397e2c19f48692b","stack":null}
+{"timestamp":"2025-05-08 10:31:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:34:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:34:48","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:35:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:35:21","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:35:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:36:02","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:36:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3bbb6397e2c19f486979","stack":null}
+{"timestamp":"2025-05-08 10:36:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:36:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:36:04","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:36:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:36:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:36:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:37:04","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:37:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3bf86397e2c19f4869cb","stack":null}
+{"timestamp":"2025-05-08 10:37:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:37:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3bf86397e2c19f4869cb","stack":null}
+{"timestamp":"2025-05-08 10:39:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:39:14","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:39:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:39:24","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:41:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 10:51:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:51:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:51:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:52:33","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:53:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:53:01","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:53:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:53:39","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:53:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3fdb6397e2c19f486a61","stack":null}
+{"timestamp":"2025-05-08 10:53:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:53:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 10:56:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:56:19","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:56:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 10:56:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 10:56:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 10:57:09","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 10:57:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c40ad6397e2c19f486ab0","stack":null}
+{"timestamp":"2025-05-08 10:57:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 10:57:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:01:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}

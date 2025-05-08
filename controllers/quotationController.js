@@ -4,6 +4,10 @@ const Model = require('../models/ModelModel');
 const Header = require('../models/HeaderModel');
 const AppError = require('../utils/appError');
 const logger = require('../config/logger');
+const Offer = require('../models/OfferModel')
+const mongoose = require('mongoose');
+const User = require('../models/User')
+const Branch = require('../models/Branch');
 
 const getQuotationDetails = async (quotationId) => {
   return await Quotation.findById(quotationId)
@@ -28,6 +32,9 @@ const getQuotationDetails = async (quotationId) => {
     });
 };
 
+const isValidModelId = (modelId) => {
+  return modelId && mongoose.Types.ObjectId.isValid(modelId);
+};
 
 exports.createQuotation = async (req, res, next) => {
   try {
@@ -35,8 +42,11 @@ exports.createQuotation = async (req, res, next) => {
       customerDetails, 
       selectedModels, 
       expected_delivery_date,
-      finance_needed = false // Add finance_needed field with default false
+      finance_needed = false
     } = req.body;
+
+    // Get creator from request
+    const creator = req.user;
 
     // Validate input
     if (!customerDetails || !selectedModels || !Array.isArray(selectedModels)) {
@@ -63,11 +73,11 @@ exports.createQuotation = async (req, res, next) => {
         district: customerDetails.district || '',
         mobile1: customerDetails.mobile1,
         mobile2: customerDetails.mobile2 || '',
-        createdBy: req.user.id
+        createdBy: creator._id
       });
     }
 
-    // 2. Get full model details
+    // 2. Get full model details with branch-specific prices
     const models = await Model.find({
       _id: { $in: selectedModels.map(m => m.model_id) }
     }).populate({
@@ -79,7 +89,29 @@ exports.createQuotation = async (req, res, next) => {
       return next(new AppError('One or more model IDs are invalid', 400));
     }
 
-    // 3. Find Ex-Showroom header
+    // Filter prices to only include creator's branch prices
+    const branchId = creator.branch_id?._id;
+    if (!branchId) {
+      return next(new AppError('User must be assigned to a branch to create quotations', 400));
+    }
+
+    // Get full branch details
+    const branch = await Branch.findById(branchId);
+    if (!branch) {
+      return next(new AppError('Branch not found', 404));
+    }
+
+    const modelsWithBranchPrices = models.map(model => {
+      const filteredPrices = model.prices.filter(price => 
+        price.branch_id && price.branch_id.equals(branchId)
+      );
+      return {
+        ...model.toObject(),
+        prices: filteredPrices
+      };
+    });
+
+    // 3. Find Ex-Showroom header for the branch
     const headers = await Header.find();
     const exShowroomHeader = headers.find(h => 
       h.header_key.toLowerCase().includes('ex-showroom') || 
@@ -90,9 +122,28 @@ exports.createQuotation = async (req, res, next) => {
       logger.warn('Ex-Showroom price header not found in database');
     }
 
-    // 4. Prepare response with model details and collect base models
+    // 4. Get all unique offers for selected models
+    const modelIds = models.map(model => model._id);
+    const allOffers = await Offer.find({
+      isActive: true,
+      $or: [
+        { applyToAllModels: true },
+        { applicableModels: { $in: modelIds } }
+      ]
+    }).populate('applicableModels', 'model_name');
+
+    // Remove duplicate offers
+    const uniqueOffersMap = new Map();
+    allOffers.forEach(offer => {
+      if (!uniqueOffersMap.has(offer._id.toString())) {
+        uniqueOffersMap.set(offer._id.toString(), offer);
+      }
+    });
+    const uniqueOffers = Array.from(uniqueOffersMap.values());
+
+    // 5. Prepare response with model details and collect base models
     const allBaseModels = [];
-    const responseModels = await Promise.all(models.map(async model => {
+    const responseModels = await Promise.all(modelsWithBranchPrices.map(async model => {
       // Find Ex-Showroom price
       const exShowroomPrice = exShowroomHeader 
         ? model.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
@@ -115,7 +166,18 @@ exports.createQuotation = async (req, res, next) => {
         });
 
         if (seriesModels.length > 0) {
-          const modelsWithPrices = seriesModels.map(m => {
+          // Filter prices for each series model to only include creator's branch prices
+          const seriesModelsWithBranchPrices = seriesModels.map(seriesModel => {
+            const filteredPrices = seriesModel.prices.filter(price => 
+              price.branch_id && price.branch_id.equals(branchId)
+            );
+            return {
+              ...seriesModel.toObject(),
+              prices: filteredPrices
+            };
+          });
+
+          const modelsWithPrices = seriesModelsWithBranchPrices.map(m => {
             const price = exShowroomHeader 
               ? m.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
               : null;
@@ -123,23 +185,36 @@ exports.createQuotation = async (req, res, next) => {
               model_id: m._id,
               model_name: m.model_name,
               price: price,
-              model: m // Store the full model document
+              model: m
             };
           }).filter(m => m.price !== null && m.price !== undefined);
-
+          
           if (modelsWithPrices.length > 0) {
             modelsWithPrices.sort((a, b) => a.price - b.price);
             baseModel = modelsWithPrices[0];
-            
-            // Check if selected model is the base model
             isBaseModel = baseModel.model_id.toString() === model._id.toString();
-            
             if (!isBaseModel) {
               allBaseModels.push(baseModel);
             }
           }
         }
       }
+
+      // Find offers specific to this model with null checks
+      const modelOffers = uniqueOffers.filter(offer => 
+        offer.applyToAllModels || 
+        (offer.applicableModels && offer.applicableModels.some(appModel => 
+          appModel && appModel._id && appModel._id.equals(model._id)
+        ))
+      ).map(offer => ({
+        _id: offer._id,
+        title: offer.title,
+        description: offer.description,
+        image: offer.image,
+        url: offer.url,
+        createdAt: offer.createdAt
+      }));
+
       return {
         selected_model: {
           _id: model._id,
@@ -149,70 +224,89 @@ exports.createQuotation = async (req, res, next) => {
             header_key: p.header_id?.header_key || 'deleted',
             category_key: p.header_id?.category_key || 'deleted',
             priority: p.header_id?.priority || 0,
-            metadata: p.header_id?.metadata || {}
+            metadata: p.header_id?.metadata || {},
+            branch_id: p.branch_id || null
           })),
           ex_showroom_price: exShowroomPrice,
           series: series,
           createdAt: model.createdAt,
-          is_base_model: isBaseModel
+          is_base_model: isBaseModel,
+          offers: modelOffers
         }
       };
     }));
 
-    // 5. Find the lowest priced base model across all series (only if not all selected models are base models)
+    // 6. Determine final base model
     let finalBaseModel = null;
     const allSelectedAreBaseModels = responseModels.every(m => m.selected_model.is_base_model);
     
     if (!allSelectedAreBaseModels && allBaseModels.length > 0) {
-      allBaseModels.sort((a, b) => a.price - b.price);
-      const lowestBaseModel = allBaseModels[0];
+      // Get unique base models
+      const uniqueBaseModels = allBaseModels.reduce((acc, current) => {
+        const x = acc.find(item => item.model_id.equals(current.model_id));
+        if (!x) {
+          return acc.concat([current]);
+        } else {
+          return acc;
+        }
+      }, []);
 
-      // Get full details of the lowest base model
-      const fullBaseModel = await Model.findById(lowestBaseModel.model_id)
-        .populate({
-          path: 'prices.header_id',
-          select: 'header_key category_key priority metadata'
-        });
-
-      if (fullBaseModel) {
-        finalBaseModel = {
-          _id: fullBaseModel._id,
-          model_name: fullBaseModel.model_name,
-          prices: fullBaseModel.prices.map(p => ({
-            value: p.value,
-            header_key: p.header_id?.header_key || 'deleted',
-            category_key: p.header_id?.category_key || 'deleted',
-            priority: p.header_id?.priority || 0,
-            metadata: p.header_id?.metadata || {}
-          })),
-          ex_showroom_price: exShowroomHeader 
-            ? fullBaseModel.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
-            : null,
-          series: fullBaseModel.model_name.match(/^([A-Za-z0-9]+)/)?.[1] || 'Unknown',
-          createdAt: fullBaseModel.createdAt
-        };
+      if (uniqueBaseModels.length === 1) {
+        finalBaseModel = uniqueBaseModels[0];
       }
     }
 
-    // 6. Create and save the quotation to database
+    // Check if finalBaseModel is same as any selected model
+    if (finalBaseModel) {
+      const isBaseModelSameAsSelected = responseModels.some(m => 
+        m.selected_model._id.toString() === finalBaseModel.model_id.toString()
+      );
+      if (isBaseModelSameAsSelected) {
+        finalBaseModel = null;
+      }
+    }
+
+    // 7. Create the quotation
     const quotation = await Quotation.create({
       customer_id: customer._id,
       models: responseModels.map(m => ({
         model_id: m.selected_model._id,
         model_name: m.selected_model.model_name,
-        base_price: m.selected_model.ex_showroom_price || 0,
-        final_price: m.selected_model.ex_showroom_price || 0
+        base_price: m.selected_model.ex_showroom_price || 0
       })),
-      expected_delivery_date,
-      finance_needed, // Save finance_needed status
-      createdBy: req.user.id,
-      total_amount: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0),
-      tax_amount: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0) * 0.18,
-      grand_total: responseModels.reduce((sum, m) => sum + (m.selected_model.ex_showroom_price || 0), 0) * 1.18
+      base_model_id: finalBaseModel ? finalBaseModel.model_id : null,
+      base_model_name: finalBaseModel ? finalBaseModel.model_name : null,
+      expected_delivery_date: expected_delivery_date || null,
+      finance_needed: finance_needed,
+      createdBy: creator._id,
+      status: 'draft'
     });
 
-    // 7. Prepare the final response
+    // 8. Prepare the final response
     const response = {
+      userDetails: {
+        _id: creator._id,
+        username: creator.username,
+        email: creator.email,
+        mobile: creator.mobile,
+        full_name: creator.full_name,
+        branch: branch ? {
+          _id: branch._id,
+          name: branch.name,
+          address: branch.address,
+          city: branch.city,
+          state: branch.state,
+          pincode: branch.pincode,
+          phone: branch.phone,
+          email: branch.email,
+          gst_number: branch.gst_number,
+          is_active: branch.is_active
+        } : null,
+        role: creator.role_id ? {
+          _id: creator.role_id._id,
+          name: creator.role_id.name,
+        } : null
+      },
       customerDetails: {
         _id: customer._id,
         name: customer.name,
@@ -221,42 +315,50 @@ exports.createQuotation = async (req, res, next) => {
         district: customer.district,
         mobile1: customer.mobile1,
         mobile2: customer.mobile2,
-        finance_needed: quotation.finance_needed,
+        finance_needed: finance_needed,
         createdAt: customer.createdAt
       },
       expected_delivery_date: expected_delivery_date || null,
-      selectedModels: responseModels,
+      selectedModels: responseModels.map(model => ({
+        _id: model.selected_model._id,
+        model_name: model.selected_model.model_name,
+        prices: model.selected_model.prices,
+        ex_showroom_price: model.selected_model.ex_showroom_price,
+        series: model.selected_model.series,
+        createdAt: model.selected_model.createdAt,
+        is_base_model: model.selected_model.is_base_model
+      })),
       quotation_id: quotation._id,
       quotation_number: quotation.quotation_number,
-      userDetails: {
-        _id: req.user._id,
-        username: req.user.username,
-        email: req.user.email,
-        mobile: req.user.mobile,
-        full_name: req.user.full_name,
-        // Virtual fields
-        branch: req.user.branch ? {
-          _id: req.user.branch._id,
-          name: req.user.branch.name,
-          address: req.user.branch.address,
-          city: req.user.branch.city,
-          state: req.user.branch.state,
-          pincode: req.user.branch.pincode,
-          phone: req.user.branch.phone,
-          email: req.user.branch.email,
-          gst_number: req.user.branch.gst_number,
-          is_active: req.user.branch.is_active
-        } : null,
-        role: req.user.role ? {
-          _id: req.user.role._id,
-          name: req.user.role.name,
-          description: req.user.role.description,
-          is_default: req.user.role.is_default,
-        } : null
-      }
+      modelSpecificOffers: responseModels.map(model => ({
+        model_id: model.selected_model._id,
+        model_name: model.selected_model.model_name,
+        offers: model.selected_model.offers.map(offer => ({
+          _id: offer._id,
+          title: offer.title,
+          description: offer.description,
+          image: offer.image,
+          url: offer.url,
+          createdAt: offer.createdAt
+        }))
+      })),
+      allUniqueOffers: uniqueOffers.map(offer => ({
+        _id: offer._id,
+        title: offer.title,
+        description: offer.description,
+        image: offer.image,
+        url: offer.url,
+        createdAt: offer.createdAt,
+        applyToAllModels: offer.applyToAllModels,
+        applicableModels: offer.applicableModels 
+          ? offer.applicableModels.map(model => ({
+              _id: model?._id,
+              model_name: model?.model_name
+            })).filter(m => m._id)
+          : []
+      }))
     };
 
-    // Only include base_model if there is one and not all selected are base models
     if (finalBaseModel && !allSelectedAreBaseModels) {
       response.base_model = finalBaseModel;
     }
@@ -271,7 +373,6 @@ exports.createQuotation = async (req, res, next) => {
   }
 };
 
-// Get all quotations
 exports.getAllQuotations = async (req, res, next) => {
   try {
     const quotations = await Quotation.find()
@@ -292,4 +393,286 @@ exports.getAllQuotations = async (req, res, next) => {
 };
 
 
+// Add this to quotationController.js
 
+// Add this new method to quotationController.js
+exports.getQuotationById = async (req, res, next) => {
+  try {
+    const quotationId = req.params.id;
+    
+    // Validate quotation ID
+    if (!mongoose.Types.ObjectId.isValid(quotationId)) {
+      return next(new AppError('Invalid quotation ID', 400));
+    }
+
+    // Get the full quotation details with all populated data
+    const quotation = await getQuotationDetails(quotationId);
+    
+    if (!quotation) {
+      return next(new AppError('Quotation not found', 404));
+    }
+
+    // Get creator details with populated branch
+    const creator = await User.findById(quotation.creator._id)
+      .populate('branch_id')
+      .populate('role_id');
+
+    if (!creator) {
+      return next(new AppError('Creator not found', 404));
+    }
+
+    // Get customer details
+    const customer = quotation.customer;
+
+    // Get all model details with branch-specific prices
+    const models = await Model.find({
+      _id: { $in: quotation.models.map(m => m.model_id) }
+    }).populate({
+      path: 'prices.header_id',
+      select: 'header_key category_key priority metadata'
+    });
+
+    if (models.length !== quotation.models.length) {
+      logger.warn('Some models referenced in quotation no longer exist');
+    }
+
+    // Filter prices to only include creator's branch prices
+    const branchId = creator.branch_id?._id;
+    if (!branchId) {
+      return next(new AppError('Creator must be assigned to a branch', 400));
+    }
+
+    // Get full branch details
+    const branch = await Branch.findById(branchId);
+    if (!branch) {
+      return next(new AppError('Branch not found', 404));
+    }
+
+    const modelsWithBranchPrices = models.map(model => {
+      const filteredPrices = model.prices.filter(price => 
+        price.branch_id && price.branch_id.equals(branchId)
+      );
+      return {
+        ...model.toObject(),
+        prices: filteredPrices
+      };
+    });
+
+    // Find Ex-Showroom header
+    const headers = await Header.find();
+    const exShowroomHeader = headers.find(h => 
+      h.header_key.toLowerCase().includes('ex-showroom') || 
+      h.category_key.toLowerCase().includes('ex-showroom')
+    );
+
+    // Get all offers (same logic as createQuotation)
+    const modelIds = models.map(model => model._id);
+    const allOffers = await Offer.find({
+      isActive: true,
+      $or: [
+        { applyToAllModels: true },
+        { applicableModels: { $in: modelIds } }
+      ]
+    }).populate('applicableModels', 'model_name');
+
+    // Remove duplicate offers
+    const uniqueOffersMap = new Map();
+    allOffers.forEach(offer => {
+      if (!uniqueOffersMap.has(offer._id.toString())) {
+        uniqueOffersMap.set(offer._id.toString(), offer);
+      }
+    });
+    const uniqueOffers = Array.from(uniqueOffersMap.values());
+
+    // Prepare response models
+    const responseModels = await Promise.all(modelsWithBranchPrices.map(async model => {
+      // Find Ex-Showroom price
+      const exShowroomPrice = exShowroomHeader 
+        ? model.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
+        : null;
+
+      // Get series name
+      const seriesMatch = model.model_name.match(/^([A-Za-z0-9]+)/);
+      const series = seriesMatch ? seriesMatch[1] : 'Unknown';
+
+      // Check if this model is the base model
+      const isBaseModel = quotation.base_model_id 
+        ? quotation.base_model_id._id.equals(model._id)
+        : false;
+
+      // Find offers specific to this model
+      const modelOffers = uniqueOffers
+        .filter(offer => 
+          offer.applyToAllModels || 
+          (offer.applicableModels && offer.applicableModels.some(appModel => 
+            appModel && appModel._id && appModel._id.equals(model._id)
+          )
+        ))
+        .map(offer => ({
+          _id: offer._id,
+          title: offer.title,
+          description: offer.description,
+          image: offer.image,
+          url: offer.url,
+          createdAt: offer.createdAt
+        }));
+
+      return {
+        selected_model: {
+          _id: model._id,
+          model_name: model.model_name,
+          prices: model.prices.map(p => ({
+            value: p.value,
+            header_key: p.header_id?.header_key || 'deleted',
+            category_key: p.header_id?.category_key || 'deleted',
+            priority: p.header_id?.priority || 0,
+            metadata: p.header_id?.metadata || {},
+            branch_id: p.branch_id || null
+          })),
+          ex_showroom_price: exShowroomPrice,
+          series: series,
+          createdAt: model.createdAt,
+          is_base_model: isBaseModel,
+          offers: modelOffers
+        }
+      };
+    }));
+
+    // Prepare base model data if it exists
+    let baseModelData = null;
+    if (quotation.base_model_id) {
+      const baseModel = await Model.findById(quotation.base_model_id)
+        .populate({
+          path: 'prices.header_id',
+          select: 'header_key category_key priority metadata'
+        });
+
+      if (baseModel) {
+        // Filter prices for base model to only include creator's branch prices
+        const baseModelWithBranchPrices = {
+          ...baseModel.toObject(),
+          prices: baseModel.prices.filter(price => 
+            price.branch_id && price.branch_id.equals(branchId)
+          )
+        };
+
+        const exShowroomPrice = exShowroomHeader 
+          ? baseModelWithBranchPrices.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
+          : null;
+
+        baseModelData = {
+          _id: baseModel._id,
+          model_name: baseModel.model_name,
+          price: exShowroomPrice,
+          prices: baseModelWithBranchPrices.prices.map(p => ({
+            value: p.value,
+            header_id: {
+              _id: p.header_id._id,
+              header_key: p.header_id.header_key,
+              category_key: p.header_id.category_key
+            },
+            branch_id: p.branch_id
+          })),
+          createdAt: baseModel.createdAt,
+          __v: baseModel.__v,
+          id: baseModel._id
+        };
+      }
+    }
+
+    // Prepare AllModels array with base model first followed by selected models
+    const allModels = [];
+    if (baseModelData) {
+      allModels.push(baseModelData);
+    }
+    allModels.push(...responseModels.map(model => ({
+      _id: model.selected_model._id,
+      model_name: model.selected_model.model_name,
+      prices: model.selected_model.prices,
+      ex_showroom_price: model.selected_model.ex_showroom_price,
+      series: model.selected_model.series,
+      createdAt: model.selected_model.createdAt,
+      is_base_model: model.selected_model.is_base_model
+    })));
+
+    // Prepare the final response
+    const response = {
+      userDetails: {
+        _id: creator._id,
+        username: creator.username,
+        email: creator.email,
+        mobile: creator.mobile,
+        full_name: creator.full_name,
+        branch: branch ? {
+          _id: branch._id,
+          name: branch.name,
+          address: branch.address,
+          city: branch.city,
+          state: branch.state,
+          pincode: branch.pincode,
+          phone: branch.phone,
+          email: branch.email,
+          gst_number: branch.gst_number,
+          is_active: branch.is_active
+        } : null,
+        role: creator.role_id ? {
+          _id: creator.role_id._id,
+          name: creator.role_id.name,
+        } : null
+      },
+      customerDetails: {
+        _id: customer._id,
+        name: customer.name,
+        address: customer.address,
+        taluka: customer.taluka,
+        district: customer.district,
+        mobile1: customer.mobile1,
+        mobile2: customer.mobile2,
+        finance_needed: quotation.finance_needed,
+        createdAt: customer.createdAt
+      },
+      expected_delivery_date: quotation.expected_delivery_date ? 
+        new Date(quotation.expected_delivery_date).toISOString().split('T')[0] : 
+        null,
+      AllModels: allModels,
+      quotation_id: quotation._id,
+      quotation_number: quotation.quotation_number,
+      modelSpecificOffers: responseModels.map(model => ({
+        model_id: model.selected_model._id,
+        model_name: model.selected_model.model_name,
+        offers: model.selected_model.offers
+      })),
+      allUniqueOffers: uniqueOffers.map(offer => {
+        const offerObj = {
+          _id: offer._id,
+          title: offer.title,
+          description: offer.description,
+          image: offer.image,
+          url: offer.url,
+          createdAt: offer.createdAt,
+          applyToAllModels: offer.applyToAllModels,
+          applicableModels: []
+        };
+
+        if (offer.applicableModels && Array.isArray(offer.applicableModels)) {
+          offerObj.applicableModels = offer.applicableModels
+            .filter(model => model && model._id)
+            .map(model => ({
+              _id: model._id,
+              model_name: model.model_name
+            }));
+        }
+
+        return offerObj;
+      })
+    };
+
+    res.status(200).json({
+      status: 'success',
+      data: response
+    });
+  } catch (err) {
+    logger.error(`Error fetching quotation by ID: ${err.message}`);
+    next(err);
+  }
+};
