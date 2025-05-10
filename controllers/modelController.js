@@ -312,43 +312,44 @@ exports.getModelWithPrices = async (req, res, next) => {
       return next(new AppError('Invalid model ID format', 400));
     }
 
-    let query = Model.findById(req.params.modelId);
-
-    // Apply branch filter if provided
-    if (req.query.branch_id) {
-      query = query.where('prices.branch_id').equals(req.query.branch_id);
+    // Validate branch_id if provided
+    if (req.query.branch_id && !mongoose.Types.ObjectId.isValid(req.query.branch_id) && req.query.branch_id !== 'null') {
+      return next(new AppError('Invalid branch ID format', 400));
     }
 
-    // Populate both header and branch information
-    const model = await query.populate({
-      path: 'prices.header_id prices.branch_id',
-      select: 'header_key category_key priority metadata name city'
-    });
+    const model = await Model.findById(req.params.modelId)
+      .populate({
+        path: 'prices.header_id prices.branch_id',
+        select: 'header_key category_key priority metadata name city'
+      });
 
     if (!model) {
       return next(new AppError('No model found with that ID', 404));
     }
 
-    // Filter prices if branch_id was specified
+    // Filter prices based on branch_id (single branch only)
     const filteredPrices = req.query.branch_id 
-      ? model.prices.filter(price => 
-          price.branch_id?._id?.toString() === req.query.branch_id ||
-          (price.branch_id === null && req.query.branch_id === 'null')
-        )
-      : model.prices;
+      ? model.prices.filter(price => {
+          const priceBranchId = price.branch_id?._id?.toString();
+          return (
+            // Match exact branch_id OR include null prices if branch_id='null'
+            (priceBranchId === req.query.branch_id) ||
+            (req.query.branch_id === 'null' && !priceBranchId)
+          );
+        })
+      : model.prices; // Return all if no branch_id specified
 
     const transformedData = {
       _id: model._id,
       model_name: model.model_name,
       prices: filteredPrices.map(price => ({
         value: price.value,
-        header_id: price.header_id?._id || null,  // Include header_id reference
+        header_id: price.header_id?._id || null,
         header_key: price.header_id?.header_key || null,
-        branch_id:price.branch_id?.branch_id || null,
         category_key: price.header_id?.category_key || null,
         priority: price.header_id?.priority || null,
         metadata: price.header_id?.metadata || {},
-        branch_id: price.branch_id?._id || null,  // Include branch_id reference
+        branch_id: price.branch_id?._id || null,
         branch_name: price.branch_id?.name || null,
         branch_city: price.branch_id?.city || null
       })),

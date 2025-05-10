@@ -134,3 +134,754 @@
 {"timestamp":"2025-05-08 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
 {"timestamp":"2025-05-08 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
 {"timestamp":"2025-05-08 11:01:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:01:57","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-08 11:01:57","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-08 11:01:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-08 11:01:58","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-08 11:01:58","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-08 11:01:58","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5001","stack":null}
+{"timestamp":"2025-05-08 11:01:58","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-08 11:01:59","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-08 11:02:03","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:02:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c41d3e4acebdd19ddc7fc","stack":null}
+{"timestamp":"2025-05-08 11:02:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:02:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:02:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:02:04","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:02:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:02:19","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:02:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:02:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:02:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c420be4acebdd19ddc84f","stack":null}
+{"timestamp":"2025-05-08 11:02:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:02:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:03:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:03:24","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:03:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:03:34","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:03:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:04:03","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:04:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c424be4acebdd19ddc89e","stack":null}
+{"timestamp":"2025-05-08 11:04:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:04:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:10:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:10:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:15:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:15:10","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:15:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:15:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:15:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:16:11","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:16:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4523e4acebdd19ddc8fa","stack":null}
+{"timestamp":"2025-05-08 11:16:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:16:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:20:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:20:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:21:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:21:22","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:21:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:21:57","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:21:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c467de4acebdd19ddc949","stack":null}
+{"timestamp":"2025-05-08 11:21:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:21:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:23:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:23:46","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:23:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:23:57","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:26:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:26:11","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:26:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:26:38","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:26:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4796e4acebdd19ddc9a5","stack":null}
+{"timestamp":"2025-05-08 11:26:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:26:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:31:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:31:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:32:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:32:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:32:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:32:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:32:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4913e4acebdd19ddc9f4","stack":null}
+{"timestamp":"2025-05-08 11:32:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:32:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:33:15","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:33:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4923e4acebdd19ddca28","stack":null}
+{"timestamp":"2025-05-08 11:33:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:33:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:33:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:33:32","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:33:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:34:12","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:34:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c495ce4acebdd19ddca6a","stack":null}
+{"timestamp":"2025-05-08 11:34:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:34:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:34:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:34:48","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:34:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:35:17","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:35:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c499de4acebdd19ddcaac","stack":null}
+{"timestamp":"2025-05-08 11:35:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:35:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:35:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:35:56","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:35:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:36:20","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:36:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c49dce4acebdd19ddcaee","stack":null}
+{"timestamp":"2025-05-08 11:36:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:36:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:42:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:42:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:42:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:42:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:42:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4b6be4acebdd19ddcb30","stack":null}
+{"timestamp":"2025-05-08 11:43:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:43:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:44:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:44:14","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:44:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:44:24","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:44:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:44:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:45:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4be3e4acebdd19ddcb7f","stack":null}
+{"timestamp":"2025-05-08 11:45:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:45:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 11:45:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:45:30","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:45:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:45:38","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:56:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 11:56:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 11:56:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 11:57:11","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 11:57:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4ebfe4acebdd19ddcbdb","stack":null}
+{"timestamp":"2025-05-08 11:57:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 11:57:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 12:01:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:01:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:01:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:01:57","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:09:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:09:52","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:09:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 12:10:30","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:10:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 12:10:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 12:10:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 12:10:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:10:31","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:10:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:10:44","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:10:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 12:11:16","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:11:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 12:11:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 12:11:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 12:11:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:11:17","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:12:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:12:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:12:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 12:13:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:13:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c529de4acebdd19ddccd9","stack":null}
+{"timestamp":"2025-05-08 12:13:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 12:13:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 12:17:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:17:47","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:17:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:17:58","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:18:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 12:18:26","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:18:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c53bae4acebdd19ddcd28","stack":null}
+{"timestamp":"2025-05-08 12:18:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 12:18:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 12:18:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:18:27","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:18:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:18:56","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:34:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:34:11","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:34:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:34:36","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-08 12:34:37","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 12:34:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 12:45:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:45:25","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:46:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:46:00","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 12:54:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 12:56:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 12:56:27","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:46:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:46:32","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:46:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 13:48:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:48:18","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:48:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 13:49:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:49:10","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:49:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 13:49:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 13:51:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:51:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:51:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 13:54:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:54:13","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:54:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 13:58:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 13:58:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 13:58:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 14:00:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 14:00:41","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 14:00:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 14:03:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 14:03:59","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 14:04:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 14:11:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 14:11:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-08 14:11:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-08 14:11:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:07:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:07:18","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:07:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:11:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:11:00","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:11:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:13:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:13:27","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:13:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:15:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:15:13","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:15:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:16:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:16:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:16:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:24:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:24:19","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:24:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:30:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:30:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:30:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:33:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c53bae4acebdd19ddcd28","stack":null}
+{"timestamp":"2025-05-08 15:33:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 15:33:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 15:39:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:39:50","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:39:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:39:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c53bae4acebdd19ddcd28","stack":null}
+{"timestamp":"2025-05-08 15:39:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 15:39:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 15:45:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:45:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:45:41","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:45:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:46:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:46:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:46:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:46:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:47:11","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:47:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:47:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:49:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:49:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:49:06","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:49:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:49:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:52:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:52:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 15:52:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 15:52:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 15:52:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:04:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:04:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:04:19","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:04:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:04:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:04:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:04:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:05:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:05:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:05:37","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:05:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:05:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:05:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:06:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:06:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:06:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:27:23","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:27:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:27:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:28:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 16:29:33","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:29:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 16:29:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 16:29:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 16:30:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:30:05","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:30:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:30:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:39:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:39:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:39:10","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:39:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:39:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:39:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:39:38","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:39:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:40:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:40:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:40:41","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:40:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:41:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:41:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:41:47","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:41:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 16:42:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 16:42:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 16:42:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 17:41:20","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 17:41:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:41:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:45:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 17:47:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:47:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 17:47:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 17:47:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 17:50:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:50:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:50:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:58:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 17:58:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 17:58:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 17:58:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:02:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:02:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:02:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:02:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:04:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:04:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:04:44","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:04:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:04:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:04:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:04:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:04:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:05:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:05:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:05:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:05:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:05:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:05:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:05:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:05:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:06:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:06:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:06:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:06:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:06:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:06:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:06:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:06:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:07:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:07:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:07:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:08:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:08:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:08:05","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:08:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:08:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:08:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:08:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:08:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:11:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:11:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:11:02","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:11:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:11:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:11:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:11:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:11:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:11:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:11:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:11:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:12:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c53bae4acebdd19ddcd28","stack":null}
+{"timestamp":"2025-05-08 18:12:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:12:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:14:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c529de4acebdd19ddccd9","stack":null}
+{"timestamp":"2025-05-08 18:14:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:14:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:14:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:14:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:14:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:14:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:14:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:14:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:14:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:14:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:14:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:14:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:14:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:14:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:15:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c53bae4acebdd19ddcd28","stack":null}
+{"timestamp":"2025-05-08 18:15:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c4ebfe4acebdd19ddcbdb","stack":null}
+{"timestamp":"2025-05-08 18:15:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:15:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:15:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:15:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:16:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:16:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:16:14","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:16:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:16:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:16:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:16:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:16:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:17:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c3bf86397e2c19f4869cb","stack":null}
+{"timestamp":"2025-05-08 18:17:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:17:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:18:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c8e95e4acebdd19ddd1cd","stack":null}
+{"timestamp":"2025-05-08 18:18:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:18:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:19:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:19:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:19:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:20:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:20:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:20:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:20:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c51dee4acebdd19ddcc36","stack":null}
+{"timestamp":"2025-05-08 18:20:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:20:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c520ce4acebdd19ddcc87","stack":null}
+{"timestamp":"2025-05-08 18:20:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:20:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681c529de4acebdd19ddccd9","stack":null}
+{"timestamp":"2025-05-08 18:20:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:20:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:22:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:22:46","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:22:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:22:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:22:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:22:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4eb43a47b937ad06c6bd","stack":null}
+{"timestamp":"2025-05-08 18:22:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:22:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b49dfcbdaa070306f6011","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4982cbdaa070306f5ff0","stack":null}
+{"timestamp":"2025-05-08 18:23:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4982cbdaa070306f5ff0","stack":null}
+{"timestamp":"2025-05-08 18:23:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4982cbdaa070306f5ff0","stack":null}
+{"timestamp":"2025-05-08 18:23:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b494dcbdaa070306f5fc4","stack":null}
+{"timestamp":"2025-05-08 18:23:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:23:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:23:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:23:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:23:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4fb53a47b937ad06c742","stack":null}
+{"timestamp":"2025-05-08 18:23:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:23:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:24:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:24:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:24:31","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:24:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:24:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:24:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:24:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:24:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:24:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:24:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:24:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:24:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:24:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:24:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b49dfcbdaa070306f6011","stack":null}
+{"timestamp":"2025-05-08 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:24:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:24:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:24:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:25:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:25:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:25:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:25:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:25:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:25:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:25:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:25:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:25:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:25:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:25:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:25:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:25:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:25:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:25:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:25:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:26:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:26:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:26:54","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:26:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:26:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:26:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:26:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:26:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:27:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:27:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4e243a47b937ad06c664","stack":null}
+{"timestamp":"2025-05-08 18:27:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:27:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4f923a47b937ad06c704","stack":null}
+{"timestamp":"2025-05-08 18:27:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681b4eb43a47b937ad06c6bd","stack":null}
+{"timestamp":"2025-05-08 18:27:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:27:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:27:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:27:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:27:25","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:27:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:27:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-08 18:28:16","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:28:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681caa68e4acebdd19dde37a","stack":null}
+{"timestamp":"2025-05-08 18:28:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:28:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:28:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:28:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:28:31","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:28:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:28:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:28:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:28:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681caa68e4acebdd19dde37a","stack":null}
+{"timestamp":"2025-05-08 18:28:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:28:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:28:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/681caa68e4acebdd19dde37a","stack":null}
+{"timestamp":"2025-05-08 18:28:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-08 18:28:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-08 18:30:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:30:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-08 18:30:40","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-08 18:30:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:30:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:30:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-08 18:30:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
