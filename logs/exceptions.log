@@ -11253,3 +11253,141 @@ SyntaxError: missing ) after argument list
     at require (node:internal/modules/helpers:176:18)
     at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:3:29)
     at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-12 16:20:45 [[31MERROR[39M]: uncaughtException: authController is not defined
+ReferenceError: authController is not defined
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:9:24)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+ReferenceError: authController is not defined
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:9:24)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-05-12 16:57:22 [[31MERROR[39M]: uncaughtException: Identifier 'PDFDocument' has already been declared
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\utils\pdfGenerator.js:6
+const PDFDocument = require('pdfkit');
+      ^
+
+SyntaxError: Identifier 'PDFDocument' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:11:22)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\utils\pdfGenerator.js:6
+const PDFDocument = require('pdfkit');
+      ^
+
+SyntaxError: Identifier 'PDFDocument' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:11:22)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-05-13 10:07:37 [[31MERROR[39M]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:9:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js:9:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js:68:25)
+2025-05-13 10:24:39 [[31MERROR[39M]: uncaughtException: Cannot find module 'handlebars'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+Error: Cannot find module 'handlebars'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:14:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+Error: Cannot find module 'handlebars'
+Require stack:
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\routes\quotationRoutes.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\app.js
+- E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Module._load (node:internal/modules/cjs/loader:985:27)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars\vehicle-quotation-system\controllers\quotationController.js:14:20)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+2025-05-14 15:37:35 [[31MERROR[39M]: uncaughtException: argument handler must be a function
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\routes\quotationRoutes.js:5:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\app.js:70:25)
+TypeError: argument handler must be a function
+    at Route.<computed> [as get] (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\node_modules\router\lib\route.js:228:15)
+    at Router.<computed> [as get] (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\node_modules\router\index.js:448:19)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\routes\quotationRoutes.js:5:8)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system\app.js:70:25)

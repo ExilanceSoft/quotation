@@ -14,8 +14,6 @@ const modelItemSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-
- 
 }, { _id: false });
 
 const quotationSchema = new mongoose.Schema({
@@ -62,7 +60,10 @@ const quotationSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'TermsCondition'
   }],
-
+pdfUrl: {
+    type: String,
+    default: null
+  },
 }, {
   timestamps: true,
   toJSON: { virtuals: true },

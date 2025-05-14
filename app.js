@@ -54,6 +54,8 @@ app.use('/api/uploads', (req, res, next) => {
 });
 
 app.use('/api/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 
 // Logger for all requests
 app.use((req, res, next) => {

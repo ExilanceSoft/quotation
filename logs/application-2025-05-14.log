@@ -1,0 +1,736 @@
+{"timestamp":"2025-05-14 09:57:22","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 09:57:22","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 09:57:22","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 09:57:22","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 09:57:23","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 09:57:23","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 09:57:23","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 09:57:23","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 10:09:32","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:09:33","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid","stack":null}
+{"timestamp":"2025-05-14 10:09:33","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid\n    at exports.createQuotation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:730:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 10:10:27","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:35:09","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:38:16","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 10:38:38","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 10:38:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:39:40","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 10:40:07","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:45:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:46:58","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:48:34","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:50:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 10:57:53","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:10:21","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:21:56","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:25:27","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:34:50","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:34:50","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:34:51","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:34:51","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:34:52","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:34:52","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:34:52","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:34:55","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:35:53","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:37:34","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:37:35","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 11:38:04","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:38:04","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:38:04","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:38:04","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:38:05","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:38:05","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:38:05","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:39:06","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 11:44:29","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:45:06","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:45:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:47:44","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:52:20","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:52:21","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 11:52:23","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:53:12","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:53:12","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:53:12","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:53:12","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:53:13","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:53:13","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:53:13","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:53:39","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:54:03","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:54:04","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 11:54:10","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 11:59:22","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 11:59:22","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 11:59:23","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 11:59:23","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 11:59:23","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 11:59:23","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 11:59:23","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 11:59:37","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:00:25","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 12:04:20","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 12:04:47","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 12:04:48","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 12:04:49","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:15:58","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 12:15:58","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 12:15:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 12:15:58","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 12:16:23","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 12:16:23","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 12:16:23","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 12:16:23","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 12:16:24","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 12:16:24","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 12:16:24","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 12:16:25","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 12:16:55","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 12:20:51","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 12:20:52","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 12:20:56","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:20:56","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 0 finance documents","stack":null}
+{"timestamp":"2025-05-14 12:34:24","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:34:25","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 0 finance documents","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 12:42:13","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 12:42:14","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 12:42:17","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 12:42:17","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 13:29:15","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-14 13:30:22","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 13:30:22","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 13:30:27","level":"\u001b[31MERROR\u001b[39M","message":"❌ MongoDB Connection Error:","stack":null}
+{"timestamp":"2025-05-14 13:32:54","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 13:32:54","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 13:32:54","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 13:32:54","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 13:32:55","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 13:32:55","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 13:32:55","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 13:33:27","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 13:33:33","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 13:33:33","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-14 13:33:33","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 13:39:57","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/branches","stack":null}
+{"timestamp":"2025-05-14 13:39:57","level":"\u001b[32MINFO\u001b[39M","message":"Saving branch: Main Branch","stack":null}
+{"timestamp":"2025-05-14 13:39:57","level":"\u001b[32MINFO\u001b[39M","message":"New branch created: Main Branch by user 68244f322f0ac012ebfb5f29","stack":null}
+{"timestamp":"2025-05-14 13:51:02","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 13:51:02","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 2 finance documents","stack":null}
+{"timestamp":"2025-05-14 13:57:28","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 13:57:28","level":"\u001b[33MWARN\u001b[39M","message":"Attempt to access protected route without token","stack":null}
+{"timestamp":"2025-05-14 13:57:28","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-14 13:57:28","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:17:17)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at Function.handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:186:3)","stack":null}
+{"timestamp":"2025-05-14 13:57:40","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 13:57:40","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 2 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:01:20","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:01:20","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 2 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:03:58","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:03:58","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 2 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:07:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /quotations/quotation_QT-1747211638888-810_1747211638892.pdf","stack":null}
+{"timestamp":"2025-05-14 14:12:17","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 14:12:17","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 14:12:18","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 14:12:18","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 14:12:18","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 14:12:18","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 14:12:18","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 14:12:19","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 14:22:08","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 14:22:08","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 14:22:09","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 14:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 14:22:39","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 14:23:15","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 14:23:16","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 14:24:22","level":"\u001b[32MINFO\u001b[39M","message":"POST /public/quotations/quotation_QT-1747211638888-810_1747211638892.pdf","stack":null}
+{"timestamp":"2025-05-14 14:26:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /favicon.ico","stack":null}
+{"timestamp":"2025-05-14 14:27:55","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:28:00","level":"\u001b[31MERROR\u001b[39M","message":"Error verifying token: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","stack":"MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\sdam\\topology.js:321:38)\n    at async tryOperation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:145:18)\n    at async executeOperation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:75:16)\n    at async FindCursor._initialize (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:61:26)\n    at async FindCursor.cursorInit (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:633:27)\n    at async FindCursor.fetchBatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:667:13)\n    at async FindCursor.next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:347:17)\n    at async Collection.findOne (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongodb\\lib\\collection.js:277:21)\n    at async model.Query._findOne (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongoose\\lib\\query.js:2661:15)\n    at async model.Query.exec (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\mongoose\\lib\\query.js:4456:63)"}
+{"timestamp":"2025-05-14 14:28:00","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-14 14:28:00","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:36:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:29:32","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-14 14:29:37","level":"\u001b[31MERROR\u001b[39M","message":"Error in login process: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","stack":null}
+{"timestamp":"2025-05-14 14:29:37","level":"\u001b[31MERROR\u001b[39M","message":"Error: Server error during login","stack":null}
+{"timestamp":"2025-05-14 14:29:37","level":"\u001b[31MERROR\u001b[39M","message":"Error: Server error during login\n    at exports.login (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\userController.js:292:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:30:31","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-14 14:30:36","level":"\u001b[31MERROR\u001b[39M","message":"Error in login process: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","stack":null}
+{"timestamp":"2025-05-14 14:30:36","level":"\u001b[31MERROR\u001b[39M","message":"Error: Server error during login","stack":null}
+{"timestamp":"2025-05-14 14:30:36","level":"\u001b[31MERROR\u001b[39M","message":"Error: Server error during login\n    at exports.login (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\userController.js:292:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:40:37","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 14:40:37","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 14:40:38","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 14:40:38","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 14:40:39","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 14:40:39","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 14:40:39","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 14:41:22","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-14 14:41:22","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:41:24","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 14:41:24","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to user: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 14:41:39","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 14:41:45","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:41:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:41:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:41:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:41:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 14:42:55","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:42:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:43:03","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:03","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68245e98d6b2f7eb09fa4a01","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68245e9fd6b2f7eb09fa4a15","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 14:43:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 14:43:13","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:43:13","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:43:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:43:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:47:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 14:47:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:47:21","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:47:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:49:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:49:41","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:50:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:50:42","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:51:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /quotations/quotation_QT-1747214442844-824_1747214442851.pdf","stack":null}
+{"timestamp":"2025-05-14 14:52:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 14:52:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:52:07","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 14:52:08","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:52:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:52:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:52:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 14:52:23","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:52:23","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing required fields or invalid data format","stack":null}
+{"timestamp":"2025-05-14 14:52:23","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing required fields or invalid data format\n    at exports.createQuotation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:56:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:33:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:53:12","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:53:12","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:53:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid","stack":null}
+{"timestamp":"2025-05-14 14:53:12","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid\n    at exports.createQuotation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:100:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:55:52","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:55:52","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:55:52","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid","stack":null}
+{"timestamp":"2025-05-14 14:55:52","level":"\u001b[31MERROR\u001b[39M","message":"Error: One or more model IDs are invalid\n    at exports.createQuotation (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:100:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 14:56:18","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:56:18","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 14:59:04","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 14:59:04","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:01:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:01:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:01:38","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:01:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:01:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:01:44","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:01:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 15:02:22","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:22","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:02:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b85","stack":null}
+{"timestamp":"2025-05-14 15:02:28","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:02:28","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:02:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:02:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:02:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:02:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:02:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b85","stack":null}
+{"timestamp":"2025-05-14 15:02:36","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:02:36","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:02:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:02:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:02:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b85","stack":null}
+{"timestamp":"2025-05-14 15:02:39","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:02:39","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:02:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:02:40","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:02:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b85","stack":null}
+{"timestamp":"2025-05-14 15:02:41","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:02:41","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:02:41","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:02:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:02:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:02:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:04:25","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-14 15:04:25","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:04:27","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 15:04:27","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to user: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 15:04:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-05-14 15:04:59","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:04:59","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:04:59","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 15:05:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:05:56","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:06:01","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:06:01","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:06:58","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:07:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /public/quotations/quotation_QT-1747214778912-687.pdf","stack":null}
+{"timestamp":"2025-05-14 15:08:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /favicon.ico","stack":null}
+{"timestamp":"2025-05-14 15:11:00","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:11:00","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:11:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /public/quotations/quotation_QT-1747215142724-260.pdf","stack":null}
+{"timestamp":"2025-05-14 15:11:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /public/quotations/quotation_QT-1747215142724-260.pdf","stack":null}
+{"timestamp":"2025-05-14 15:11:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /public/quotations/quotation_QT-1747215660586-727_1747215660595.pdf%22","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:16:59","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:17:00","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:17:04","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:17:04","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:18:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:20:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:20:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:20:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:20:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:20:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:20:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246698f98c15a89a7e5d32","stack":null}
+{"timestamp":"2025-05-14 15:20:56","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:20:56","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:20:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:20:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:21:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246698f98c15a89a7e5d32","stack":null}
+{"timestamp":"2025-05-14 15:21:59","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:21:59","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:21:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:21:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:23:22","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b78","stack":null}
+{"timestamp":"2025-05-14 15:23:22","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:23:22","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:450:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:24:59","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:24:59","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:25:00","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:25:00","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:25:00","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:25:00","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:25:00","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:25:01","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:25:32","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:25:33","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:26:43","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:26:49","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:26:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:26:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:26:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:26:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:27:45","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:27:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:27:51","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:27:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b78","stack":null}
+{"timestamp":"2025-05-14 15:27:54","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:27:54","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:458:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:30:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b78","stack":null}
+{"timestamp":"2025-05-14 15:30:19","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:30:19","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:458:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:30:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:30:35","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:30:36","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:30:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:31:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 15:31:48","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:31:48","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:31:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:31:53","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:31:53","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:458:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:31:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:31:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:31:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:31:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:31:54","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:31:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:31:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:33:09","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:33:40","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:34:14","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:34:15","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:34:40","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:34:41","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:35:40","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:35:40","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 15:36:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:36:42","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:36:42","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:458:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:37:24","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:37:25","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:38:14","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:38:14","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:38:15","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:38:15","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:38:15","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:38:15","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:38:15","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:38:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:38:19","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:38:19","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:458:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:38:46","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:39:40","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:39:40","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:39:41","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:39:41","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:39:41","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:39:41","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:39:41","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:39:42","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:39:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:39:43","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename","stack":null}
+{"timestamp":"2025-05-14 15:39:43","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid filename\n    at exports.getQuotationPDF (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:744:19)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:664:3)","stack":null}
+{"timestamp":"2025-05-14 15:44:08","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:44:08","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:44:09","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:44:09","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:44:09","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:44:09","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:44:09","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:44:10","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:44:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:44:39","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:44:39","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:44:39","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:44:39","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:44:40","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:44:40","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:44:40","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:44:41","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:47:59","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:48:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 15:48:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b78","stack":null}
+{"timestamp":"2025-05-14 15:48:49","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-14 15:48:49","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 15:49:02","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:49:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b78","stack":null}
+{"timestamp":"2025-05-14 15:49:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Quotation not found","stack":null}
+{"timestamp":"2025-05-14 15:49:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Quotation not found\n    at exports.getQuotationById (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\controllers\\quotationController.js:468:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 15:49:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 15:50:51","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 15:51:53","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 15:52:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246af460c0a85086286335","stack":null}
+{"timestamp":"2025-05-14 15:54:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:54:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:54:54","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:54:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 15:55:42","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 15:55:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:45","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:55:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246af460c0a85086286335","stack":null}
+{"timestamp":"2025-05-14 15:55:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 15:55:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 15:56:30","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 15:56:30","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:22:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:22:20","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:22:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:22:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:22:28","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:22:28","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:27:29","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:27:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:29:02","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:29:02","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:29:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:29:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:30:42","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:141)\n    at prog (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at execIteration (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:51:19)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:61:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:49)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)","stack":null}
+{"timestamp":"2025-05-14 16:31:49","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:31:49","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:31:50","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:31:50","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:31:50","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:31:50","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"groupedDocuments\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:192)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at Object.eval [as main] (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:51:47)\n    at main (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:208:32)\n    at ret (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:212:12)\n    at ret (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\compiler.js:519:21)","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"groupedDocuments\"","stack":null}
+{"timestamp":"2025-05-14 16:32:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"groupedDocuments\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:192)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at Object.eval [as main] (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:51:47)\n    at main (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:208:32)\n    at ret (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:212:12)\n    at ret (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\compiler.js:519:21)","stack":null}
+{"timestamp":"2025-05-14 16:32:29","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:32:29","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:34:16","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:34:16","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:34:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:34:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:34:26","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:34:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:34:28","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:34:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682478b04aed2bc8c0d34852","stack":null}
+{"timestamp":"2025-05-14 16:34:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 16:34:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 16:36:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:36:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:36:05","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:36:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:36:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:36:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682478b04aed2bc8c0d34852","stack":null}
+{"timestamp":"2025-05-14 16:36:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-14 16:36:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-14 16:37:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:37:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:37:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:37:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:37:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:37:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682478b04aed2bc8c0d34852","stack":null}
+{"timestamp":"2025-05-14 16:39:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:39:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:39:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:39:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:39:57","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:233)\n    at prog (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at execIteration (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:51:19)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:61:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:49)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)","stack":null}
+{"timestamp":"2025-05-14 16:40:43","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:40:43","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:42:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:42:04","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:42:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:42:23","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:42:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247a334aed2bc8c0d3496c","stack":null}
+{"timestamp":"2025-05-14 16:42:32","level":"\u001b[32MINFO\u001b[39M","message":"GET //public/quotations/quotation_QT-1747221043763-266_1747221043768.pdf","stack":null}
+{"timestamp":"2025-05-14 16:42:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247a334aed2bc8c0d3496c","stack":null}
+{"timestamp":"2025-05-14 16:42:39","level":"\u001b[32MINFO\u001b[39M","message":"GET //public/quotations/quotation_QT-1747221043763-266_1747221043768.pdf","stack":null}
+{"timestamp":"2025-05-14 16:42:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:42:42","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"","stack":null}
+{"timestamp":"2025-05-14 16:43:17","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"mod\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:233)\n    at prog (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at execIteration (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:51:19)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:61:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:49)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)","stack":null}
+{"timestamp":"2025-05-14 16:43:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:43:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:43:21","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:43:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:43:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:43:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247acd4aed2bc8c0d34a0f","stack":null}
+{"timestamp":"2025-05-14 16:43:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247acd4aed2bc8c0d34a0f","stack":null}
+{"timestamp":"2025-05-14 16:43:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247aaa4aed2bc8c0d349f9","stack":null}
+{"timestamp":"2025-05-14 16:43:59","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:43:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247a334aed2bc8c0d3496c","stack":null}
+{"timestamp":"2025-05-14 16:43:59","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:44:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:44:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 16:44:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:44:42","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:44:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247b224aed2bc8c0d34acc","stack":null}
+{"timestamp":"2025-05-14 16:44:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:44:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:44:57","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:44:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:44:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:44:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:04","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:45:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:47:40","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:47:40","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:47:41","level":"\u001b[31MERROR\u001b[39M","message":"PDF generation error: Missing helper: \"add\"","stack":null}
+{"timestamp":"2025-05-14 16:47:41","level":"\u001b[31MERROR\u001b[39M","message":"Error in quotation preparation: Missing helper: \"add\"","stack":null}
+{"timestamp":"2025-05-14 16:47:41","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"add\"","stack":null}
+{"timestamp":"2025-05-14 16:47:41","level":"\u001b[31MERROR\u001b[39M","message":"Error: Missing helper: \"add\"\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\helper-missing.js:19:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:96)\n    at prog (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at execIteration (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:51:19)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\each.js:61:13)\n    at Object.wrapper (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\internal\\wrapHelper.js:15:19)\n    at eval (eval at createFunctionContext (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\compiler\\javascript-compiler.js:262:23), <anonymous>:11:49)\n    at Object.prog [as fn] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\runtime.js:268:12)\n    at Object.<anonymous> (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\handlebars\\dist\\cjs\\handlebars\\helpers\\if.js:29:22)","stack":null}
+{"timestamp":"2025-05-14 16:48:51","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:48:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:49:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:49:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:49:33","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:49:34","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:53:21","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:53:21","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:54:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:54:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 16:54:16","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 16:54:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:54:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:54:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247d2a4aed2bc8c0d34bab","stack":null}
+{"timestamp":"2025-05-14 16:57:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68247d2a4aed2bc8c0d34bab","stack":null}
+{"timestamp":"2025-05-14 16:58:34","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:58:34","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 16:59:44","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 16:59:44","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:00:14","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:00:14","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:00:39","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:00:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:01:31","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:01:31","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:03:39","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:03:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:04:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:04:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-14 17:05:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:05:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:05:31","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:05:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:06:51","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:06:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:08:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:08:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:08:59","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:08:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:09:50","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:09:51","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:11:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:11:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:11:15","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:11:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:11:18","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:11:18","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
+{"timestamp":"2025-05-14 17:11:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:15:41","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
