@@ -92,6 +92,20 @@ app.use('/api/models', modelRoutes);
 app.use('/api/csv', csvRoutes);
 app.use('/api/offers', offerRoutes);
 
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '1y',
+  immutable: true,
+  setHeaders: (res, path) => {
+    if (path.endsWith('.png')) {
+      res.setHeader('Content-Type', 'image/png');
+    }
+  }
+}));
+app.get('/logo.png', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/images/logo.png'));
+});
+
+
 // Health Check Endpoint
 app.get('/health', (req, res) => {
   const dbStatus = mongoose.connection.readyState === 1 ? 'connected' : 'disconnected';

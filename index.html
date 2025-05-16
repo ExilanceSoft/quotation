@@ -11,18 +11,20 @@
       padding: 15px;
       font-size: 12px;
     }
-    .offer-section {
-  margin: 0;
-  padding: 0;
-  font-size: 11px;
-}
+    .fixed-columns th,
+    .fixed-columns td {
+      width: 25%; /* For 4 columns (100%/4) */
+    }
     .branch-name {
       text-transform: uppercase;
       font-size: 16px;
       font-weight: bold;
       margin-bottom: 3px;
     }
-
+    .thank-you,
+    .optional-services {
+      font-weight: bold;
+    }
     .header {
       display: flex;
       justify-content: space-between;
@@ -32,17 +34,17 @@
       margin-bottom: 10px;
     }
     .sec{
-       border-bottom: 1px solid #0000002a;
+      border-bottom: 1px solid #0000002a;
     }
 
     .header-left, .header-center, .header-right {
       flex: 1;
     }
     .terms-condition-item {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  line-height: 1.2;
-}
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      line-height: 1.2;
+    }
     .company-address,
     .company-contact,
     .company-gst {
@@ -85,6 +87,11 @@
       padding-bottom: 3px;
       margin-bottom: 5px;
       font-size: 12px;
+    }
+    
+    .offers-title{
+      font-weight: bold;
+      font-size: 16px;
     }
 
     .customer-info {
@@ -178,6 +185,42 @@
     .document-name {
       flex-grow: 1;
     }
+    
+    .thank-you {
+      border-top: 1px solid #00000030;
+      margin: 10px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .optional-services {
+      border-top: 1px solid #00000030;
+      margin: 10px 0 15px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .price-disclaimer {
+      margin: 10px 0;
+      font-size: 11px;
+      text-align: justify;
+      line-height: 1.4;
+    }
+    
+    .terms-and-signature-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    
+    .terms-container {
+      width: 70%;
+    }
+    
+    .signature-container {
+      width: 25%;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -194,7 +237,9 @@
       <div class="quotation-title">QUOTATION</div>
     </div>
     <div class="header-right">
-      <img src="public\images\logo.png" alt="Company Logo" class="company-logo" />
+      {{#if logoBase64}}
+        <img src="{{logoBase64}}" alt="Company Logo" class="company-logo" />
+      {{/if}}
     </div>
   </div>
 
@@ -212,60 +257,90 @@
   <div class="customer-info">
     <div class="info-line"><strong>Name:</strong> {{customerDetails.name}}</div>
     <div class="info-line"><strong>Address:</strong> {{customerDetails.address}}</div>
-    <div class="info-line">
-      <strong>Taluka:</strong> {{customerDetails.taluka}}
-      <span style="display: inline-block; width: 426px !important;"></span>
-      <strong>District:</strong> {{customerDetails.district}}
-    </div>
-    <div class="info-line">
-      <strong>Mobile 1:</strong> {{customerDetails.mobile1}}
-      {{#if customerDetails.mobile2}}
-      <span style="display: inline-block; width: 249px !important;"></span>
-      <strong>Mobile 2:</strong> {{customerDetails.mobile2}}
-      {{/if}}
-    </div>
+<div class="info-container">
+  <div class="info-line">
+    <div class="info-item"><strong>Taluka:</strong> {{customerDetails.taluka}}</div>
+    <div class="info-item"><strong>Mobile 1:</strong> {{customerDetails.mobile1}}</div>
+  </div>
+  <div class="info-line">
+    <div class="info-item"><strong>District:</strong> {{customerDetails.district}}</div>
+    {{#if customerDetails.mobile2}}
+    <div class="info-item"><strong>Mobile 2:</strong> {{customerDetails.mobile2}}</div>
+    {{/if}}
+  </div>
+</div>
+
   </div>
 
-  <!-- Vehicle Details Table -->
-  <div class="section">
+<div class="section">
     <div class="section sec">
       <h4 style="margin-top:-14px">Dear Sir,</h4>
       <p style="margin-top: -18px;margin-bottom: 0px;">As per inquiry, we are pleased to quote the current prices for below mentioned models as under:</p>
     </div>
-    <table class="table">
+    <table class="table fixed-columns">
       <thead>
         <tr>
           <th>Model Name</th>
-          {{#if base_model}}<th>{{base_model.model_name}}</th>{{/if}}
-          {{#each selectedModels}}<th>{{model_name}}</th>{{/each}}
+          {{#each AllModels}}
+            {{#if (lt @index 3)}} <!-- Show only first 3 models -->
+              <th>{{model_name}}</th>
+            {{/if}}
+          {{/each}}
+          <!-- Fill remaining columns if less than 3 models -->
+          {{#if (lt AllModels.length 3)}}
+            {{#times (math 3 "-" AllModels.length)}}
+              <th>Selected Model</th>
+            {{/times}}
+          {{/if}}
         </tr>
       </thead>
       <tbody>
-        {{#each selectedModels.[0].prices}}
+        {{#each (or AllModels.[0].prices [])}}
           {{#if (eq category_key "vehicle_price")}}
           <tr>
             <td>{{header_key}}</td>
-            {{#if ../base_model}}
+            <!-- First model price -->
             <td class="text-right">
-              {{#with (findPrice ../base_model.prices header_key)}}
-              {{formatCurrency this}}
-              {{/with}}
+              {{#if ../AllModels.[0]}}
+                {{#with (findPrice ../AllModels.[0].prices header_key)}}
+                  {{formatCurrency this}}
+                {{else}}
+                  ₹0
+                {{/with}}
+              {{else}}
+                ₹0
+              {{/if}}
             </td>
-            {{/if}}
-            {{#each ../selectedModels}}
+            <!-- Second model price -->
             <td class="text-right">
-              {{#with (findPrice prices ../header_key)}}
-              {{formatCurrency this}}
-              {{/with}}
+              {{#if ../AllModels.[1]}}
+                {{#with (findPrice ../AllModels.[1].prices header_key)}}
+                  {{formatCurrency this}}
+                {{else}}
+                  ₹0
+                {{/with}}
+              {{else}}
+                ₹0
+              {{/if}}
             </td>
-            {{/each}}
+            <!-- Third model price -->
+            <td class="text-right">
+              {{#if ../AllModels.[2]}}
+                {{#with (findPrice ../AllModels.[2].prices header_key)}}
+                  {{formatCurrency this}}
+                {{else}}
+                  ₹0
+                {{/with}}
+              {{else}}
+                ₹0
+              {{/if}}
+            </td>
           </tr>
           {{/if}}
         {{/each}}
       </tbody>
     </table>
   </div>
-  
   <div style="border-bottom: 1px solid #0000002a;">
     <div class="section" style="text-align: right; margin-top: -11px;">
       <p><strong>Finance Needed:</strong> {{#if customerDetails.finance_needed}}Yes{{else}}No{{/if}}</p>
@@ -279,51 +354,135 @@
   </div>
   
   <!-- Finance Documents Section -->
-{{#if customerDetails.finance_needed}}
-<div class="section">
-  <div class="section-title">Documents Required for Finance:-</div>
-  <div style="display: flex; flex-wrap: wrap; margin-left: -5px; margin-right: -5px;">
-    {{#each financeDocuments}}
-      <div style="flex: 0 0 25%; max-width: 25%; padding: 0 5px; box-sizing: border-box; display: flex; align-items: center;">
-        <span style="margin-right: 5px;">*</span>
-        <input type="checkbox" style="margin-right: 5px;">
-        <span style="font-size: 11px; white-space: nowrap;">
-          <strong>{{name}}:</strong>{{description}}
-        </span>
-        {{#unless @last}},{{/unless}}
-      </div>
-    {{/each}}
-  </div>
-</div>
-{{/if}}
-  
-  <!-- Terms & Conditions Section -->
- {{#if termsConditions.length}}
-<div class="section">
-  <div class="section-title">Terms and Conditions::</div>
-  <div style="margin-top: -5px;">
-    {{#each termsConditions}}
-    <div class="terms-condition-item" style="margin-bottom: 0; line-height: 1.2;">
-      <div>{{math @index "+" 1}}). {{content}}</div>
+  {{#if customerDetails.finance_needed}}
+  <div class="section">
+    <div class="section-title">Documents Required for Finance:-</div>
+    <div style="display: flex; flex-wrap: wrap; margin-left: -5px; margin-right: -5px;">
+      {{#each financeDocuments}}
+        <div style="flex: 0 0 25%; max-width: 25%; padding: 0 5px; box-sizing: border-box; display: flex; align-items: center;">
+          <span style="margin-right: 5px;">*</span>
+          <input type="checkbox" style="margin-right: 5px;">
+          <span style="font-size: 11px; white-space: nowrap;">
+            <strong>{{name}}:</strong>{{description}}
+          </span>
+          {{#unless @last}},{{/unless}}
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
-{{/if}}
+  {{/if}}
 
-<div class="section">
-  <div class="section-title">OFFER:</div>
-  <div class="offer-section" style="margin-top: -22px;">
-    <p style="margin-bottom: 0;"><strong>Right Place - Right Price</strong></p>
-    <p style="text-align: justify; line-height: 1.4; margin-top: 2px;">
-      प्रिय ग्राहक, नवीन वाहन खरेदी हा प्रत्येक ग्राहकाच्या जीवनातील एक सदाचा क्षण असतो या व्यवहारात पारदर्शिता असावी म्हणूनच आम्ही आपणास सविस्तर कोटेशन देत आहोत जेणेकरून आपली फसवणूक होऊ नये अनेक ठिकाणी विक्रेते आपणास कमी किमतीचे / डिस्काउंट चे अमिश दाखवून दिशाभूल करतात. लक्षात असू द्या -आपणास फसवले जाऊ शकते- जसे कि इन्शुरन्स मध्ये zero debt कव्हर न देणे, १५ लाखाचा पी ए कव्हर न देणे, आर.एस.ए. कव्हर न देणे दुय्यम / हलक्या दर्जाच्या नॉन टीव्हीएस बँड च्या विना वॉरंटीच्या एक्सेसरीज देणे, आयएसआय मानांकित ओरिजिनल टीव्हीएस च्या सुरक्षित हेल्मेट ऐवजी हलक्या क्वालिटीचे तकलादू हेल्मेट देणे, वाहनाबरोबरचे स्टँडर्ड फिटमेंट्स चे पार्टस न देणे आणि नंतर त्याचेच वेगळे पैसे आकारणे ई. आपण तर जागरूक ग्राहक आहात ! जवळच्या फायद्यासाठी लांबचे नुकसान होऊ देऊ नका. पुढील किमान सहा वर्ष हमखास सेवा मिळेल अशाच ठिकाणी तुमच्या स्वपातील वाहन खरेदी करा. Trust Value Service करिता वाहन सेवेतील सर्वोत्कृष्ट गांधी टीव्हीएस ची निवड करा ! याबाबत काहीही शंका असेल तर शोरूम व्यवस्थापक श्री सागर देशमुख यांचेशी मोबाईल नबरं ९१६८५३३०००वर नक्की संपर्क " करा आणि आम्हाला तुमच्या सेवेची संधी द्या ! Gandhi TVS = Right Place - Right Price"
-    </p>
+  <!-- Terms & Conditions Section -->
+  {{#if termsConditions.length}}
+  <div class="section">
+    <div class="section-title">Terms and Conditions::</div>
+    <div class="terms-and-signature-container">
+      <div class="terms-container" style="margin-top: -5px;">
+        {{#each termsConditions}}
+        <div class="terms-condition-item" style="margin-bottom: 0; line-height: 1.2;">
+          <div>{{math @index "+" 1}}). {{content}}</div>
+        </div>
+        {{/each}}
+      </div>
+      <!-- Signature Section -->
+      <div class="signature-container">
+        <div>For {{userDetails.branch.name}}</div>
+        <div class="signature-line"></div>
+        <div>Authorised Signatory</div>
+      </div>
+    </div>
   </div>
-</div>
+  {{/if}}
+
+  <div class="section">
+    <div class="section-title">OFFER:</div>
+    <div class="offer-section" style="margin-top: -22px;">
+      <p style="margin-bottom: 0;"><strong style="font-size: 16px; font-style: italic;">Right Place - Right Price</strong></p>
+      <p style="text-align: justify; line-height: 1.4; margin-top: 2px;">
+        प्रिय ग्राहक, नवीन वाहन खरेदी हा प्रत्येक ग्राहकाच्या जीवनातील एक सदाचा क्षण असतो या व्यवहारात पारदर्शिता असावी म्हणूनच आम्ही आपणास सविस्तर कोटेशन देत आहोत जेणेकरून आपली फसवणूक होऊ नये अनेक ठिकाणी विक्रेते आपणास कमी किमतीचे / डिस्काउंट चे अमिश दाखवून दिशाभूल करतात. लक्षात असू द्या -आपणास फसवले जाऊ शकते- जसे कि इन्शुरन्स मध्ये zero debt कव्हर न देणे, १५ लाखाचा पी ए कव्हर न देणे, आर.एस.ए. कव्हर न देणे दुय्यम / हलक्या दर्जाच्या नॉन टीव्हीएस बँड च्या विना वॉरंटीच्या एक्सेसरीज देणे, आयएसआय मानांकित ओरिजिनल टीव्हीएस च्या सुरक्षित हेल्मेट ऐवजी हलक्या क्वालिटीचे तकलादू हेल्मेट देणे, वाहनाबरोबरचे स्टँडर्ड फिटमेंट्स चे पार्टस न देणे आणि नंतर त्याचेच वेगळे पैसे आकारणे ई. आपण तर जागरूक ग्राहक आहात ! जवळच्या फायद्यासाठी लांबचे नुकसान होऊ देऊ नका. पुढील किमान सहा वर्ष हमखास सेवा मिळेल अशाच ठिकाणी तुमच्या स्वपातील वाहन खरेदी करा. Trust Value Service करिता वाहन सेवेतील सर्वोत्कृष्ट गांधी टीव्हीएस ची निवड करा ! याबाबत काहीही शंका असेल तर शोरूम व्यवस्थापक श्री सागर देशमुख यांचेशी मोबाईल नबरं ९१६८५३३०००वर नक्की संपर्क " करा आणि आम्हाला तुमच्या सेवेची संधी द्या ! Gandhi TVS = Right Place - Right Price"
+      </p>
+    </div>
+  </div>
+
+  <!-- Thank You Section -->
+  <div class="thank-you">
+    Thanking You and assuring you of our best services at all times.
+  </div>
+  
+  <!-- Optional Services Section -->
+  <div class="optional-services">
+    Apart from the above we also provide below mentioned addon services and accessories which are optional:-
+  </div>
+<!-- Accessories Table -->
+<table class="table fixed-columns">
+  <thead>
+    <tr>
+      <th>Description</th>
+      {{#each AllModels}}
+        {{#if (lt @index 3)}} <!-- Show only first 3 models -->
+          <th>{{model_name}}</th>
+        {{/if}}
+      {{/each}}
+      <!-- Fill remaining columns if less than 3 models -->
+      {{#if (lt AllModels.length 3)}}
+        {{#times (math 3 "-" AllModels.length)}}
+          <th>Selected Model</th>
+        {{/times}}
+      {{/if}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each (or AllModels.[0].prices [])}}
+      {{#if (or (eq category_key "add-on-services") (eq category_key "accessories"))}}
+      <tr>
+        <td>{{header_key}}</td>
+        <!-- First model price -->
+        <td class="text-right">
+          {{#if ../AllModels.[0]}}
+            {{#with (findPrice ../AllModels.[0].prices header_key)}}
+              {{formatCurrency this}}
+            {{else}}
+              ₹0
+            {{/with}}
+          {{else}}
+            ₹0
+          {{/if}}
+        </td>
+        <!-- Second model price -->
+        <td class="text-right">
+          {{#if ../AllModels.[1]}}
+            {{#with (findPrice ../AllModels.[1].prices header_key)}}
+              {{formatCurrency this}}
+            {{else}}
+              ₹0
+            {{/with}}
+          {{else}}
+            ₹0
+          {{/if}}
+        </td>
+        <!-- Third model price -->
+        <td class="text-right">
+          {{#if ../AllModels.[2]}}
+            {{#with (findPrice ../AllModels.[2].prices header_key)}}
+              {{formatCurrency this}}
+            {{else}}
+              ₹0
+            {{/with}}
+          {{else}}
+            ₹0
+          {{/if}}
+        </td>
+      </tr>
+      {{/if}}
+    {{/each}}
+  </tbody>
+</table>
+
+
   <!-- Offers Section -->
   {{#if allUniqueOffers.length}}
   <div class="section">
-    <div class="section-title">OFFERS</div>
+    <div class="offers-title">OFFERS</div>
     {{#each allUniqueOffers}}
     <div class="offer-section">
       <p><strong>{{title}}</strong></p>
@@ -332,60 +491,5 @@
     {{/each}}
   </div>
   {{/if}}
-
-  <!-- Accessories Table -->
-  <div class="section">
-    <div class="section-title">ACCESSORIES</div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Description</th>
-          {{#if base_model}}<th>{{base_model.model_name}}</th>{{/if}}
-          {{#each selectedModels}}<th>{{model_name}}</th>{{/each}}
-        </tr>
-      </thead>
-      <tbody>
-        {{#each selectedModels.[0].prices}}
-          {{#if (or (eq category_key "AddONservices") (eq category_key "Accesories"))}}
-          <tr>
-            <td>{{header_key}}</td>
-            {{#if ../base_model}}
-            <td class="text-right">
-              {{#with (findPrice ../base_model.prices header_key)}}
-              {{formatCurrency this}}
-              {{/with}}
-            </td>
-            {{/if}}
-            {{#each ../selectedModels}}
-            <td class="text-right">
-              {{#with (findPrice prices ../header_key)}}
-              {{formatCurrency this}}
-              {{/with}}
-            </td>
-            {{/each}}
-          </tr>
-          {{/if}}
-        {{/each}}
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Contact Person -->
-  <div class="section">
-    <p><strong>Contact Person:</strong> {{userDetails.full_name}} ({{userDetails.mobile}})</p>
-  </div>
-
-  <!-- Signature Section -->
-  <div class="signature-block">
-    <div>
-      <div>Customer Signature</div>
-      <div class="signature-line"></div>
-    </div>
-    <div>
-      <div>For {{userDetails.branch.name}}</div>
-      <div class="signature-line"></div>
-      <div>Authorised Signatory</div>
-    </div>
-  </div>
 </body>
 </html>

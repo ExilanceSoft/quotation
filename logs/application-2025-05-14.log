@@ -734,3 +734,101 @@
 {"timestamp":"2025-05-14 17:11:18","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 12 finance documents","stack":null}
 {"timestamp":"2025-05-14 17:11:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
 {"timestamp":"2025-05-14 17:15:41","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-05-14 17:32:57","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 17:32:57","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:32:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:32:59","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:32:59","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 17:33:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:33:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824815e4aed2bc8c0d34d30","stack":null}
+{"timestamp":"2025-05-14 17:34:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824815e4aed2bc8c0d34d30","stack":null}
+{"timestamp":"2025-05-14 17:36:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:36:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:36:13","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:36:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:36:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:36:24","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824781e4aed2bc8c0d34812","stack":null}
+{"timestamp":"2025-05-14 17:36:27","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682478384aed2bc8c0d34827","stack":null}
+{"timestamp":"2025-05-14 17:36:31","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682478454aed2bc8c0d3483c","stack":null}
+{"timestamp":"2025-05-14 17:36:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824602dd6b2f7eb09fa4aac","stack":null}
+{"timestamp":"2025-05-14 17:36:46","level":"\u001b[33MWARN\u001b[39M","message":"Some models referenced in quotation no longer exist","stack":null}
+{"timestamp":"2025-05-14 17:36:49","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824606ad6b2f7eb09fa4ac3","stack":null}
+{"timestamp":"2025-05-14 17:36:49","level":"\u001b[33MWARN\u001b[39M","message":"Some models referenced in quotation no longer exist","stack":null}
+{"timestamp":"2025-05-14 17:36:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682461bad6b2f7eb09fa4b27","stack":null}
+{"timestamp":"2025-05-14 17:36:52","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246260d6b2f7eb09fa4b3d","stack":null}
+{"timestamp":"2025-05-14 17:36:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246326d6b2f7eb09fa4b85","stack":null}
+{"timestamp":"2025-05-14 17:36:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824652c8aba2b872f4ce298","stack":null}
+{"timestamp":"2025-05-14 17:36:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246698f98c15a89a7e5d32","stack":null}
+{"timestamp":"2025-05-14 17:36:57","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/682468e1968446961d8abcae","stack":null}
+{"timestamp":"2025-05-14 17:37:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246a0c968446961d8abd0c","stack":null}
+{"timestamp":"2025-05-14 17:37:05","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/68246af460c0a85086286335","stack":null}
+{"timestamp":"2025-05-14 17:37:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:37:12","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:37:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:37:14","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:41:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:41:15","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:41:15","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:41:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:41:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:43:53","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 17:43:53","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 17:43:54","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:43:58","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 17:44:00","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 18:22:03","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 18:22:06","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 18:22:14","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 18:22:15","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-14 18:22:37","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-14 18:22:38","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found","stack":null}
+{"timestamp":"2025-05-14 18:24:16","level":"\u001b[31MERROR\u001b[39M","message":"Error: User not found\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:30:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-05-14 18:24:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:24:17","level":"\u001b[33MWARN\u001b[39M","message":"Attempt to access protected route without token","stack":null}
+{"timestamp":"2025-05-14 18:24:17","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-05-14 18:24:17","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\middlewares\\auth.js:17:17)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:295:15\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:582:12)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:291:5)\n    at Function.handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system\\node_modules\\router\\index.js:186:3)","stack":null}
+{"timestamp":"2025-05-14 18:24:35","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-14 18:24:35","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 18:24:37","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 18:24:37","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to user: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 18:24:54","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-05-14 18:24:54","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 18:24:54","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-05-14 18:24:54","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: softcrowdtest038@gmail.com","stack":null}
+{"timestamp":"2025-05-14 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-05-14 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-05-14 18:24:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:24:56","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations","stack":null}
+{"timestamp":"2025-05-14 18:25:01","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/6824815e4aed2bc8c0d34d30","stack":null}
+{"timestamp":"2025-05-14 18:25:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /public/quotations/quotation_QT-1747226919763-767_1747226919764.pdf","stack":null}

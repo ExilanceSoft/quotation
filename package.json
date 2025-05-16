@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env DEBUG=* nodemon server.js"
+    "dev": "cross-env NODE_ENV=development DEBUG=* nodemon server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "prestart": "mkdir -p public/images && cp -R src/assets/images/* public/images/",
+    "postinstall": "npm run prestart"
   },
   "keywords": [],
   "author": "",

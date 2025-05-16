@@ -4,6 +4,7 @@
       "models",
       "routes",
       "app.js",
+      "public/images",
       "server.js"
     ],
     "ignore": [
