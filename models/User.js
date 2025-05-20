@@ -22,16 +22,18 @@ const userSchema = new mongoose.Schema({
       'Please add a valid email'
     ]
   },
-  mobile: {
-    type: String,
-    required: [true, 'Please add a mobile number'],
-    unique: true,
-    trim: true,
-    match: [
-      /^[0-9]{10}$/,
-      'Please add a valid 10-digit mobile number'
-    ]
-  },
+ mobile: {
+  type: String,
+  required: [true, 'Please add a mobile number'],
+  unique: true,
+  trim: true,
+  validate: {
+    validator: function(v) {
+      return /^[0-9]{10}$/.test(v);
+    },
+    message: props => `${props.value} is not a valid 10-digit mobile number!`
+  }
+},
   full_name: {
     type: String,
     required: [true, 'Please add a full name'],

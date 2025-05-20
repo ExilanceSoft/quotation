@@ -8,6 +8,7 @@ router.post('/register-super-admin', userController.registerSuperAdmin);
 router.post('/login', userController.login);
 router.post('/verify-otp', userController.verifyOTP);
 
+
 // Protected routes below
 router.use(protect);
 

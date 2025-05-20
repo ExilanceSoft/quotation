@@ -76,6 +76,7 @@ const modelRoutes = require('./routes/modelRoutes');
 const csvRoutes = require('./routes/csvRoutes');
 const offerRoutes = require('./routes/offerRoutes');
 const customerRoutes = require('./routes/customerRoutes');
+const attachmentRoutes = require('./routes/attachmentRoutes');
 
 
 // Mount Routes
@@ -91,6 +92,7 @@ app.use('/api/headers', headerRoutes);
 app.use('/api/models', modelRoutes);
 app.use('/api/csv', csvRoutes);
 app.use('/api/offers', offerRoutes);
+app.use('/api/attachment',attachmentRoutes);
 
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '1y',

@@ -6,41 +6,46 @@ const mongoose = require('mongoose');
 
 // modelController.js
 exports.createModel = async (req, res, next) => {
-    try {
-      const { model_name, prices = [] } = req.body;
-  
-      // Validate model name
-      if (!model_name || typeof model_name !== 'string') {
-        return next(new AppError('Model name is required and must be a string', 400));
-      }
-  
-      // Check if model already exists
-      const existingModel = await Model.findOne({ model_name });
-      if (existingModel) {
-        return next(new AppError('Model with this name already exists', 400));
-      }
-  
-      const newModel = await Model.create({
-        model_name,
-        prices
-      });
-  
-      res.status(201).json({
-        status: 'success',
-        data: {
-          model: {
-            _id: newModel._id,
-            model_name: newModel.model_name,
-            prices: newModel.prices,
-            createdAt: newModel.createdAt
-          }
-        }
-      });
-    } catch (err) {
-      logger.error(`Error creating model: ${err.message}`);
-      next(err);
+  try {
+    const { model_name, type, prices = [] } = req.body;
+
+    // Validate model name and type
+    if (!model_name || typeof model_name !== 'string') {
+      return next(new AppError('Model name is required and must be a string', 400));
     }
-  };
+    if (!type || !['EV', 'IC'].includes(type.toUpperCase())) {
+      return next(new AppError('Type is required and must be either EV or IC', 400));
+    }
+
+    // Check if model already exists
+    const existingModel = await Model.findOne({ model_name });
+    if (existingModel) {
+      return next(new AppError('Model with this name already exists', 400));
+    }
+
+    const newModel = await Model.create({
+      model_name,
+      type: type.toUpperCase(),
+      prices
+    });
+
+    res.status(201).json({
+      status: 'success',
+      data: {
+        model: {
+          _id: newModel._id,
+          model_name: newModel.model_name,
+          type: newModel.type,
+          prices: newModel.prices,
+          createdAt: newModel.createdAt
+        }
+      }
+    });
+  } catch (err) {
+    logger.error(`Error creating model: ${err.message}`);
+    next(err);
+  }
+};
 
 
   exports.getModelById = async (req, res, next) => {

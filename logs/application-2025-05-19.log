@@ -1,0 +1,77 @@
+{"timestamp":"2025-05-19 12:01:27","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-05-19 12:01:27","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5002","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-05-19 12:01:28","level":"\u001b[32MINFO\u001b[39M","message":"Email transporter is ready","stack":null}
+{"timestamp":"2025-05-19 12:18:43","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-05-19 12:18:43","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: superadmin","stack":null}
+{"timestamp":"2025-05-19 12:18:46","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to harshali4827@gmail.com","stack":null}
+{"timestamp":"2025-05-19 12:18:46","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to user: harshali4827@gmail.com","stack":null}
+{"timestamp":"2025-05-19 12:19:18","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-05-19 12:19:18","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: superadmin","stack":null}
+{"timestamp":"2025-05-19 12:19:18","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: superadmin","stack":null}
+{"timestamp":"2025-05-19 12:19:18","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: harshali4827@gmail.com","stack":null}
+{"timestamp":"2025-05-19 12:20:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 12:20:03","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 12:20:03","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 12:20:03","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:36:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:36:22","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:36:36","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:36:36","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:37:07","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles/681aedd97852fda85cc87ce8","stack":null}
+{"timestamp":"2025-05-19 15:37:11","level":"\u001b[32MINFO\u001b[39M","message":"Fetched role: sales by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:16","level":"\u001b[32MINFO\u001b[39M","message":"PUT /api/roles/681aedd97852fda85cc87ce8","stack":null}
+{"timestamp":"2025-05-19 15:37:17","level":"\u001b[32MINFO\u001b[39M","message":"Updated role: sales by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:19","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:37:19","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:37:25","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:37:25","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:39","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users","stack":null}
+{"timestamp":"2025-05-19 15:37:39","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 users by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:37:46","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:37:46","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:46","level":"\u001b[32MINFO\u001b[39M","message":"Fetched user: superadmin","stack":null}
+{"timestamp":"2025-05-19 15:37:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users","stack":null}
+{"timestamp":"2025-05-19 15:37:48","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 users by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/roles","stack":null}
+{"timestamp":"2025-05-19 15:37:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:37:50","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 roles by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:37:55","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users","stack":null}
+{"timestamp":"2025-05-19 15:37:55","level":"\u001b[32MINFO\u001b[39M","message":"Fetched 4 users by 681aef8e6735e18d7968a477","stack":null}
+{"timestamp":"2025-05-19 15:38:06","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:11","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches/681dd77b729bcfb7d193229c","stack":null}
+{"timestamp":"2025-05-19 15:38:13","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-19 15:38:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-19 15:38:18","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:30","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/6824615e2a3ac06026a096eb/with-prices?branch_id=681dd77b729bcfb7d193229c","stack":null}
+{"timestamp":"2025-05-19 15:38:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-19 15:38:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-19 15:38:33","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:37","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models/all/with-prices?branch_id=681dd77b729bcfb7d193229c","stack":null}
+{"timestamp":"2025-05-19 15:38:43","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-19 15:38:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-19 15:38:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers","stack":null}
+{"timestamp":"2025-05-19 15:38:50","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/branches","stack":null}
+{"timestamp":"2025-05-19 15:38:59","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-19 15:39:02","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-19 15:39:10","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers/id/681af4706735e18d7968a76c","stack":null}
+{"timestamp":"2025-05-19 15:39:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-19 15:39:29","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/headers?sort=priority","stack":null}
+{"timestamp":"2025-05-19 15:39:32","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/finance-documents","stack":null}
+{"timestamp":"2025-05-19 15:39:38","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/terms-conditions","stack":null}
+{"timestamp":"2025-05-19 15:39:42","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-05-19 15:39:48","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/offers","stack":null}
+{"timestamp":"2025-05-19 15:40:07","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/customers","stack":null}

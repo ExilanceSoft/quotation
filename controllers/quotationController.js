@@ -13,6 +13,55 @@ const TermsCondition = require('../models/TermsCondition');
 const pdfGenerator = require('../utils/pdfGenerator');
 const path = require('path');
 const fs = require('fs');
+const Attachment = require('../models/AttachmentModel');
+
+
+const getUniqueAttachmentsForModels = async (modelIds) => {
+  const attachments = await Attachment.find({
+    $or: [
+      { isForAllModels: true },
+      { applicableModels: { $in: modelIds } }
+    ]
+  })
+  .populate('createdBy', 'name email')
+  .populate('applicableModels', 'model_name');
+
+  const uniqueAttachmentsMap = new Map();
+  attachments.forEach(attachment => {
+    if (!uniqueAttachmentsMap.has(attachment._id.toString())) {
+      uniqueAttachmentsMap.set(attachment._id.toString(), attachment);
+    }
+  });
+
+  return Array.from(uniqueAttachmentsMap.values());
+};
+
+const prepareAttachmentResponse = (attachments) => {
+  return attachments.map(attachment => ({
+    _id: attachment._id,
+    title: attachment.title,
+    description: attachment.description,
+    isForAllModels: attachment.isForAllModels,
+    applicableModels: attachment.isForAllModels 
+      ? []
+      : attachment.applicableModels.map(model => ({
+          _id: model._id,
+          model_name: model.model_name
+        })),
+    attachments: attachment.attachments.map(item => ({
+      type: item.type,
+      url: item.url,
+      content: item.content,
+      thumbnail: item.thumbnail
+    })),
+    createdBy: {
+      _id: attachment.createdBy._id,
+      name: attachment.createdBy.name,
+      email: attachment.createdBy.email
+    },
+    createdAt: attachment.createdAt
+  }));
+};
 
 const getQuotationDetails = async (quotationId) => {
   return await Quotation.findById(quotationId)
@@ -37,10 +86,6 @@ const getQuotationDetails = async (quotationId) => {
     });
 };
 
-const isValidModelId = (modelId) => {
-  return modelId && mongoose.Types.ObjectId.isValid(modelId);
-};
-
 exports.createQuotation = async (req, res, next) => {
   try {
     const { 
@@ -56,7 +101,6 @@ exports.createQuotation = async (req, res, next) => {
       return next(new AppError('Missing required fields or invalid data format', 400));
     }
 
-    // 1. Create or find customer
     let customer;
     if (customerDetails._id) {
       customer = await Customer.findById(customerDetails._id);
@@ -79,15 +123,9 @@ exports.createQuotation = async (req, res, next) => {
       });
     }
 
-    // 2. Get all finance documents
     const financeDocuments = await FinanceDocument.find({}).sort({ createdAt: 1 });
-    logger.info(`Fetched ${financeDocuments.length} finance documents`);
-    console.log(financeDocuments);
-
-    // 3. Get all active terms and conditions
     const termsConditions = await TermsCondition.find({ isActive: true }).sort({ order: 1 });
 
-    // 4. Get full model details with branch-specific prices
     const models = await Model.find({
       _id: { $in: selectedModels.map(m => m.model_id) }
     }).populate({
@@ -98,6 +136,9 @@ exports.createQuotation = async (req, res, next) => {
     if (models.length !== selectedModels.length) {
       return next(new AppError('One or more model IDs are invalid', 400));
     }
+
+    const modelIds = models.map(model => model._id);
+    const attachments = await getUniqueAttachmentsForModels(modelIds);
 
     const branchId = creator.branch_id?._id;
     if (!branchId) {
@@ -125,11 +166,6 @@ exports.createQuotation = async (req, res, next) => {
       h.category_key.toLowerCase().includes('ex-showroom')
     );
 
-    if (!exShowroomHeader) {
-      logger.warn('Ex-Showroom price header not found in database');
-    }
-
-    const modelIds = models.map(model => model._id);
     const allOffers = await Offer.find({
       isActive: true,
       $or: [
@@ -204,7 +240,7 @@ exports.createQuotation = async (req, res, next) => {
         offer.applyToAllModels || 
         (offer.applicableModels && offer.applicableModels.some(appModel => 
           appModel && appModel._id && appModel._id.equals(model._id)
-        ))
+        )
       ).map(offer => ({
         _id: offer._id,
         title: offer.title,
@@ -212,7 +248,7 @@ exports.createQuotation = async (req, res, next) => {
         image: offer.image,
         url: offer.url,
         createdAt: offer.createdAt
-      }));
+      })));
 
       return {
         selected_model: {
@@ -262,7 +298,6 @@ exports.createQuotation = async (req, res, next) => {
       }
     }
 
-    // Create the quotation
     const quotation = await Quotation.create({
       customer_id: customer._id,
       models: responseModels.map(m => ({
@@ -279,10 +314,8 @@ exports.createQuotation = async (req, res, next) => {
       terms_conditions: termsConditions.map(tc => tc._id)
     });
 
-    // Prepare AllModels array with base model first followed by selected models
     const allModels = [];
     
-    // Add base model first if it exists
     if (finalBaseModel) {
       const baseModelDetails = await Model.findById(finalBaseModel.model_id)
         .populate({
@@ -318,7 +351,6 @@ exports.createQuotation = async (req, res, next) => {
       }
     }
 
-    // Add all selected models
     allModels.push(...responseModels.map(model => ({
       _id: model.selected_model._id,
       model_name: model.selected_model.model_name,
@@ -329,7 +361,6 @@ exports.createQuotation = async (req, res, next) => {
       is_base_model: model.selected_model.is_base_model
     })));
 
-    // Prepare the final response
     const response = {
       userDetails: {
         _id: creator._id,
@@ -366,7 +397,7 @@ exports.createQuotation = async (req, res, next) => {
         createdAt: customer.createdAt
       },
       expected_delivery_date: expected_delivery_date || null,
-      AllModels: allModels, // Changed from selectedModels to AllModels with base model first
+      AllModels: allModels,
       financeDocuments: financeDocuments.map(doc => ({
         _id: doc._id,
         name: doc.name,
@@ -380,6 +411,7 @@ exports.createQuotation = async (req, res, next) => {
         content: tc.content,
         order: tc.order
       })),
+      attachments: prepareAttachmentResponse(attachments),
       quotation_id: quotation._id,
       quotation_number: quotation.quotation_number,
       modelSpecificOffers: responseModels.map(model => ({
@@ -415,14 +447,12 @@ exports.createQuotation = async (req, res, next) => {
     const pdfDir = path.join(__dirname, '../public/quotations');
     const pdfUrl = `/quotations/${pdfFileName}`;
     
-    // Ensure directory exists
     if (!fs.existsSync(pdfDir)) {
       fs.mkdirSync(pdfDir, { recursive: true });
     }
     
     await pdfGenerator.generateQuotationPDF(response, path.join(pdfDir, pdfFileName));
     
-    // Update quotation with relative URL only
     quotation.pdfUrl = pdfUrl;
     await quotation.save({ validateBeforeSave: true });
     
@@ -437,7 +467,6 @@ exports.createQuotation = async (req, res, next) => {
     next(err);
   }
 };
-
 
 // Add this at the bottom of quotationController.js
 // exports.getQuotationPDF = async (req, res, next) => {
@@ -470,7 +499,14 @@ exports.createQuotation = async (req, res, next) => {
 
 exports.getAllQuotations = async (req, res, next) => {
   try {
-    const quotations = await Quotation.find()
+    let query = {};
+    
+    // If user is not super admin, only show their own quotations
+    if (req.user.role_id.name !== 'super_admin') {
+      query.createdBy = req.user._id;
+    }
+
+    const quotations = await Quotation.find(query)
       .populate('customer', 'name mobile1')
       .populate('creator', 'name')
       .sort({ createdAt: -1 });
@@ -486,24 +522,22 @@ exports.getAllQuotations = async (req, res, next) => {
     next(err);
   }
 };
+
 // Add this new method to quotationController.js
 exports.getQuotationById = async (req, res, next) => {
   try {
     const quotationId = req.params.id;
     
-    // Validate quotation ID
     if (!mongoose.Types.ObjectId.isValid(quotationId)) {
       return next(new AppError('Invalid quotation ID', 400));
     }
 
-    // Get the full quotation details with all populated data
     const quotation = await getQuotationDetails(quotationId);
     
     if (!quotation) {
       return next(new AppError('Quotation not found', 404));
     }
 
-    // Get creator details with populated branch
     const creator = await User.findById(quotation.creator._id)
       .populate('branch_id')
       .populate('role_id');
@@ -512,10 +546,8 @@ exports.getQuotationById = async (req, res, next) => {
       return next(new AppError('Creator not found', 404));
     }
 
-    // Get customer details
     const customer = quotation.customer;
 
-    // Get all model details with branch-specific prices
     const models = await Model.find({
       _id: { $in: quotation.models.map(m => m.model_id) }
     }).populate({
@@ -523,17 +555,14 @@ exports.getQuotationById = async (req, res, next) => {
       select: 'header_key category_key priority metadata'
     });
 
-    if (models.length !== quotation.models.length) {
-      logger.warn('Some models referenced in quotation no longer exist');
-    }
+    const modelIds = models.map(model => model._id);
+    const attachments = await getUniqueAttachmentsForModels(modelIds);
 
-    // Filter prices to only include creator's branch prices
     const branchId = creator.branch_id?._id;
     if (!branchId) {
       return next(new AppError('Creator must be assigned to a branch', 400));
     }
 
-    // Get full branch details
     const branch = await Branch.findById(branchId);
     if (!branch) {
       return next(new AppError('Branch not found', 404));
@@ -549,15 +578,12 @@ exports.getQuotationById = async (req, res, next) => {
       };
     });
 
-    // Find Ex-Showroom header
     const headers = await Header.find();
     const exShowroomHeader = headers.find(h => 
       h.header_key.toLowerCase().includes('ex-showroom') || 
       h.category_key.toLowerCase().includes('ex-showroom')
     );
 
-    // Get all offers (same logic as createQuotation)
-    const modelIds = models.map(model => model._id);
     const allOffers = await Offer.find({
       isActive: true,
       $or: [
@@ -566,7 +592,6 @@ exports.getQuotationById = async (req, res, next) => {
       ]
     }).populate('applicableModels', 'model_name');
 
-    // Remove duplicate offers
     const uniqueOffersMap = new Map();
     allOffers.forEach(offer => {
       if (!uniqueOffersMap.has(offer._id.toString())) {
@@ -575,23 +600,18 @@ exports.getQuotationById = async (req, res, next) => {
     });
     const uniqueOffers = Array.from(uniqueOffersMap.values());
 
-    // Prepare response models
     const responseModels = await Promise.all(modelsWithBranchPrices.map(async model => {
-      // Find Ex-Showroom price
       const exShowroomPrice = exShowroomHeader 
         ? model.prices.find(p => p.header_id._id.equals(exShowroomHeader._id))?.value
         : null;
 
-      // Get series name
       const seriesMatch = model.model_name.match(/^([A-Za-z0-9]+)/);
       const series = seriesMatch ? seriesMatch[1] : 'Unknown';
 
-      // Check if this model is the base model
       const isBaseModel = quotation.base_model_id 
         ? quotation.base_model_id._id.equals(model._id)
         : false;
 
-      // Find offers specific to this model
       const modelOffers = uniqueOffers
         .filter(offer => 
           offer.applyToAllModels || 
@@ -629,7 +649,6 @@ exports.getQuotationById = async (req, res, next) => {
       };
     }));
 
-    // Prepare base model data if it exists
     let baseModelData = null;
     if (quotation.base_model_id) {
       const baseModel = await Model.findById(quotation.base_model_id)
@@ -639,7 +658,6 @@ exports.getQuotationById = async (req, res, next) => {
         });
 
       if (baseModel) {
-        // Filter prices for base model to only include creator's branch prices
         const baseModelWithBranchPrices = {
           ...baseModel.toObject(),
           prices: baseModel.prices.filter(price => 
@@ -671,7 +689,6 @@ exports.getQuotationById = async (req, res, next) => {
       }
     }
 
-    // Prepare AllModels array with base model first followed by selected models
     const allModels = [];
     if (baseModelData) {
       allModels.push(baseModelData);
@@ -686,7 +703,6 @@ exports.getQuotationById = async (req, res, next) => {
       is_base_model: model.selected_model.is_base_model
     })));
 
-    // Prepare the final response
     const response = {
       userDetails: {
         _id: creator._id,
@@ -726,9 +742,10 @@ exports.getQuotationById = async (req, res, next) => {
         new Date(quotation.expected_delivery_date).toISOString().split('T')[0] : 
         null,
       AllModels: allModels,
+      attachments: prepareAttachmentResponse(attachments),
       quotation_id: quotation._id,
       quotation_number: quotation.quotation_number,
-      pdfUrl: quotation.pdfUrl, // Add the pdfUrl to the response
+      pdfUrl: quotation.pdfUrl,
       modelSpecificOffers: responseModels.map(model => ({
         model_id: model.selected_model._id,
         model_name: model.selected_model.model_name,
@@ -794,6 +811,73 @@ exports.getQuotationPDF = async (req, res, next) => {
     fileStream.pipe(res);
   } catch (err) {
     logger.error(`Error serving PDF file: ${err.message}`);
+    next(err);
+  }
+};
+
+exports.getTodaysQuotationCount = async (req, res, next) => {
+  try {
+    const startOfDay = new Date();
+    startOfDay.setHours(0, 0, 0, 0);
+    
+    const endOfDay = new Date();
+    endOfDay.setHours(23, 59, 59, 999);
+
+    let query = {
+      createdAt: {
+        $gte: startOfDay,
+        $lte: endOfDay
+      }
+    };
+    
+    // If user is not super admin, only count their own quotations
+    if (req.user.role_id.name !== 'super_admin') {
+      query.createdBy = req.user._id;
+    }
+
+    const count = await Quotation.countDocuments(query);
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        count
+      }
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// Get this month's quotation count
+exports.getThisMonthQuotationCount = async (req, res, next) => {
+  try {
+    const now = new Date();
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+    endOfMonth.setHours(23, 59, 59, 999);
+
+    let query = {
+      createdAt: {
+        $gte: startOfMonth,
+        $lte: endOfMonth
+      }
+    };
+    
+    // If user is not super admin, only count their own quotations
+    if (req.user.role_id.name !== 'super_admin') {
+      query.createdBy = req.user._id;
+    }
+
+    const count = await Quotation.countDocuments(query);
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        count
+      }
+    });
+  } catch (err) {
     next(err);
   }
 };

@@ -32,6 +32,13 @@ const modelSchema = new mongoose.Schema({
       message: 'Model name cannot contain commas'
     }
   },
+  type: {
+    type: String,
+    required: [true, 'Type is required (EV/IC)'],
+    enum: ['EV', 'IC'],
+    uppercase: true,
+    trim: true
+  },
   prices: {
     type: [priceDataSchema],
     default: []

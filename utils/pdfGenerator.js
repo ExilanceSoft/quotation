@@ -14,15 +14,21 @@ function registerHelpers() {
     return false; // Always show all columns
   });
 
-  handlebars.registerHelper('formatCurrency', function (value) {
-    if (value === undefined || value === null) return '₹0';
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0
-    }).format(value);
-  });
-
+ handlebars.registerHelper('formatCurrency', function (value) {
+  if (value === undefined || value === null) return '0';
+  return new Intl.NumberFormat('en-IN', {
+    style: 'decimal', // Changed from 'currency' to 'decimal'
+    maximumFractionDigits: 0
+  }).format(value);
+});
+handlebars.registerHelper('hasAccessories', function(prices) {
+  if (!prices || !Array.isArray(prices)) return false;
+  return prices.some(p => 
+    p.category_key && 
+    (p.category_key.toLowerCase().includes("addonservices") || 
+     p.category_key.toLowerCase().includes("accesories"))
+  );
+});
   handlebars.registerHelper('some', function(array, property, value, options) {
     if (!array || !Array.isArray(array)) return false;
     return array.some(item => item[property] === value);
@@ -60,7 +66,10 @@ function registerHelpers() {
     if (!obj) return null;
     return obj[key] || null;
   });
-
+  // Add this to your registerHelpers() function in pdfGenerator.js
+handlebars.registerHelper('mod', function (a, b) {
+  return a % b;
+});
   handlebars.registerHelper('findPrice', function (prices, headerKey) {
     if (!prices || !Array.isArray(prices)) return null;
     const found = prices.find(p => p.header_key === headerKey);
@@ -182,10 +191,10 @@ const generateQuotationPDF = async (quotationData, outputPath) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '20mm',
-        right: '20mm',
-        bottom: '20mm',
-        left: '20mm'
+        top: '10mm',
+        right: '10mm',
+        bottom: '10mm',
+        left: '10mm'
       }
     });
 
