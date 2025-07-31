@@ -23,36 +23,46 @@ const ACCESS_TOKEN = 'Ia13ovnsbYJ18zYTIfdVU5ERVJTQ09SRQ736y9UaLu32VU5ERVJTQ09SRQ
 
 async function sendWhatsAppMessage(to, pdfUrl) {
   try {
+    // Verify PDF is accessible
+    try {
+      const response = await axios.head(pdfUrl);
+      if (response.status !== 200) {
+        throw new Error(`PDF returned status ${response.status}`);
+      }
+    } catch (err) {
+      logger.error(`PDF access failed: ${pdfUrl} - ${err.message}`);
+      throw new AppError('PDF cannot be accessed by WhatsApp servers', 400);
+    }
+
+    // Corrected payload structure
     const payload = {
-      to,
-      recipient_type: 'individual',
-      type: 'template',
+      messaging_product: "whatsapp", // Required field
+      recipient_type: "individual",
+      to: to,
+      type: "template",
       template: {
+        name: "change5", // Must match exactly with approved template
         language: {
-          policy: 'deterministic',
-          code: 'en',
+          code: "en",
+          policy: "deterministic"
         },
-        name: 'quotation_pdf', // Your approved template name
         components: [
           {
-            type: 'header',
+            type: "header",
             parameters: [
               {
-                type: 'document',
+                type: "document",
                 document: {
-                  link: pdfUrl
+                  link: pdfUrl,
+                  filename: "Quotation.pdf" // Required field
                 }
               }
             ]
           },
+          // REQUIRED Body component
           {
-            type: 'body',
-            parameters: [
-              {
-                type: 'text',
-                text: new Date().toLocaleDateString('en-IN') // Current date
-              }
-            ]
+            type: "body",
+            parameters: [] // Can be empty but component must exist
           }
         ]
       }
@@ -60,22 +70,25 @@ async function sendWhatsAppMessage(to, pdfUrl) {
 
     const response = await axios.post(WHATSAPP_API_URL, payload, {
       headers: {
-        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        'Authorization': `Bearer ${ACCESS_TOKEN}`,
         'Content-Type': 'application/json'
       }
     });
 
     return {
       success: true,
-      messageId: response.data?.messages?.[0]?.id,
-      timestamp: response.data?.meta?.timestamp
+      messageId: response.data.messages?.[0]?.id || 'unknown'
     };
+
   } catch (error) {
-    logger.error(`WhatsApp API error: ${error.message}`);
-    throw new AppError('Failed to send WhatsApp message', 500);
+    logger.error('WhatsApp API Failure:', {
+      error: error.message,
+      response: error.response?.data,
+      pdfUrl: pdfUrl
+    });
+    throw new AppError(`WhatsApp sending failed: ${error.message}`, 500);
   }
 }
-
 exports.sendQuotationViaWhatsApp = async (req, res, next) => {
   try {
     const { quotationId } = req.params;
@@ -85,8 +98,9 @@ exports.sendQuotationViaWhatsApp = async (req, res, next) => {
       return next(new AppError('Invalid quotation ID', 400));
     }
 
-    // Get the quotation - no need to populate since we have embedded customerDetails
-    const quotation = await Quotation.findById(quotationId);
+    // Get the quotation with customer details
+    const quotation = await Quotation.findById(quotationId)
+      .populate('customer_id', 'mobile1 name');
 
     if (!quotation) {
       return next(new AppError('Quotation not found', 404));
@@ -97,14 +111,18 @@ exports.sendQuotationViaWhatsApp = async (req, res, next) => {
       return next(new AppError('PDF not generated for this quotation', 400));
     }
 
-    // Get mobile number from embedded customerDetails
-    const mobileNumber = quotation.customerDetails?.mobile1;
+    // Get the correct mobile number
+    const mobileNumber = quotation.customerDetails?.mobile1 || 
+                        (quotation.customer_id?.mobile1 ? quotation.customer_id.mobile1 : null);
+
     if (!mobileNumber || !/^[0-9]{10}$/.test(mobileNumber)) {
       return next(new AppError('Invalid customer mobile number', 400));
     }
 
-    // Construct full PDF URL
-    const fullPdfUrl = `${req.protocol}://${req.get('host')}${quotation.pdfUrl}`;
+    // Construct full PDF URL with /public in the path
+    const baseUrl = 'https://tvsapi.gandhitvs.in';
+    const pdfPath = quotation.pdfUrl.startsWith('/') ? quotation.pdfUrl : `/${quotation.pdfUrl}`;
+    const fullPdfUrl = `${baseUrl}/public${pdfPath}`;
 
     // Send via WhatsApp
     const whatsappResponse = await sendWhatsAppMessage(`91${mobileNumber}`, fullPdfUrl);
@@ -125,9 +143,9 @@ exports.sendQuotationViaWhatsApp = async (req, res, next) => {
       message: 'Quotation sent successfully via WhatsApp',
       data: {
         quotationId: quotation._id,
-        customerName: quotation.customerDetails?.name,
+        customerName: quotation.customerDetails?.name || quotation.customer_id?.name,
         mobileNumber,
-        pdfUrl: fullPdfUrl,
+        pdfUrl: fullPdfUrl, // This will now include /public in the path
         whatsappResponse
       }
     });
@@ -1152,7 +1170,7 @@ exports.exportQuotationsToExcel = async (req, res, next) => {
   try {
     // Extract and validate query parameters
     const { startDate, endDate, branchId } = req.query;
-    
+
     // Helper function to parse date in YYYY-MM-DD format and set to start of day in local time
     const parseStartDate = (dateString) => {
       if (!dateString) return null;
@@ -1187,14 +1205,14 @@ exports.exportQuotationsToExcel = async (req, res, next) => {
 
     // Build query
     let query = {};
-    
+
     // Date range filter
     if (startDateObj || endDateObj) {
       query.createdAt = {};
       if (startDateObj) query.createdAt.$gte = startDateObj;
       if (endDateObj) query.createdAt.$lte = endDateObj;
     }
-    
+
     // Branch filter
     if (branchId) {
       // Find users in this branch

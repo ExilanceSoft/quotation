@@ -12986,3 +12986,158 @@ ReferenceError: authController is not defined
     at require (node:internal/modules/helpers:176:18)
     at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\server.js:2:45)
     at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-07-31 16:19:19 [[31MERROR[39M]: uncaughtException: Identifier 'Quotation' has already been declared
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:1420
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:1420
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-07-31 16:19:37 [[31MERROR[39M]: uncaughtException: Identifier 'Quotation' has already been declared
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:1420
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:1420
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-07-31 16:20:12 [[31MERROR[39M]: uncaughtException: Identifier 'Quotation' has already been declared
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:604
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:604
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-07-31 16:20:20 [[31MERROR[39M]: uncaughtException: Identifier 'Quotation' has already been declared
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:579
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:579
+const Quotation = require('../models/QuotationModel');
+      ^
+
+SyntaxError: Identifier 'Quotation' has already been declared
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+2025-07-31 17:17:12 [[31MERROR[39M]: uncaughtException: await is only valid in async functions and the top level bodies of modules
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:111
+const whatsappResponse = await sendWhatsAppMessage(mobileNumber, fullPdfUrl); // Remove the 91 prefix here
+                         ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)
+E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\controllers\quotationController.js:111
+const whatsappResponse = await sendWhatsAppMessage(mobileNumber, fullPdfUrl); // Remove the 91 prefix here
+                         ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at internalCompileFunction (node:internal/vm:77:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+    at Module._compile (node:internal/modules/cjs/loader:1340:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+    at Module.load (node:internal/modules/cjs/loader:1207:32)
+    at Module._load (node:internal/modules/cjs/loader:1023:12)
+    at Module.require (node:internal/modules/cjs/loader:1235:19)
+    at require (node:internal/modules/helpers:176:18)
+    at Object.<anonymous> (E:\Exilance-Project\Gandhi Motars - Copy\vehicle-quotation-system - Copy\routes\quotationRoutes.js:3:29)
+    at Module._compile (node:internal/modules/cjs/loader:1376:14)

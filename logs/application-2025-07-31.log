@@ -85,3 +85,170 @@
 {"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
 {"timestamp":"2025-07-31 15:02:01","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f160c8d36d6a85f549065/send-whatsapp","stack":null}
 {"timestamp":"2025-07-31 15:04:47","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/683168be199283a98b0e9240/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 15:13:13","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 15:13:13","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 15:13:14","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 15:13:14","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 15:13:15","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 15:13:15","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 15:13:15","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 15:13:41","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/683168be199283a98b0e9240/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 15:35:38","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 15:35:40","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid customer mobile number","stack":null}
+{"timestamp":"2025-07-31 15:35:40","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid customer mobile number\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:103:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 15:36:13","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:21:32","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:21:32","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:21:34","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:21:34","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:21:34","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:21:34","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:21:34","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:23:51","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:24:41","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:24:42","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:24:43","level":"\u001b[31MERROR\u001b[39M","message":"WhatsApp API error: axios is not defined","stack":null}
+{"timestamp":"2025-07-31 16:24:43","level":"\u001b[31MERROR\u001b[39M","message":"Error sending quotation via WhatsApp: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:24:43","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:24:43","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:73:11)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:108:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 16:25:04","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:25:04","level":"\u001b[31MERROR\u001b[39M","message":"WhatsApp API error: axios is not defined","stack":null}
+{"timestamp":"2025-07-31 16:25:04","level":"\u001b[31MERROR\u001b[39M","message":"Error sending quotation via WhatsApp: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:25:04","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:25:04","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:73:11)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:108:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 16:28:09","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:28:09","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:28:09","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:28:09","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:28:10","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:28:10","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:28:10","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:28:19","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:28:49","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:29:11","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:29:11","level":"\u001b[31MERROR\u001b[39M","message":"WhatsApp API error: axios is not defined","stack":null}
+{"timestamp":"2025-07-31 16:29:11","level":"\u001b[31MERROR\u001b[39M","message":"Error sending quotation via WhatsApp: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:29:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:29:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:72:11)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:108:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 16:29:15","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:29:15","level":"\u001b[31MERROR\u001b[39M","message":"WhatsApp API error: axios is not defined","stack":null}
+{"timestamp":"2025-07-31 16:29:15","level":"\u001b[31MERROR\u001b[39M","message":"Error sending quotation via WhatsApp: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:29:15","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:29:15","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:72:11)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:108:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:31:43","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:32:07","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:32:07","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:32:08","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:32:08","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:32:08","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:32:08","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:32:08","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:32:13","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:32:13","level":"\u001b[31MERROR\u001b[39M","message":"WhatsApp API failed axios is not defined","stack":"ReferenceError: axios is not defined\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:59:22)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:136:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"timestamp":"2025-07-31 16:32:13","level":"\u001b[31MERROR\u001b[39M","message":"Error sending quotation via WhatsApp: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:32:13","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message","stack":null}
+{"timestamp":"2025-07-31 16:32:13","level":"\u001b[31MERROR\u001b[39M","message":"Error: Failed to send WhatsApp message\n    at sendWhatsAppMessage (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:97:11)\n    at exports.sendQuotationViaWhatsApp (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\quotationController.js:136:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 16:33:13","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:33:13","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:33:14","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:33:14","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:33:14","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:33:14","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:33:14","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:33:20","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:35:06","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:35:10","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:41:13","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:41:13","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:41:13","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:41:13","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:41:14","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:41:14","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:41:14","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 16:41:18","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 16:54:50","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 16:54:50","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 16:54:50","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 16:54:50","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 16:54:51","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 16:54:51","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 16:54:51","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:00:15","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:00:48","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:04:49","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:09:50","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:09:50","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:09:50","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:09:50","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:09:51","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:09:51","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:09:51","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:12:54","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:14:58","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:14:58","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:14:58","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:14:58","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:14:59","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:14:59","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:14:59","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 17:17:40","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
