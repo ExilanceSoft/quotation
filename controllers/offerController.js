@@ -162,18 +162,46 @@ exports.getAllOffers = async (req, res, next) => {
 
     query = query.skip(skip).limit(limit);
 
-    // Populate models if needed
-    if (req.query.populate === 'true') {
-      query = query.populate('applicableModels', 'model_name');
-    }
+    // Populate applicableModels with model_name
+    query = query.populate({
+      path: 'applicableModels',
+      select: 'model_name',
+      model: 'Model' // Explicitly specify the model to populate from
+    });
 
     const offers = await query;
 
+    // Format the response
+    const formattedOffers = offers.map(offer => {
+      const formattedOffer = {
+        _id: offer._id,
+        title: offer.title,
+        description: offer.description,
+        url: offer.url,
+        image: offer.image,
+        isActive: offer.isActive,
+        applyToAllModels: offer.applyToAllModels,
+        createdAt: offer.createdAt,
+        updatedAt: offer.updatedAt,
+        applicableModels: []
+      };
+
+      // Only populate applicableModels if not applying to all models
+      if (!offer.applyToAllModels && offer.applicableModels) {
+        formattedOffer.applicableModels = offer.applicableModels.map(model => ({
+          _id: model._id,
+          model_name: model.model_name
+        }));
+      }
+
+      return formattedOffer;
+    });
+
     res.status(200).json({
       status: 'success',
-      results: offers.length,
+      results: formattedOffers.length,
       data: {
-        offers
+        offers: formattedOffers
       }
     });
   } catch (err) {
@@ -215,22 +243,42 @@ exports.updateOffer = async (req, res, next) => {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return next(new AppError('Invalid offer ID format', 400));
     }
-    const { 
-      title, 
-      description, 
-      url,
-      isActive,
-      applyToAllModels,
-      applicableModels 
-    } = req.body;
+
     // Check if offer exists
     const existingOffer = await Offer.findById(req.params.id);
     if (!existingOffer) {
       return next(new AppError('No offer found with that ID', 404));
     }
 
-    // Validate applicable models if being updated
-    if (applicableModels !== undefined) {
+    // Parse boolean fields
+    const isActive = req.body.isActive === 'true' || req.body.isActive === true;
+    const applyToAllModels = req.body.applyToAllModels === 'true' || req.body.applyToAllModels === true;
+
+    // Handle applicableModels - similar to createOffer
+    let applicableModels = existingOffer.applicableModels; // Default to existing models
+    if (req.body.applicableModels !== undefined) {
+      if (Array.isArray(req.body.applicableModels)) {
+        applicableModels = req.body.applicableModels;
+      }
+      else if (typeof req.body.applicableModels === 'string' && 
+               req.body.applicableModels.startsWith('[')) {
+        try {
+          applicableModels = JSON.parse(req.body.applicableModels);
+        } catch (err) {
+          return next(new AppError('Invalid format for applicableModels', 400));
+        }
+      }
+      else if (req.body.applicableModels) {
+        applicableModels = [req.body.applicableModels];
+      }
+    }
+
+    // Validate applicable models if not applying to all
+    if (!applyToAllModels) {
+      if (!applicableModels || applicableModels.length === 0) {
+        return next(new AppError('You must specify applicable models or select "apply to all"', 400));
+      }
+
       if (!validateObjectIds(applicableModels)) {
         return next(new AppError('Invalid model IDs provided', 400));
       }
@@ -247,9 +295,9 @@ exports.updateOffer = async (req, res, next) => {
 
     // Handle image update
     let updateData = {
-      title,
-      description,
-      url,
+      title: req.body.title || existingOffer.title,
+      description: req.body.description || existingOffer.description,
+      url: req.body.url || existingOffer.url,
       isActive,
       applyToAllModels,
       applicableModels: applyToAllModels ? [] : applicableModels,

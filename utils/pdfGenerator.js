@@ -4,153 +4,114 @@ const handlebars = require('handlebars');
 const puppeteer = require('puppeteer');
 const logger = require('../config/logger');
 
-// Register all Handlebars helpers
 function registerHelpers() {
-  handlebars.registerHelper('lt', function (a, b) {
+  // Comparison Helpers
+  handlebars.registerHelper('eq', function(a, b) {
+    return a === b;
+  });
+
+  handlebars.registerHelper('lt', function(a, b) {
     return a < b;
   });
 
-  handlebars.registerHelper('shouldMoveToEnd', function(prices, baseModel) {
-    return false; // Always show all columns
+  handlebars.registerHelper('gt', function(a, b) {
+    return a > b;
   });
 
- handlebars.registerHelper('formatCurrency', function (value) {
-  if (value === undefined || value === null) return '0';
-  return new Intl.NumberFormat('en-IN', {
-    style: 'decimal', // Changed from 'currency' to 'decimal'
-    maximumFractionDigits: 0
-  }).format(value);
-});
-handlebars.registerHelper('hasAccessories', function(prices) {
-  if (!prices || !Array.isArray(prices)) return false;
-  return prices.some(p => 
-    p.category_key && 
-    (p.category_key.toLowerCase().includes("addonservices") || 
-     p.category_key.toLowerCase().includes("accesories"))
-  );
-});
-  handlebars.registerHelper('some', function(array, property, value, options) {
-    if (!array || !Array.isArray(array)) return false;
-    return array.some(item => item[property] === value);
+  // Logical Helpers
+  handlebars.registerHelper('and', function() {
+    return Array.prototype.slice.call(arguments, 0, -1).every(Boolean);
   });
 
-  handlebars.registerHelper('math', function (lvalue, operator, rvalue) {
-    lvalue = parseFloat(lvalue || 0);
-    rvalue = parseFloat(rvalue || 0);
+  handlebars.registerHelper('or', function() {
+    return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
+  });
+
+  // Math Helpers
+  handlebars.registerHelper('math', function(lvalue, operator, rvalue) {
+    lvalue = parseFloat(lvalue);
+    rvalue = parseFloat(rvalue);
     return {
-      "+": lvalue + rvalue,
-      "-": lvalue - rvalue,
-      "*": lvalue * rvalue,
-      "/": lvalue / rvalue,
-      "%": lvalue % rvalue
+      '+': lvalue + rvalue,
+      '-': lvalue - rvalue,
+      '*': lvalue * rvalue,
+      '/': lvalue / rvalue,
+      '%': lvalue % rvalue
     }[operator];
   });
 
-  handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
-    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  handlebars.registerHelper('mod', function(a, b) {
+    return a % b;
   });
 
+  // Loop Helper
   handlebars.registerHelper('times', function(n, block) {
     let accum = '';
-    for(let i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
       accum += block.fn(i);
     }
     return accum;
   });
 
-  handlebars.registerHelper('gt', function (a, b) {
-    return a > b;
+  // Formatting Helpers
+  handlebars.registerHelper('formatCurrency', function(value) {
+    if (isNaN(value)) return '0';
+    return new Intl.NumberFormat('en-IN').format(value);
   });
 
-  handlebars.registerHelper('lookup', function (obj, key) {
-    if (!obj) return null;
-    return obj[key] || null;
-  });
-  // Add this to your registerHelpers() function in pdfGenerator.js
-handlebars.registerHelper('mod', function (a, b) {
-  return a % b;
-});
-  handlebars.registerHelper('findPrice', function (prices, headerKey) {
-    if (!prices || !Array.isArray(prices)) return null;
-    const found = prices.find(p => p.header_key === headerKey);
-    return found ? found.value : null;
+  // Data Helpers
+  handlebars.registerHelper('findPrice', function(prices, headerKey) {
+    if (!Array.isArray(prices)) return 0;
+    const item = prices.find(p => p.header_key === headerKey);
+    return item ? item.value : 0;
   });
 
-  handlebars.registerHelper('eq', function (a, b) {
-    return a === b;
+  handlebars.registerHelper('hasAccessories', function(prices) {
+    if (!Array.isArray(prices)) return false;
+    return prices.some(p =>
+      ['addonservices', 'accesories'].includes(p.category_key.toLowerCase())
+    );
   });
 
-  handlebars.registerHelper('or', function (a, b) {
-    return a || b;
+  handlebars.registerHelper('filterByPage', function(items, pageNo, options) {
+    if (!Array.isArray(items)) return options.inverse(this);
+    const filtered = items.filter(item =>
+      item.metadata && item.metadata.page_no === pageNo
+    );
+    return filtered.length ? options.fn(filtered) : options.inverse(this);
   });
 
-  handlebars.registerHelper('ifeq', function (a, b, options) {
-    if (a === b) {
-      return options.fn(this);
-    }
-    return options.inverse ? options.inverse(this) : '';
+  handlebars.registerHelper('getModelName', function(models, index) {
+    if (!Array.isArray(models)) return 'Selected Model';
+    return models[index]?.model_name || 'Selected Model';
   });
 
-  handlebars.registerHelper('sortPrices', function (prices, categoryKey, includeZero) {
-    if (!prices || !Array.isArray(prices)) return [];
-
-    const filtered = prices.filter(p => {
-      const matchesCategory = !categoryKey ||
-        (p.category_key && p.category_key.toLowerCase().includes(categoryKey.toLowerCase()));
-      if (includeZero) return matchesCategory;
-      return matchesCategory && p.value !== 0 && p.value !== '0';
-    });
-
-    const nonZeroPrices = filtered.filter(p => p.value && p.value !== 0 && p.value !== '0');
-    const zeroPrices = filtered.filter(p => !p.value || p.value === 0 || p.value === '0');
-
-    return [...nonZeroPrices, ...zeroPrices];
-  });
-
-  handlebars.registerHelper('calculateGrandTotal', function (selectedModels, baseModel) {
-    let total = 0;
-
-    selectedModels.forEach(model => {
-      const exShowroom = model.ex_showroom_price || 0;
-      const rtoTax = (model.prices && model.prices[1] && model.prices[1].value) || 0;
-      const insurance = (model.prices && model.prices[2] && model.prices[2].value) || 0;
-      const accessories = (model.prices && model.prices[3] && model.prices[3].value) || 0;
-      total += exShowroom + rtoTax + insurance + accessories;
-    });
-
-    if (baseModel) {
-      const basePrice = baseModel.price || 0;
-      const firstModelPrice = (selectedModels[0] && selectedModels[0].ex_showroom_price) || 0;
-      total += (firstModelPrice - basePrice);
-    }
-
-    return total;
+  // New helper to get prices for specific page
+  handlebars.registerHelper('getPricesForPage', function(prices, pageNo) {
+    if (!Array.isArray(prices)) return [];
+    return prices.filter(price =>
+      price.metadata && price.metadata.page_no === pageNo
+    );
   });
 }
 
 const generateQuotationPDF = async (quotationData, outputPath) => {
   try {
-    // Register helpers before anything else
     registerHelpers();
 
-    // Read and encode logo image as base64 string
+    // Logo Handling
     const logoPath = path.join(__dirname, '../public/images/logo.png');
     let logoBase64 = '';
-    if (fs.existsSync(logoPath) && fs.lstatSync(logoPath).isFile()) {
+    if (fs.existsSync(logoPath)) {
       logoBase64 = `data:image/png;base64,${fs.readFileSync(logoPath, 'base64')}`;
-    } else {
-      logger.warn(`Logo file not found or is not a file at path: ${logoPath}`);
     }
 
-    // Read and compile Handlebars template (quotation.html)
+    // Template Processing
     const templatePath = path.join(__dirname, '../templates/quotation.html');
-    if (!fs.existsSync(templatePath) || !fs.lstatSync(templatePath).isFile()) {
-      throw new Error(`Template file not found or is not a file: ${templatePath}`);
-    }
     const htmlTemplate = fs.readFileSync(templatePath, 'utf8');
     const template = handlebars.compile(htmlTemplate);
 
-    // Prepare data for template
+    // Data Preparation
     const formattedData = {
       ...quotationData,
       logoBase64,
@@ -165,41 +126,28 @@ const generateQuotationPDF = async (quotationData, outputPath) => {
             month: 'short',
             year: 'numeric'
           })
-        : 'Not specified',
-      base_model: quotationData.base_model ? {
-        model_name: quotationData.base_model.model_name,
-        prices: quotationData.base_model.model.prices.map(p => ({
-          value: p.value,
-          header_key: p.header_id?.header_key || p.header_key || 'deleted',
-          category_key: p.header_id?.category_key || p.category_key || 'deleted'
-        }))
-      } : null
+        : 'Not specified'
     };
 
-    const html = template(formattedData);
-
-    // Launch Puppeteer and generate PDF
+    // PDF Generation
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
-    const page = await browser.newPage();
 
-    await page.setContent(html, { waitUntil: 'networkidle0' });
+    const page = await browser.newPage();
+    await page.setContent(template(formattedData), { waitUntil: 'networkidle0' });
+
     await page.pdf({
       path: outputPath,
       format: 'A4',
       printBackground: true,
-      margin: {
-        top: '10mm',
-        right: '10mm',
-        bottom: '10mm',
-        left: '10mm'
-      }
+      margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' },
+      displayHeaderFooter: false,
+      preferCSSPageSize: true
     });
 
     await browser.close();
-
     return outputPath;
 
   } catch (err) {

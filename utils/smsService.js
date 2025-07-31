@@ -1,77 +1,90 @@
 const axios = require('axios');
 const logger = require('../config/logger');
-const { ErrorResponse } = require('./errorHandler');
 
-// SMS configuration - now using environment variables
 const SMS_CONFIG = {
-  baseUrl: process.env.SMS_BASE_URL || 'https://sms.happysms.in',
-  username: process.env.SMS_USERNAME || 'suyog55777',
-  password: process.env.SMS_PASSWORD || '121212',
-  senderId: process.env.SMS_SENDER_ID || 'GNDTVS',
-  template_id: process.env.SMS_TEMPLATE_ID || '1707174731188793226'
+  BASE_URL: 'https://sms.happysms.in/api/sendhttp.php',
+  AUTH_KEY: '449042AUThwq6Y6811e857P1',
+  SENDER_ID: 'GNDTVS',
+  ROUTE: '4',
+  COUNTRY: '91',
+  DLT_TE_ID: '1707174731188793226'
 };
 
-// Generate random OTP (6 digits)
+// Improved mobile number validation
+const validateMobileNumber = (mobile) => {
+  // Remove all non-digit characters
+  const cleaned = mobile.replace(/\D/g, '');
+  
+  // Must be 10 digits (without country code) or 12 digits (with 91)
+  if (!/^(?:\d{10}|91\d{10})$/.test(cleaned)) {
+    throw new Error('Invalid mobile number format');
+  }
+  
+  // Ensure it starts with 6-9 (Indian mobile numbers)
+  const digits = cleaned.length === 10 ? cleaned : cleaned.substring(2);
+  if (!/^[6-9]/.test(digits)) {
+    throw new Error('Invalid Indian mobile number');
+  }
+  
+  // Return in 91XXXXXXXXXX format
+  return cleaned.length === 10 ? `91${cleaned}` : cleaned;
+};
+
+// Generate 6-digit OTP
 exports.generateOTP = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
 
-// Send OTP via SMS with enhanced error handling
+// Improved SMS sending function
 exports.sendOTPSMS = async (mobile, otp) => {
   try {
-    // Validate mobile number format
-    if (!/^[0-9]{10}$/.test(mobile)) {
-      throw new ErrorResponse('Invalid mobile number format', 400);
-    }
+    const validatedMobile = validateMobileNumber(mobile);
+    const message = `${otp} is your One Time Verification (OTP) code to confirm your phone for GANDHI MOTORS PRIVATE LIMITED`;
 
-    const message = `Your verification OTP is ${otp}. Valid for 10 minutes.`;
+    const params = new URLSearchParams();
+    params.append('authkey', SMS_CONFIG.AUTH_KEY);
+    params.append('mobiles', validatedMobile);
+    params.append('message', message);
+    params.append('sender', SMS_CONFIG.SENDER_ID);
+    params.append('route', SMS_CONFIG.ROUTE);
+    params.append('country', SMS_CONFIG.COUNTRY);
+    params.append('DLT_TE_ID', SMS_CONFIG.DLT_TE_ID);
+    params.append('response', 'json');
 
-    // Log the request for debugging
-    logger.debug(`Sending SMS to ${mobile} with OTP ${otp}`);
+    logger.debug(`Sending SMS to ${validatedMobile}`, { params: params.toString() });
 
-    const response = await axios.get(`${SMS_CONFIG.baseUrl}/api/v2/sendsms`, {
-      params: {
-        username: SMS_CONFIG.username,
-        password: SMS_CONFIG.password,
-        sender: SMS_CONFIG.senderId,
-        sendto: mobile,
-        message: message,
-        template_id: SMS_CONFIG.template_id,
-      },
-      timeout: 10000 // 10 seconds timeout
+    const response = await axios.get(SMS_CONFIG.BASE_URL, {
+      params,
+      timeout: 10000
     });
 
-    // Log full response for debugging
-    logger.debug(`SMS API response: ${JSON.stringify(response.data)}`);
+    logger.debug('SMS API response:', response.data);
 
-    if (!response.data || response.data.status !== 'success') {
-      const errorMsg = response.data?.message || 'Unknown SMS API error';
-      logger.error(`Failed to send SMS: ${errorMsg}`);
-      throw new ErrorResponse(`Failed to send OTP: ${errorMsg}`, 500);
+    // Handle different response formats
+    if (typeof response.data === 'string') {
+      if (response.data.includes('Invalid') || response.data.includes('Error')) {
+        throw new Error(response.data);
+      }
+      return { success: true, messageId: response.data };
     }
 
-    logger.info(`OTP SMS successfully sent to ${mobile}`);
-    return true;
-  } catch (err) {
-    logger.error(`SMS sending error: ${err.message}`, { 
-      stack: err.stack,
-      mobile,
-      errorResponse: err.response?.data 
+    if (response.data.error) {
+      throw new Error(response.data.error);
+    }
+
+    return { 
+      success: true,
+      message: 'OTP sent successfully',
+      mobile: validatedMobile,
+      messageId: response.data.request_id || 'N/A'
+    };
+  } catch (error) {
+    logger.error('SMS sending failed:', {
+      error: error.message,
+      response: error.response?.data,
+      config: error.config?.params,
+      stack: error.stack
     });
-    
-    // Handle specific axios errors
-    if (err.code === 'ECONNABORTED') {
-      throw new ErrorResponse('SMS service timeout', 500);
-    }
-    if (err.response) {
-      // The request was made and the server responded with a status code
-      throw new ErrorResponse(`SMS service error: ${err.response.status}`, 500);
-    } else if (err.request) {
-      // The request was made but no response was received
-      throw new ErrorResponse('No response from SMS service', 500);
-    } else {
-      // Something happened in setting up the request
-      throw new ErrorResponse('SMS service configuration error', 500);
-    }
+    throw new Error('Failed to send OTP. Please try again.');
   }
 };

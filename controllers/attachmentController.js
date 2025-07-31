@@ -2,6 +2,8 @@ const Attachment = require('../models/AttachmentModel');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const Quotation = require('../models/QuotationModel');
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -32,7 +34,173 @@ const upload = multer({
   { name: 'videos', maxCount: 5 },
   { name: 'documents', maxCount: 5 }
 ]);
+const axios = require('axios');
 
+const Customer = require('../models/CustomerModel');
+const AppError = require('../utils/appError');
+const logger = require('../config/logger');
+
+// Helper function to format WhatsApp message
+const formatWhatsAppMessage = (quotation, selectedAttachments = []) => {
+  let message = `📄 *Quotation Details* 📄\n\n`;
+  message += `🔹 *Quotation Number:* ${quotation.quotation_number}\n`;
+  message += `🔹 *Customer:* ${quotation.customerDetails.name}\n`;
+  message += `🔹 *Date:* ${new Date(quotation.createdAt).toLocaleDateString()}\n\n`;
+  
+  // Add PDF link
+  if (quotation.pdfUrl) {
+    message += `📎 *PDF Document:* ${quotation.pdfUrl}\n\n`;
+  }
+
+  // Add selected attachments
+  if (selectedAttachments.length > 0) {
+    message += `📌 *Attachments:*\n`;
+    quotation.attachments.forEach(attachment => {
+      if (selectedAttachments.includes(attachment._id.toString())) {
+        message += `\n🔸 *${attachment.title}*`;
+        if (attachment.description) message += ` - ${attachment.description}\n`;
+        
+        attachment.attachments.forEach(item => {
+          switch(item.type) {
+            case 'image': message += `🖼️ ${item.url}\n`; break;
+            case 'video': message += `🎬 ${item.url}\n`; break;
+            case 'document': message += `📄 ${item.url}\n`; break;
+            case 'youtube': message += `▶️ ${item.url}\n`; break;
+            case 'text': message += `📝 ${item.content}\n`; break;
+          }
+        });
+      }
+    });
+  }
+
+  return message;
+};
+
+exports.generateWhatsAppLink = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    if (!id) {
+      return next(new AppError('Quotation ID is required', 400));
+    }
+
+    const quotation = await Quotation.findById(id)
+      .populate('customer', 'mobile1 mobile2')
+      .populate('attachments');
+
+    if (!quotation) {
+      return next(new AppError('Quotation not found', 404));
+    }
+
+    const numbers = [];
+    if (quotation.customer?.mobile1) {
+      numbers.push(quotation.customer.mobile1.replace(/\D/g, ''));
+    }
+    if (quotation.customer?.mobile2) {
+      numbers.push(quotation.customer.mobile2.replace(/\D/g, ''));
+    }
+
+    const formattedAttachments = quotation.attachments.map(attachment => ({
+      id: attachment._id.toString(),
+      title: attachment.title,
+      description: attachment.description,
+      items: attachment.attachments.map(item => ({
+        type: item.type,
+        url: item.url,
+        content: item.content,
+        thumbnail: item.thumbnail
+      }))
+    }));
+
+    const response = {
+      status: 'success',
+      data: {
+        quotationNumber: quotation.quotation_number,
+        pdfUrl: quotation.pdfUrl ? `${req.protocol}://${req.get('host')}${quotation.pdfUrl}` : null,
+        attachments: formattedAttachments,
+        numbers: numbers.filter(n => n.length >= 10)
+      }
+    };
+
+    res.status(200).json(response);
+  } catch (err) {
+    logger.error(`Error generating WhatsApp link: ${err.message}`);
+    next(err);
+  }
+};
+
+exports.shareOnWhatsApp = async (req, res, next) => {
+  try {
+    const { quotationId, phoneNumber, attachmentIds = [] } = req.body;
+
+    // Validate inputs
+    if (!quotationId || !phoneNumber) {
+      return next(new AppError('Quotation ID and phone number are required', 400));
+    }
+
+    // Get quotation data
+    const quotation = await Quotation.findById(quotationId)
+      .populate('customer')
+      .populate('attachments');
+
+    if (!quotation) {
+      return next(new AppError('Quotation not found', 404));
+    }
+
+    // Format phone number (remove non-digits and add country code if missing)
+    const formattedNumber = phoneNumber.replace(/\D/g, '');
+    if (formattedNumber.length < 10) {
+      return next(new AppError('Invalid phone number', 400));
+    }
+    const whatsappNumber = formattedNumber.startsWith('91') ? formattedNumber : `91${formattedNumber}`;
+
+    // Format message
+    const message = formatWhatsAppMessage(quotation, attachmentIds);
+
+    // Send via WhatsApp Business API
+    const response = await axios.post(
+      `https://graph.facebook.com/v18.0/${process.env.WHATSAPP_BUSINESS_ACCOUNT_ID}/messages`,
+      {
+        messaging_product: 'whatsapp',
+        recipient_type: 'individual',
+        to: whatsappNumber,
+        type: 'text',
+        text: {
+          body: message
+        }
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${process.env.WHATSAPP_BUSINESS_TOKEN}`,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+
+    logger.info(`WhatsApp message sent to ${whatsappNumber} for quotation ${quotationId}`);
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        messageId: response.data.messages[0].id,
+        timestamp: response.data.messages[0].timestamp
+      }
+    });
+
+  } catch (err) {
+    logger.error(`Error sending WhatsApp message: ${err.message}`);
+    
+    // Handle WhatsApp API errors
+    if (err.response) {
+      return next(new AppError(
+        `WhatsApp API error: ${err.response.data.error?.message || 'Failed to send message'}`,
+        err.response.status
+      ));
+    }
+    
+    next(err);
+  }
+};
 exports.uploadAttachmentFile = (req, res, next) => {
   upload(req, res, (err) => {
     if (err) {
@@ -150,10 +318,43 @@ exports.getAttachmentsForModel = async (req, res) => {
 
 exports.getAllAttachments = async (req, res) => {
   try {
-    const attachments = await Attachment.find().populate('createdBy', 'name email');
+    // Get all attachments and populate both createdBy and applicableModels
+    const attachments = await Attachment.find()
+      .populate('createdBy', 'name email')
+      .populate('applicableModels', 'model_name');
+
+    // Format the response to include model names
+    const formattedAttachments = attachments.map(attachment => ({
+      _id: attachment._id,
+      title: attachment.title,
+      description: attachment.description,
+      isForAllModels: attachment.isForAllModels,
+      applicableModels: attachment.isForAllModels 
+        ? []
+        : attachment.applicableModels.map(model => ({
+            _id: model._id,
+            model_name: model.model_name
+          })),
+      attachments: attachment.attachments.map(item => ({
+        type: item.type,
+        url: item.url,
+        content: item.content,
+        thumbnail: item.thumbnail
+      })),
+      createdBy: {
+        _id: attachment.createdBy._id,
+        name: attachment.createdBy.name,
+        email: attachment.createdBy.email
+      },
+      createdAt: attachment.createdAt,
+      updatedAt: attachment.updatedAt
+    }));
+
     res.status(200).json({
       status: 'success',
-      data: { attachments }
+      data: { 
+        attachments: formattedAttachments 
+      }
     });
   } catch (err) {
     res.status(500).json({
@@ -201,22 +402,72 @@ exports.deleteAttachment = async (req, res) => {
 exports.generateWhatsAppLink = async (req, res) => {
   try {
     const { id } = req.params;
-    const attachment = await Attachment.findById(id);
+    const quotation = await Quotation.findById(id)
+      .populate('customer')
+      .populate('models.model_id');
     
-    if (!attachment) {
+    if (!quotation) {
       return res.status(404).json({
         status: 'error',
-        message: 'Attachment not found'
+        message: 'Quotation not found'
       });
     }
 
+    // Get base URL - more reliable method
     const baseUrl = `${req.protocol}://${req.get('host')}`;
-    const shareUrl = `${baseUrl}/attachments/${id}`;
-    const whatsappLink = `https://wa.me/?text=Check out this attachment: ${encodeURIComponent(shareUrl)}`;
     
+    // Get PDF URL - handle cases where pdfUrl might already include base path
+    let pdfUrl = quotation.pdfUrl;
+    if (pdfUrl && !pdfUrl.startsWith('http')) {
+      // Remove any leading slash if present
+      if (pdfUrl.startsWith('/')) {
+        pdfUrl = pdfUrl.substring(1);
+      }
+      pdfUrl = `${baseUrl}/${pdfUrl}`;
+    }
+
+    // Get applicable attachments
+    const modelIds = quotation.models.map(m => m.model_id._id);
+    const attachments = await Attachment.find({
+      $or: [
+        { isForAllModels: true },
+        { applicableModels: { $in: modelIds } }
+      ]
+    });
+
+    // Format attachments for display with checkboxes
+    const formattedAttachments = attachments.map(att => ({
+      id: att._id,
+      title: att.title,
+      description: att.description,
+      items: att.attachments.map(item => ({
+        type: item.type,
+        url: item.type === 'youtube' ? item.url : `${baseUrl}${item.url}`,
+        content: item.content,
+        thumbnail: item.thumbnail
+      }))
+    }));
+
+    // Get WhatsApp-available mobile numbers
+    const whatsappNumbers = [];
+    if (quotation.customer?.mobile1) {
+      whatsappNumbers.push(quotation.customer.mobile1.replace(/\D/g, ''));
+    }
+    if (quotation.customer?.mobile2) {
+      whatsappNumbers.push(quotation.customer.mobile2.replace(/\D/g, ''));
+    }
+
+    // Create WhatsApp share data
+    const shareData = {
+      pdfUrl: pdfUrl || 'PDF not available',
+      attachments: formattedAttachments,
+      numbers: whatsappNumbers,
+      quotationNumber: quotation.quotation_number
+    };
+
     res.status(200).json({
       status: 'success',
-      data: { whatsappLink }
+      data: shareData
     });
   } catch (err) {
     res.status(500).json({

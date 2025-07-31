@@ -9,7 +9,7 @@ const headerSchema = new mongoose.Schema({
   type: {
     type: String,
     required: [true, 'Type is required'],
-    enum: ['EV', 'IC'],
+    enum: ['EV', 'ICE'],
     uppercase: true,
     trim: true
   },
@@ -41,7 +41,7 @@ headerSchema.pre('save', async function(next) {
       category_key: this.category_key,
       header_key: this.header_key
     });
-    
+
     if (existingHeader && (!this.isNew || existingHeader._id.toString() !== this._id.toString())) {
       throw new Error(
         `Header with type '${this.type}', category '${this.category_key}', ` +

@@ -16,7 +16,7 @@ const app = express();
 app.use(helmet());
 
 // CORS Configuration
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003',  'http://192.168.1.7:3000','http://192.168.1.7:5001'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003',  'http://192.168.1.7:3000','http://192.168.1.7:5001','http://127.0.0.1:5500',];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -77,8 +77,7 @@ const csvRoutes = require('./routes/csvRoutes');
 const offerRoutes = require('./routes/offerRoutes');
 const customerRoutes = require('./routes/customerRoutes');
 const attachmentRoutes = require('./routes/attachmentRoutes');
-
-
+const whatsappRoutes = require('./routes/whatsappRoutes');
 // Mount Routes
 app.use('/api/customers', customerRoutes);
 app.use('/api/users', userRoutes);
@@ -93,6 +92,7 @@ app.use('/api/models', modelRoutes);
 app.use('/api/csv', csvRoutes);
 app.use('/api/offers', offerRoutes);
 app.use('/api/attachment',attachmentRoutes);
+app.use('/api/whatsapp', whatsappRoutes);
 
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '1y',

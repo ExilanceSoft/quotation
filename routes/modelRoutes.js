@@ -11,7 +11,11 @@ const { protect } = require('../middlewares/auth');
 router.post('/', protect, modelController.createModel);
 
 // 2. Get all models (basic info)
-router.get('/', modelController.getAllModels);
+// router.get('/', modelController.getAllModels);
+ router.get('/', protect, modelController.getAllModels);
+ //get with all status
+router.get('/status', protect, modelController.getAllModelsStatus);
+
 
 // 3. Get model by ID (basic info)
 router.get('/:modelId', modelController.getModelDetails);
@@ -21,6 +25,9 @@ router.patch('/:modelId', protect, modelController.updateModel);
 
 // 5. Delete model
 router.delete('/:modelId', protect, modelController.deleteModel);
+
+//6.Change Status 
+router.patch('/:modelId/status', protect, modelController.updateModelStatus);
 
 // PRICE-RELATED ENDPOINTS
 // =======================

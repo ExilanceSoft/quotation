@@ -3,7 +3,6 @@ const Header = require('../models/HeaderModel');
 const AppError = require('../utils/appError');
 const logger = require('../config/logger');
 const mongoose = require('mongoose');
-
 // modelController.js
 exports.createModel = async (req, res, next) => {
   try {
@@ -13,7 +12,7 @@ exports.createModel = async (req, res, next) => {
     if (!model_name || typeof model_name !== 'string') {
       return next(new AppError('Model name is required and must be a string', 400));
     }
-    if (!type || !['EV', 'IC'].includes(type.toUpperCase())) {
+    if (!type || !['EV', 'ICE'].includes(type.toUpperCase())) {
       return next(new AppError('Type is required and must be either EV or IC', 400));
     }
 
@@ -46,8 +45,6 @@ exports.createModel = async (req, res, next) => {
     next(err);
   }
 };
-
-
   exports.getModelById = async (req, res, next) => {
     try {
       if (!mongoose.Types.ObjectId.isValid(req.params.modelId)) {
@@ -236,21 +233,139 @@ exports.deleteModel = async (req, res, next) => {
     next(err);
   }
 };
-
+//get active models
 exports.getAllModels = async (req, res, next) => {
+
   try {
-    const models = await Model.find();
+    // Build the base query
+    let query = Model.find();
+    // For non-super admin users, filter by their branch
+
+    if (req.user && req.user.role_id.name !== 'super_admin' && req.user.branch_id) {
+
+      query = query.where('prices.branch_id').equals(req.user.branch_id);
+
+    }
+
+
+
+    // Execute the query with population
+
+    const models = await query
+
+      .populate({
+
+        path: 'prices.header_id prices.branch_id',
+
+        select: 'header_key category_key priority metadata name city'
+
+      });
+
+
+
+    // Transform the data to match your desired format
+
+    const transformedModels = models.map(model => ({
+
+      model_name: model.model_name,
+
+      prices: model.prices.map(price => ({
+
+        value: price.value,
+
+        header_id: price.header_id?._id || null,
+
+        branch_id: price.branch_id?._id || null
+
+      })),
+
+      createdAt: model.createdAt,
+
+      __v: model.__v,
+
+      type: model.type,
+
+      id: model._id
+
+    }));
+
+
+
+    res.status(200).json({
+
+      status: 'success',
+
+      results: transformedModels.length,
+
+      data: {
+
+        models: transformedModels
+
+      }
+
+    });
+
+  } catch (err) {
+
+    logger.error(`Error getting models: ${err.message}`);
+
+    next(err);
+
+  }
+
+};
+
+//get all model with any status 
+exports.getAllModelsStatus = async (req, res, next) => {
+  try {
+    // Build the base query without status filter
+    let query = Model.find();
+
+    // For non-super admin users, filter by their branch
+    if (req.user && req.user.role_id?.name !== 'super_admin' && req.user.branch_id) {
+      if (!mongoose.Types.ObjectId.isValid(req.user.branch_id)) {
+        return next(new AppError('Invalid branch ID in user profile', 400));
+      }
+
+      query = query.where('prices.branch_id').equals(req.user.branch_id);
+    }
+
+    // Execute the query with population
+    const models = await query
+      .populate({
+        path: 'prices.header_id prices.branch_id',
+        select: 'header_key category_key priority metadata name city'
+      })
+      .lean(); // Use lean() for better performance since we're transforming the data
+
+    // Transform the data to match your desired format
+    const transformedModels = models.map(model => ({
+      _id: model._id,
+      model_name: model.model_name,
+      type: model.type,
+      status: model.status, // Include status in response (active/inactive)
+      prices: model.prices.map(price => ({
+        value: price.value,
+        header_id: price.header_id?._id || null,
+        header_key: price.header_id?.header_key || null,
+        category_key: price.header_id?.category_key || null,
+        branch_id: price.branch_id?._id || null,
+        branch_name: price.branch_id?.name || null,
+        branch_city: price.branch_id?.city || null
+      })),
+      createdAt: model.createdAt
+    }));
 
     res.status(200).json({
       status: 'success',
-      results: models.length,
+      results: transformedModels.length,
       data: {
-        models
+        models: transformedModels
       }
     });
   } catch (err) {
-    logger.error(`Error getting models: ${err.message}`);
-    next(err);
+    logger.error(`Error getting all models: ${err.message}`, { error: err });
+    next(new AppError('Failed to retrieve models', 500));
   }
 };
 // Update getAllModelsWithPrices
@@ -263,18 +378,23 @@ exports.getAllModelsWithPrices = async (req, res, next) => {
       query = query.where('prices.branch_id').equals(req.query.branch_id);
     }
 
+    // Filter by status if provided
+    if (req.query.status && ['active', 'inactive'].includes(req.query.status.toLowerCase())) {
+      query = query.where('status').equals(req.query.status.toLowerCase());
+    }
+
     // Populate both header and branch information
     const models = await query.populate({
       path: 'prices.header_id prices.branch_id',
       select: 'header_key category_key priority metadata name city'
-    });
+    }).lean(); // Using lean() for better performance
 
     // Transform the data for cleaner response
     const transformedModels = models.map(model => {
       // Filter prices if branch_id was specified
       const filteredPrices = req.query.branch_id 
         ? model.prices.filter(price => 
-            price.branch_id?._id?.toString() === req.query.branch_id ||
+            (price.branch_id && price.branch_id._id.toString() === req.query.branch_id) ||
             (price.branch_id === null && req.query.branch_id === 'null')
           )
         : model.prices;
@@ -282,6 +402,8 @@ exports.getAllModelsWithPrices = async (req, res, next) => {
       return {
         _id: model._id,
         model_name: model.model_name,
+        type: model.type,
+        status: model.status || 'active', // Ensure status is always returned
         prices: filteredPrices.map(price => ({
           value: price.value,
           header_id: price.header_id?._id || null,
@@ -305,11 +427,13 @@ exports.getAllModelsWithPrices = async (req, res, next) => {
       }
     });
   } catch (err) {
-    logger.error(`Error getting all models with prices: ${err.message}`);
-    next(err);
+    logger.error(`Error getting all models with prices: ${err.message}`, {
+      stack: err.stack,
+      request: req.query
+    });
+    next(new AppError('Failed to retrieve models. Please try again later.', 500));
   }
 };
-
 // Update getModelWithPrices for specific model
 exports.getModelWithPrices = async (req, res, next) => {
   try {
@@ -576,6 +700,47 @@ exports.getBaseModelForSelectedModels = async (req, res, next) => {
     });
   } catch (err) {
     logger.error(`Error getting base model for selected models: ${err.message}`);
+    next(err);
+  }
+};
+
+exports.updateModelStatus = async (req, res, next) => {
+  try {
+    const { modelId } = req.params;
+    const { status } = req.body;
+
+    // Validate input
+    if (!status || !['active', 'inactive'].includes(status.toLowerCase())) {
+      return next(new AppError('Status is required and must be either "active" or "inactive"', 400));
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(modelId)) {
+      return next(new AppError('Invalid model ID format', 400));
+    }
+
+    // Update the model status
+    const updatedModel = await Model.findByIdAndUpdate(
+      modelId,
+      { status: status.toLowerCase() },
+      { 
+        new: true,
+        runValidators: true,
+        select: '_id model_name status' // Only return these fields
+      }
+    );
+
+    if (!updatedModel) {
+      return next(new AppError('No model found with that ID', 404));
+    }
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        model: updatedModel
+      }
+    });
+  } catch (err) {
+    logger.error(`Error updating model status: ${err.message}`);
     next(err);
   }
 };

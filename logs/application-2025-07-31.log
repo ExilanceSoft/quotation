@@ -1,0 +1,87 @@
+{"timestamp":"2025-07-31 10:56:53","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 10:56:53","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 10:56:53","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 10:56:53","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 10:56:54","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 10:56:54","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 10:56:54","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 10:59:07","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f0c0823069bce3d6795a6/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 10:59:07","level":"\u001b[31MERROR\u001b[39M","message":"Error verifying token: jwt expired","stack":"TokenExpiredError: jwt expired\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\jsonwebtoken\\verify.js:190:21\n    at getSecret (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\jsonwebtoken\\verify.js:97:14)\n    at module.exports [as verify] (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\jsonwebtoken\\verify.js:101:10)\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\middlewares\\auth.js:22:25)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:664:3)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:291:5)\n    at Function.handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:186:3)\n    at router (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:60:12)"}
+{"timestamp":"2025-07-31 10:59:07","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route","stack":null}
+{"timestamp":"2025-07-31 10:59:07","level":"\u001b[31MERROR\u001b[39M","message":"Error: Not authorized to access this route\n    at exports.protect (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\middlewares\\auth.js:36:17)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\layer.js:152:17)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:295:15\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:600:14)\n    at param (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:610:14)\n    at processParams (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:664:3)\n    at next (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:291:5)\n    at Function.handle (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:186:3)\n    at router (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:60:12)\n    at Layer.handleRequest (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\lib\\layer.js:152:17)\n    at trimPrefix (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:342:13)\n    at E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\node_modules\\router\\index.js:297:9","stack":null}
+{"timestamp":"2025-07-31 11:00:11","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-07-31 11:00:11","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: sales7","stack":null}
+{"timestamp":"2025-07-31 11:00:14","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to 7588192394 OTP sent successfully","stack":null}
+{"timestamp":"2025-07-31 11:00:32","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-07-31 11:00:32","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: sales7","stack":null}
+{"timestamp":"2025-07-31 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: sales7","stack":null}
+{"timestamp":"2025-07-31 11:00:33","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: 7588192394","stack":null}
+{"timestamp":"2025-07-31 11:01:22","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f0c0823069bce3d6795a6/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 11:09:11","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 11:16:43","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 11:20:11","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-07-31 11:20:11","level":"\u001b[33MWARN\u001b[39M","message":"Failed login attempt for mobile: 8080762003","stack":null}
+{"timestamp":"2025-07-31 11:20:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid credentials","stack":null}
+{"timestamp":"2025-07-31 11:20:11","level":"\u001b[31MERROR\u001b[39M","message":"Error: Invalid credentials\n    at exports.login (E:\\Exilance-Project\\Gandhi Motars - Copy\\vehicle-quotation-system - Copy\\controllers\\userController.js:261:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)","stack":null}
+{"timestamp":"2025-07-31 11:20:58","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/login","stack":null}
+{"timestamp":"2025-07-31 11:20:58","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-07-31 11:21:01","level":"\u001b[32MINFO\u001b[39M","message":"OTP sent to 8080762003 OTP sent successfully","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/users/verify-otp","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"Saving user: rutik","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"User logged in: 8080762003","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/month","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/today","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-07-31 11:21:20","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-07-31 11:21:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/month","stack":null}
+{"timestamp":"2025-07-31 11:21:21","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/today","stack":null}
+{"timestamp":"2025-07-31 11:21:23","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-07-31 11:22:47","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/models","stack":null}
+{"timestamp":"2025-07-31 11:23:09","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations","stack":null}
+{"timestamp":"2025-07-31 11:23:20","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/688b04c5ba6e41a45f68e8db","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/month","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/today","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/users/me","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"Fetched current user: rutik","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/month","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/today","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/month","stack":null}
+{"timestamp":"2025-07-31 11:27:09","level":"\u001b[32MINFO\u001b[39M","message":"GET /api/quotations/count/today","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 11:51:20","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 11:56:31","level":"\u001b[32MINFO\u001b[39M","message":"SIGINT RECEIVED. Shutting down gracefully...","stack":null}
+{"timestamp":"2025-07-31 11:56:49","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 11:56:50","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 11:56:55","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f1400896aec1ae6e93739/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 14:05:41","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-31 14:05:41","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-31 14:05:42","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-31 15:02:01","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/682f160c8d36d6a85f549065/send-whatsapp","stack":null}
+{"timestamp":"2025-07-31 15:04:47","level":"\u001b[32MINFO\u001b[39M","message":"POST /api/quotations/683168be199283a98b0e9240/send-whatsapp","stack":null}

@@ -1,0 +1,18 @@
+{"timestamp":"2025-07-28 11:12:40","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-28 11:12:40","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-28 11:12:40","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-28 11:12:40","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-28 11:12:41","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-28 11:12:41","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-28 11:12:41","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Starting server initialization...","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Connecting to MongoDB...","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"✅ MongoDB Connected Successfully","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Initializing roles...","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Default roles initialized","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Server running on port 5000","stack":null}
+{"timestamp":"2025-07-28 11:13:18","level":"\u001b[32MINFO\u001b[39M","message":"Environment: development","stack":null}
+{"timestamp":"2025-07-28 12:26:17","level":"\u001b[32MINFO\u001b[39M","message":"GET /","stack":null}
+{"timestamp":"2025-07-28 12:26:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /","stack":null}
+{"timestamp":"2025-07-28 12:26:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /loginMsg.js","stack":null}
+{"timestamp":"2025-07-28 12:26:26","level":"\u001b[32MINFO\u001b[39M","message":"GET /cgi/get.cgi?cmd=home_login","stack":null}

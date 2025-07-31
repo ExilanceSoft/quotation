@@ -24,7 +24,7 @@ router.post('/import', protect, upload.single('file'), (req, res, next) => {
     return res.status(400).json({ error: 'Branch ID is required' });
   }
   if (!req.body.type) {
-    return res.status(400).json({ error: 'Type is required (EV/IC)' });
+    return res.status(400).json({ error: 'Type is required (EV/ICE)' });
   }
   csvController.importCSV(req, res, next);
 });

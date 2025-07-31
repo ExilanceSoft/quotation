@@ -5,7 +5,8 @@ const { validateUserInput } = require('../utils/validators');
 const { ErrorResponse } = require('../utils/errorHandler');
 const jwt = require('jsonwebtoken');
 const Branch = require('../models/Branch');
-const { generateOTP, sendOTPEmail } = require('../utils/emailService');
+const { generateOTP, sendOTPSMS } = require('../utils/smsService');
+
 
 // Helper function to format user response
 const formatUserResponse = (user) => {
@@ -213,8 +214,8 @@ exports.register = async (req, res, next) => {
     user.otpExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
     await user.save();
     
-    // Send OTP email
-    await sendOTPEmail(user.email, otp);
+    // Send OTP SMS
+    await sendOTPSMS(user.mobile, otp);
 
     const userResponse = formatUserResponse(user);
 
@@ -232,21 +233,31 @@ exports.register = async (req, res, next) => {
 // @desc    Login user (initiates OTP flow)
 // @route   POST /api/users/login
 // @access  Public
+
+// @desc    Login user (initiates OTP flow)
+// @route   POST /api/users/login
+// @access  Public
+// @desc    Login user (initiates OTP flow)
+// @route   POST /api/users/login
+// @access  Public
+// @desc    Login user (initiates OTP flow)
+// @route   POST /api/users/login
+// @access  Public
 exports.login = async (req, res, next) => {
   try {
-    // Only validate email for login
-    if (!req.body.email || !req.body.email.trim()) {
-      return next(new ErrorResponse('Email is required', 400));
+    // Validate mobile number
+    if (!req.body.mobile || !req.body.mobile.toString().trim()) {
+      return next(new ErrorResponse('Valid mobile number is required', 400));
     }
 
-    const email = req.body.email.toLowerCase().trim();
+    const mobile = req.body.mobile.toString().trim();
     
-    const user = await User.findOne({ email })
+    const user = await User.findOne({ mobile })
       .select('+otp +otpExpire +loginAttempts +lockUntil')
       .populate('role_id');
     
     if (!user) {
-      logger.warn(`Failed login attempt for email: ${email}`);
+      logger.warn(`Failed login attempt for mobile: ${mobile}`);
       return next(new ErrorResponse('Invalid credentials', 401));
     }
 
@@ -262,7 +273,7 @@ exports.login = async (req, res, next) => {
 
     // Check if user is active
     if (!user.is_active) {
-      logger.warn(`Login attempt for inactive user: ${email}`);
+      logger.warn(`Login attempt for inactive user: ${mobile}`);
       return next(new ErrorResponse('Account is inactive', 401));
     }
 
@@ -273,22 +284,32 @@ exports.login = async (req, res, next) => {
     user.loginAttempts = 0;
     user.lockUntil = undefined;
     
-    await user.save();
-    
-    // Send OTP email
-    await sendOTPEmail(user.email, otp);
+    try {
+      await user.save();
+      
+      // Send OTP SMS
+      const smsResult = await sendOTPSMS(mobile, otp);
+      logger.info(`OTP sent to ${mobile}`, smsResult);
 
-    logger.info(`OTP sent to user: ${user.email}`);
-    res.status(200).json({
-      success: true,
-      message: 'OTP sent to your email',
-      data: {
-        email: user.email,
-        otpExpiresIn: 600 // 10 minutes in seconds
-      }
-    });
+      return res.status(200).json({
+        success: true,
+        message: 'OTP sent to your mobile',
+        data: {
+          mobile: mobile,
+          otpExpiresIn: 600 // 10 minutes in seconds
+        }
+      });
+    } catch (smsError) {
+      // Rollback OTP if SMS fails
+      user.otp = undefined;
+      user.otpExpire = undefined;
+      await user.save();
+      
+      logger.error('OTP SMS failed:', smsError);
+      return next(new ErrorResponse('Failed to send OTP. Please try again.', 500));
+    }
   } catch (err) {
-    logger.error(`Error in login process: ${err.message}`);
+    logger.error(`Login process error: ${err.message}`, { stack: err.stack });
     next(new ErrorResponse('Server error during login', 500));
   }
 };
@@ -298,13 +319,13 @@ exports.login = async (req, res, next) => {
 // @access  Public
 exports.verifyOTP = async (req, res, next) => {
   try {
-    const { email, otp } = req.body;
+    const { mobile, otp } = req.body;
     
-    if (!email || !otp) {
-      return next(new ErrorResponse('Please provide email and OTP', 400));
+    if (!mobile || !otp) {
+      return next(new ErrorResponse('Please provide mobile and OTP', 400));
     }
 
-    const user = await User.findOne({ email: email.toLowerCase() })
+    const user = await User.findOne({ mobile })
       .select('+otp +otpExpire')
       .populate('role_id');
     
@@ -351,7 +372,7 @@ exports.verifyOTP = async (req, res, next) => {
 
     const userResponse = formatUserResponse(user);
 
-    logger.info(`User logged in: ${user.email}`);
+    logger.info(`User logged in: ${user.mobile}`);
     res.status(200).json({
       success: true,
       token,

@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
       'Please add a valid email'
     ]
   },
- mobile: {
+mobile: {
   type: String,
   required: [true, 'Please add a mobile number'],
   unique: true,

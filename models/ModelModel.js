@@ -1,6 +1,6 @@
-// ModelModel.js
 const mongoose = require('mongoose');
 
+// Price Data Subdocument Schema
 const priceDataSchema = new mongoose.Schema({
   value: {
     type: Number,
@@ -17,8 +17,12 @@ const priceDataSchema = new mongoose.Schema({
     ref: 'Branch',
     required: true
   }
-}, { _id: false });
+}, {
+  _id: false,  // Disable _id for subdocuments
+  versionKey: false  // Disable version key for subdocuments
+});
 
+// Main Model Schema
 const modelSchema = new mongoose.Schema({
   model_name: {
     type: String,
@@ -34,28 +38,64 @@ const modelSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    required: [true, 'Type is required (EV/IC)'],
-    enum: ['EV', 'IC'],
+    required: [true, 'Type is required (EV/ICE)'],
+    enum: ['EV', 'ICE'],
     uppercase: true,
     trim: true
   },
+  status: {
+    type: String,
+    enum: ['active', 'inactive'],
+    default: 'active',
+    trim: true,
+    lowercase: true
+  },
   prices: {
     type: [priceDataSchema],
-    default: []
+    default: [],
+    validate: {
+      validator: function(prices) {
+        return true;
+      }
+    }
   },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    immutable: true
   }
 }, {
-  toJSON: { virtuals: true },
-  toObject: { virtuals: true }
+  timestamps: false,
+  versionKey: false,
+  toJSON: {
+    virtuals: true,
+    transform: function(doc, ret) {
+      delete ret._id;
+      return ret;
+    }
+  },
+  toObject: {
+    virtuals: true
+  },
+  collation: {
+    locale: 'en',
+    strength: 2
+  }
 });
 
-// Indexes
-modelSchema.index({ model_name: 1 });
+// Add error handling for duplicate key errors
+modelSchema.post('save', function(error, doc, next) {
+  if (error.name === 'MongoError' && error.code === 11000) {
+    next(new Error('Model name must be unique'));
+  } else {
+    next(error);
+  }
+});
+
+// Compound Indexes
 modelSchema.index({ 'prices.header_id': 1 });
 modelSchema.index({ 'prices.branch_id': 1 });
+modelSchema.index({ status: 1 }); // New index for status field
 
 const Model = mongoose.model('Model', modelSchema);
 

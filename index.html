@@ -366,19 +366,18 @@
     </table>
   </div>
   
-  <div style="border-bottom: 1px solid #0000002a;">
+  <div>
     <div class="section" style="text-align: right; margin-top: -11px;">
       <p>Finance Needed: {{#if customerDetails.finance_needed}}Yes{{else}}No{{/if}}</p>
-      <p style="margin-bottom: -15px;">{{userDetails.full_name}}</p>
-      <p><strong style="font-size: 16px;">Gandhi Tvs Nashik</strong> ({{userDetails.mobile}})</p>
+      <p style="margin-bottom: -15px; font-weight: bold">{{userDetails.full_name}}</p>
+      <p><strong style="font-size: 12px;">Gandhi Tvs Nashik</strong> ({{userDetails.mobile}})</p>
     </div>
     <!-- Finance and Delivery Info -->
     <div class="section">
       <p style="margin-top: -33px;">Expected Date: {{expectedDeliveryDate}}</p>
     </div>
   </div>
-  
-  <!-- Finance Documents Section -->
+
   <!-- Finance Documents Section -->
 <div class="section">
   <div class="section-title">Documents Required for Finance:-</div>
@@ -405,22 +404,25 @@
     </div>
     <!-- Signature Section -->
     <div class="signature-container" style="position: absolute; bottom: 0; right: 0;">
-      <strong>For {{userDetails.branch.name}}</strong>
+      <strong>For ({{userDetails.branch.name}})</strong>
       <strong>Authorised Signatory</strong>
     </div>
   </div>
 </div>
 {{/if}}
-
-  <div class="section">
-    <div class="section-title">OFFER:</div>
-    <div class="offer-section" style="margin-top: -22px;">
-      <p style="margin-bottom: 0;"><strong style="font-size: 16px; font-style: italic;">Right Place - Right Price</strong></p>
-      <p style="text-align: justify; line-height: 1.4; margin-top: 2px;">
-        प्रिय ग्राहक, नवीन वाहन खरेदी हा प्रत्येक ग्राहकाच्या जीवनातील एक सदाचा क्षण असतो या व्यवहारात पारदर्शिता असावी म्हणूनच आम्ही आपणास सविस्तर कोटेशन देत आहोत जेणेकरून आपली फसवणूक होऊ नये अनेक ठिकाणी विक्रेते आपणास कमी किमतीचे / डिस्काउंट चे अमिश दाखवून दिशाभूल करतात. लक्षात असू द्या -आपणास फसवले जाऊ शकते- जसे कि इन्शुरन्स मध्ये zero debt कव्हर न देणे, १५ लाखाचा पी ए कव्हर न देणे, आर.एस.ए. कव्हर न देणे दुय्यम / हलक्या दर्जाच्या नॉन टीव्हीएस बँड च्या विना वॉरंटीच्या एक्सेसरीज देणे, आयएसआय मानांकित ओरिजिनल टीव्हीएस च्या सुरक्षित हेल्मेट ऐवजी हलक्या क्वालिटीचे तकलादू हेल्मेट देणे, वाहनाबरोबरचे स्टँडर्ड फिटमेंट्स चे पार्टस न देणे आणि नंतर त्याचेच वेगळे पैसे आकारणे ई. आपण तर जागरूक ग्राहक आहात ! जवळच्या फायद्यासाठी लांबचे नुकसान होऊ देऊ नका. पुढील किमान सहा वर्ष हमखास सेवा मिळेल अशाच ठिकाणी तुमच्या स्वपातील वाहन खरेदी करा. Trust Value Service करिता वाहन सेवेतील सर्वोत्कृष्ट गांधी टीव्हीएस ची निवड करा ! याबाबत काहीही शंका असेल तर शोरूम व्यवस्थापक श्री सागर देशमुख यांचेशी मोबाईल नबरं ९१६८५३३०००वर नक्की संपर्क " करा आणि आम्हाला तुमच्या सेवेची संधी द्या ! Gandhi TVS = Right Place - Right Price"
-      </p>
+ {{#if allUniqueOffers.length}}
+<div class="section">
+  <div class="section-title">OFFER:</div>
+  {{#each allUniqueOffers}}
+    {{#if @first}} <!-- Only show the first offer -->
+    <div class="offer-section">
+      <p><strong style="font-size: 16px; font-style: italic;">{{title}}</strong></p>
+      <p>{{description}}</p>
     </div>
-  </div>
+    {{/if}}
+  {{/each}}
+</div>
+{{/if}}
 
   <!-- Thank You Section -->
   <div class="thank-you">
@@ -432,9 +434,8 @@
     Apart from the above we also provide below mentioned addon services and accessories which are optional:-
   </div>
   
+
   <!-- Accessories Table -->
-   <div class="section" style="text-align: center; margin-top: 5px;"><strong>Accessories</strong></div>
-<!-- Accessories Table -->
 <div class="section" style="text-align: center; margin-top: 5px;"><strong>Accessories</strong></div>
 <table class="table fixed-columns">
   <tbody>
@@ -480,7 +481,7 @@
       {{/each}}
     {{else}}
       <tr>
-        <td>No Accessories Present</td>
+        <td>No Accessories</td>
         <td class="text-right">0</td>
         <td class="text-right">0</td>
         <td class="text-right">0</td>
@@ -488,18 +489,19 @@
     {{/if}}
   </tbody>
 </table>
-
   <!-- Offers Section -->
-  {{#if allUniqueOffers.length}}
-  <div class="section">
-    <div class="offers-title">OFFER:</div>
-    {{#each allUniqueOffers}}
+ {{#if (gt allUniqueOffers.length 1)}} <!-- Only show if 2+ offers exist -->
+<div class="section">
+  <div class="offers-title">OFFERS:</div>
+  {{#each allUniqueOffers}}
+    {{#if (gt @index 0)}} <!-- Skip index 0 (first offer) -->
     <div class="offer-section">
       <p><strong>{{title}}</strong></p>
       <p>{{description}}</p>
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
+    {{/if}}
+  {{/each}}
+</div>
+{{/if}}
 </body>
 </html>
